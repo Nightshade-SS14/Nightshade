@@ -5,4 +5,4 @@
   id: FloorAstroGrassJungle
   sprite: /Textures/Tiles/GrassJungle/grass.png
   itemDrop: FloorTileItemJungleAstroGrass
-  variants: 1
+  variants: 6
