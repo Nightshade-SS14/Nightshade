@@ -1,3 +1,5 @@
+using Content.Medical.Common.Damage;
+using Content.Medical.Common.Targeting;
 using Content.Shared.Actions;
 using Content.Shared.Damage;
 using Content.Shared.Damage.Components;
