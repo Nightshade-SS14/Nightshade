@@ -149,7 +149,7 @@
   - type: Speech
     speechVerb: Parrot
     speechSounds: MaleAvali
-    allowedEmotes: [Chirp, Hisses, Purr, Growl, Trill, Scree, Call, Squawk]
+    allowedEmotes: [Chirp, Hiss, Purr, Growl, Trill, Scree, Call, Squawk]
 
   - type: Vocal
     emoteSounds: MaleAvali

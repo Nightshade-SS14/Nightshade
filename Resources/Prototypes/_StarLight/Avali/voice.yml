@@ -111,7 +111,7 @@
       collection: MaleGasp
     DefaultDeathgasp:
       collection: MaleDeathGasp
-    Hisses:
+    Hiss:
       collection: FelionoidHisses
     Purr:
       collection: FelionoidPurrs
@@ -162,7 +162,7 @@
       collection: FemaleGasp
     DefaultDeathgasp:
       collection: FemaleDeathGasp
-    Hisses:
+    Hiss:
       collection: FelionoidHisses
     Purr:
       collection: FelionoidPurrs
@@ -189,32 +189,6 @@
 # Avali-usable emotes missing from Nightshade
 # Starlight-only Felionoid/Resomi action icons intentionally omitted.
 # --------------------------------------------------------------------------
-
-- type: emote
-  id: Hisses
-  name: chat-emote-name-hiss
-  category: Vocal
-  available: false
-  whitelist:
-    components:
-    - Vocal
-  blacklist:
-    components:
-    - BorgChassis
-  chatMessages: [ "chat-emote-msg-hiss" ]
-  chatTriggers:
-  - hiss
-  - hiss.
-  - hiss!
-  - hiss?
-  - hissing
-  - hissing.
-  - hissing!
-  - hissing?
-  - hisses
-  - hisses.
-  - hisses!
-  - hisses?
 
 - type: emote
   id: Purr
