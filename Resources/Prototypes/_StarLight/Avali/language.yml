@@ -1,0 +1,15 @@
+# Avali Scratch adapted to Nightshade's Trauma language system.
+# See LICENSE-Starlight.TXT.
+
+- type: language
+  id: Scratch
+  speech:
+    color: "#fc7921"
+  obfuscation: !type:RandomObfuscation
+
+- type: entity
+  parent: BaseLanguageKnowledge
+  id: LanguageScratch
+  components:
+  - type: LanguageKnowledge
+    languageId: Scratch

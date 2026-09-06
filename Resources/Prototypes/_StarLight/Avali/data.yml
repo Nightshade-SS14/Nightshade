@@ -1,0 +1,26 @@
+# Avali content ported/adapted from Starlight.
+# See LICENSE-Starlight.TXT.
+
+- type: damageModifierSet
+  id: Avali
+  coefficients:
+    Cold: 0.6
+    Heat: 1.4
+
+- type: metabolizerType
+  id: Avali
+  name: metabolizer-type-avali
+
+- type: reagent
+  parent: Blood
+  id: AvaliBlood
+  name: reagent-name-avali-blood
+  group: Biological
+  desc: reagent-desc-avali-blood
+  flavor: beer
+  color: "#6C3BAA"
+  recognizable: true
+  physicalDesc: reagent-physical-desc-avali
+
+- type: Tag
+  id: Avali
