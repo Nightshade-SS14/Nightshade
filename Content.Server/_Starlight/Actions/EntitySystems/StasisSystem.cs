@@ -54,7 +54,14 @@ public sealed partial class StasisSystem : SharedStasisSystem
             var modifier = _mobState.IsCritical(uid) ? -comp.CritHealingModifier : -1.0f;
             var oldDamageCompTotal = _damageable.GetTotalDamage((uid, damageComponent));
 
-            _damageable.TryChangeDamage(uid, modifier * comp.HealingPerUpdate, true, origin: uid);
+            _damageable.TryChangeDamage(
+                uid,
+                modifier * comp.HealingPerUpdate,
+                true,
+                origin: uid,
+                targetPart: TargetBodyPart.All,
+                ignoreBlockers: true,
+                splitDamage: SplitDamageBehavior.SplitEnsureAllDamagedAndOrganic);
 
             _bloodstream.TryModifyBleedAmount(uid, modifier * comp.BleedHealPerUpdate);
 
