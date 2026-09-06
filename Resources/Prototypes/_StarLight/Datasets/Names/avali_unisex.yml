@@ -3,9 +3,3 @@
   values:
     prefix: names-avali-first-dataset-
     count: 100
-
-- type: localizedDataset
-  id: names_avali_packs
-  values:
-    prefix: names-avali-packs-dataset-
-    count: 40
