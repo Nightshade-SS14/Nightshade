@@ -126,6 +126,11 @@
   - type: HumanoidProfile
     species: Avali
 
+- type: satiation
+  id: AvaliHunger
+  parent: NormalSatiationHunger
+  baseChangeRate: -0.03
+
 - type: entity
   parent:
   - AppearanceAvali
@@ -153,10 +158,12 @@
     tags:
     - Avali
 
-  - type: Hunger
-    baseDecayRate: 0.03
-
-  - type: Thirst
+  - type: Satiation
+    satiations:
+      Hunger:
+        prototype: AvaliHunger
+      Thirst:
+        prototype: NormalSatiationThirst
 
   - type: Butcherable
     spawned:
