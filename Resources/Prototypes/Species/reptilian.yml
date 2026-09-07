@@ -6,9 +6,12 @@
   defaultSkinTone: "#34a223"
   dollPrototype: AppearanceReptilian
   skinColoration: Hues
-  maleFirstNames: NamesReptilianMale
-  femaleFirstNames: NamesReptilianFemale
-  naming: FirstDashFirst
+  # Nightshade - Does-The-Thing
+  maleFirstNames: NamesReptilianFirst
+  femaleFirstNames: NamesReptilianFirst
+  lastNames: NamesReptilianLast
+  naming: FirstDashLast
+  # Nightshade
   knowledge: Reptilian # Trauma
   defaultSoundsBySex:
   - MaleReptilian
