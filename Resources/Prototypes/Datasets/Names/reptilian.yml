@@ -4,10 +4,10 @@
   id: NamesReptilianFirst
   values:
     prefix: names-reptilian-first-dataset-
-    count: 55
+    count: 130
 
 - type: localizedDataset
   id: NamesReptilianLast
   values:
     prefix: names-reptilian-last-dataset-
-    count: 60
+    count: 100

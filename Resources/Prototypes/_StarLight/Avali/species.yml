@@ -11,7 +11,8 @@
   skinColoration: Hues
   maleFirstNames: names_avali_first
   femaleFirstNames: names_avali_first
-  naming: First
+  lastNames: names_avali_packs
+  naming: FirstLast
   knowledge: Avali
   defaultSoundsBySex:
   - MaleAvali
