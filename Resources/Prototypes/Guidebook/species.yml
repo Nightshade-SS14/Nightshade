@@ -4,6 +4,9 @@
   text: "/ServerInfo/Guidebook/Mobs/Species.xml"
   children:
   - Arachnid
+  # Nightshade
+  - Avali
+  # /Nightshade
   - Diona
   - Dwarf
   - Human

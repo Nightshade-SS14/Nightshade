@@ -8,9 +8,10 @@
   components:
     - type: Action
       itemIconStyle: BigAction
-      icon:
-        sprite: _Starlight/Interface/Actions/actions_avali.rsi
-        state: heal
+    - type: Sprite
+      sprite: _Starlight/Interface/Actions/actions_avali.rsi
+      layers:
+      - state: heal
     - type: InstantAction
       event: !type:PrepareStasisActionEvent
 
@@ -21,8 +22,9 @@
   components:
     - type: Action
       itemIconStyle: BigAction
-      icon:
-        sprite: _Starlight/Interface/Actions/actions_avali.rsi
-        state: healoff
+    - type: Sprite
+      sprite: _Starlight/Interface/Actions/actions_avali.rsi
+      layers:
+      - state: healoff
     - type: InstantAction
       event: !type:ExitStasisActionEvent

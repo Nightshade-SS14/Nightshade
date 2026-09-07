@@ -1,0 +1,37 @@
+<Document>
+   # Avali
+
+  <Box>
+    <GuideEntityEmbed Entity="MobAvali" Caption=""/>
+  </Box>
+
+  [color=#ffa500]Avali have several significant gameplay differences from baseline humanoids.[/color]
+
+  Avali are small bird/raptor-like humanoids adapted to cold environments.
+
+  ## Racial Features
+
+  - Receive [color=#ffa500]40% more heat damage[/color] and [color=#1e90ff]40% less cold damage[/color].
+  - Can tolerate temperatures down to roughly [color=#1e90ff]-50 C[/color] before beginning to take cold damage.
+  - Deal [color=red]6.25[/color] slashing damage with their claws.
+  - Have increased acceleration while weightless.
+  - Become hungry roughly 1.8 times faster than a normal humanoid.
+  - Fall into critical condition at [color=red]90[/color] damage and die at [color=red]180[/color].
+  - Speak Tau Ceti Basic and Scratch.
+
+  ## Sounds
+
+  Avali make a variety of bird-like vocalizations, including chirps, squawks, trills, calls, and screes.
+
+  They also have their own hiss, purr, and growl sounds.
+
+  ## Nanite Shell
+
+  Avali can encase themselves in a [color=#ffbc48]Nanite Shell[/color], entering stasis while nanites repair their damaged organic tissue.
+
+  The shell repairs brute damage more quickly than heat and cold damage and also reduces bleeding.
+
+  While inside the shell, the Avali cannot move and most actions are prevented. Incoming damage is reduced while the shell is active.
+
+  The nanites can restore up to [color=#7CFC00]50 total damage[/color] before the shell ends. The shell can also break early after taking enough incoming damage.
+</Document>
