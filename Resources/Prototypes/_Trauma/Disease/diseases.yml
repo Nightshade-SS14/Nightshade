@@ -10,9 +10,10 @@
     diseaseType: Parasite
     genotype: 7361
     infectionRate: 0.05
-    immunityGainRate: 0.5
+    immunityGainRate: 1 # Nightshade - Was 0.5. Not sure this matters tho.
     mutationRate: 0
     effects:
-      DiseaseBehaviorSluggish: 1
+      DiseaseBehaviorBlunt: 1 # Nightshade - Was DiseaseBehaviorSluggish.
+      # Now the parasites eat you from inside instead, whether that's less annoying is up to you.
       DiseaseBehaviorFeelUnwell: 1
       DiseaseBehaviorVomitNoSpread: 1

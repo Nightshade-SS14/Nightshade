@@ -419,7 +419,7 @@
       - Pill
       - Crayon
       - Paper
-    isSpecialDigestibleExclusive: false
+    isSpecialDigestibleExclusive: true # Nightshade - making avali carnivorous
 
 - type: entity
   parent: [ OrganBaseLiver, OrganSpriteHumanInternal, OrganAvaliInternal, OrganAvaliMetabolizer ]

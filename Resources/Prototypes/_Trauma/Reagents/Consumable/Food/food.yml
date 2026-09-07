@@ -28,23 +28,23 @@
       - !type:MetabolizerTypeCondition
         type: [ Vox, Slime ] # Vox literally eat trash, and slimes are highly resistant to various poisons
         inverted: true
-      effects:
-      - !type:PopupMessage
-        type: Local
-        messages: [ "reagent-popup-lab-grown-nutriment" ]
-        probability: 0.05
-      - !type:InfectDisease
-        probability: 0.005
-        scaleProbability: true
-        conditions:
-        - !type:MetabolizerTypeCondition
-          type: [ Rat, Vox ]
-          inverted: true
-        - !type:ReagentCondition
-          reagent: LabGrownNutriment
-          min: 0.01
-        disease: DiseaseGutWorms
-        mutate: false
+ #     effects:
+#      - !type:PopupMessage
+#        type: Local
+#        messages: [ "reagent-popup-lab-grown-nutriment" ]
+#        probability: 0.05
+#      - !type:InfectDisease
+#        probability: 0.005
+#        scaleProbability: true
+#        conditions:
+#        - !type:MetabolizerTypeCondition
+#          type: [ Rat, Vox ]
+#          inverted: true
+#        - !type:ReagentCondition
+#          reagent: LabGrownNutriment
+#          min: 0.01
+#        disease: DiseaseGutWorms
+#        mutate: false
 
 - type: reagent
   id: FullFatOils
