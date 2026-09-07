@@ -1,7 +1,5 @@
 <Document>
-  <!-- Avali guide adapted from Starlight for Nightshade. See LICENSE-Starlight.TXT. -->
-
-  # Avali
+   # Avali
 
   <Box>
     <GuideEntityEmbed Entity="MobAvali" Caption=""/>
