@@ -61,4 +61,12 @@ public sealed partial class ThermalRegulatorComponent : Component
     /// </summary>
     [DataField]
     public float ThermalRegulationTemperatureThreshold;
+
+    // Nightshade Start - Hydrakin
+    [DataField]
+    public bool ProcessWhileDead = true;
+
+    [DataField]
+    public bool ProcessWhileCrit = true;
+    // Nightshade End
 }

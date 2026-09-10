@@ -6,6 +6,7 @@
   - Arachnid
   # Nightshade
   - Avali
+  - Hydrakin
   # /Nightshade
   - Diona
   - Dwarf
@@ -66,3 +67,10 @@
 #  id: Vulpkanin
 #  name: species-name-vulpkanin
 #  text: "/ServerInfo/Guidebook/Mobs/Vulpkanin.xml"
+
+# Nightshade Start - Hydrakin
+- type: guideEntry
+  id: Hydrakin
+  name: species-name-hydrakin
+  text: "/ServerInfo/Guidebook/Mobs/Hydrakin.xml"
+# Nightshade End

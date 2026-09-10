@@ -21,6 +21,7 @@
     <GuideEntityEmbed Entity="MobDecapoid" Caption="Decapoid"/>
   <!-- Nightshade Start -->
     <GuideEntityEmbed Entity="AppearanceAvali" Caption="Avali"/>
+    <GuideEntityEmbed Entity="MobHydrakin" Caption="Hydrakin"/>
   <!-- Nightshade End -->
   </Box>
 </Document>

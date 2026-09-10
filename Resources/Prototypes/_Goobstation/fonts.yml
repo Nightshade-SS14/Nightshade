@@ -31,3 +31,9 @@
 - type: font
   id: MonospaceBold
   path: /Fonts/_Goobstation/NotoSansMono/NotoSansMono-Bold.ttf
+
+# Nightshade Start - Hydrakin
+- type: font
+  id: MinecraftEnchantment
+  path: /Fonts/unifont-17.0.03.otf
+# Nightshade End
