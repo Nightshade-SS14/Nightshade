@@ -5,10 +5,10 @@
   components:
   - type: Sprite
     drawdepth: WallTops
-    sprite: Structures/Windows/xenoborg.rsi
+    sprite: _Nightshade/Structures/Windows/xeno-resin-borg.rsi # Nightshade - respritening
   - type: Icon
-    sprite: Structures/Windows/xenoborg.rsi
+    sprite: _Nightshade/Structures/Windows/xeno-resin-borg.rsi # Nightshade - respritening
     state: full
   - type: IconSmooth
-    key: windows
+    key: walls
     base: xenoborg

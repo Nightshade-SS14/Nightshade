@@ -189,9 +189,9 @@
     convertTo: WallCosmicCult
   # </Trauma>
   - type: Sprite
-    sprite: Structures/Walls/clown.rsi
+    sprite: _Nightshade/Structures/Walls/bananium.rsi # Nightshade - respritening
   - type: Icon
-    sprite: Structures/Walls/clown.rsi
+    sprite: _Nightshade/Structures/Walls/bananium.rsi # Nightshade - respritening
   - type: Construction
     graph: Girder
     node: bananiumWall
@@ -237,9 +237,9 @@
     tags:
     - Structure
   - type: Sprite
-    sprite: Structures/Walls/meat.rsi
+    sprite: _Nightshade/Structures/Walls/meat.rsi # Nightshade - respritening
   - type: Icon
-    sprite: Structures/Walls/meat.rsi
+    sprite: _Nightshade/Structures/Walls/meat.rsi # Nightshade - respritening
   - type: Construction
     graph: Girder
     node: meatWall
@@ -359,9 +359,9 @@
     convertTo: WallCosmicCult
   # </Trauma>
   - type: Sprite
-    sprite: Structures/Walls/gold.rsi
+    sprite: _Nightshade/Structures/Walls/gold.rsi # Nightshade - respritening
   - type: Icon
-    sprite: Structures/Walls/gold.rsi
+    sprite: _Nightshade/Structures/Walls/gold.rsi # Nightshade - respritening
   - type: Construction
     graph: Girder
     node: goldWall
@@ -438,9 +438,9 @@
     convertTo: WallCosmicCult
   # </Trauma>
   - type: Sprite
-    sprite: Structures/Walls/plasma.rsi
+    sprite: _Nightshade/Structures/Walls/plasma.rsi # Nightshade - respritening
   - type: Icon
-    sprite: Structures/Walls/plasma.rsi
+    sprite: _Nightshade/Structures/Walls/plasma.rsi # Nightshade - respritening
   - type: Construction
     graph: Girder
     node: plasmaWall
@@ -518,9 +518,9 @@
     damagePenalty: 0.8
   # </Trauma>
   - type: Sprite
-    sprite: Structures/Walls/plastitanium.rsi
+    sprite: _Nightshade/Structures/Walls/plastitanium.rsi # Nightshade - respritening
   - type: Icon
-    sprite: Structures/Walls/plastitanium.rsi
+    sprite: _Nightshade/Structures/Walls/plastitanium.rsi # Nightshade - respritening
   - type: IconSmooth
     key: walls
     base: plastitanium
@@ -577,10 +577,10 @@
   components:
   - type: Sprite
     drawdepth: Walls
-    sprite: Structures/Walls/plastitanium_diagonal.rsi
+    sprite: _Nightshade/Structures/Walls/plastitanium-diagonal.rsi # Nightshade - respritening
     state: state0
   - type: Icon
-    sprite: Structures/Walls/plastitanium_diagonal.rsi
+    sprite: _Nightshade/Structures/Walls/plastitanium-diagonal.rsi # Nightshade - respritening
     state: state0
   - type: Damageable
     damageModifierSet: StructuralMetallicStrong
@@ -597,10 +597,10 @@
   components:
   - type: Sprite
     drawdepth: Walls
-    sprite: Structures/Walls/plastitanium_diagonal.rsi
+    sprite: _Nightshade/Structures/Walls/plastitanium-diagonal.rsi # Nightshade - respritening
     state: state0
   - type: Icon
-    sprite: Structures/Walls/plastitanium_diagonal.rsi
+    sprite: _Nightshade/Structures/Walls/plastitanium-diagonal.rsi # Nightshade - respritening
     state: state0
   - type: Destructible
     thresholds:
@@ -642,9 +642,9 @@
     convertTo: WallCosmicCult
   # </Trauma>
   - type: Sprite
-    sprite: _Trauma/Structures/Walls/solid.rsi # Trauma
+    sprite: _Nightshade/Structures/Walls/solid.rsi # Nightshade - respritening
   - type: Icon
-    sprite: _Trauma/Structures/Walls/solid.rsi # Trauma
+    sprite: _Nightshade/Structures/Walls/solid.rsi # Nightshade - respritening
     state: rgeneric
   - type: Construction
     graph: Girder
@@ -709,9 +709,9 @@
     convertTo: WallCosmicCult
   # </Trauma>
   - type: Sprite
-    sprite: Structures/Walls/solid_rust.rsi
+    sprite: _Nightshade/Structures/Walls/solid-rust.rsi # Nightshade - respritening
   - type: Icon
-    sprite: Structures/Walls/solid_rust.rsi
+    sprite: _Nightshade/Structures/Walls/solid-rust.rsi # Nightshade - respritening
     state: rgeneric
   - type: Construction
     graph: Girder
@@ -736,10 +736,10 @@
   # </Trauma>
   - type: Sprite
     drawdepth: Walls
-    sprite: Structures/Walls/reinforced_diagonal.rsi
+    sprite: _Nightshade/Structures/Walls/reinforced-diagonal.rsi # Nightshade - respritening
     state: state0
   - type: Icon
-    sprite: Structures/Walls/reinforced_diagonal.rsi
+    sprite: _Nightshade/Structures/Walls/reinforced-diagonal.rsi # Nightshade - respritening
     state: state0
   - type: Damageable
     damageModifierSet: StructuralMetallicStrong
@@ -837,9 +837,9 @@
   name: silver wall
   components:
   - type: Sprite
-    sprite: Structures/Walls/silver.rsi
+    sprite: _Nightshade/Structures/Walls/silver.rsi # Nightshade - respritening
   - type: Icon
-    sprite: Structures/Walls/silver.rsi
+    sprite: _Nightshade/Structures/Walls/silver.rsi # Nightshade - respritening
   - type: Construction
     graph: Girder
     node: silverWall
@@ -881,10 +881,10 @@
   # </Trauma>
   - type: Sprite
     drawdepth: Walls
-    sprite: Structures/Walls/shuttle_diagonal.rsi
+    sprite: _Nightshade/Structures/Walls/shuttle-diagonal.rsi # Nightshade - respritening
     state: state0
   - type: Icon
-    sprite: Structures/Walls/shuttle_diagonal.rsi
+    sprite: _Nightshade/Structures/Walls/shuttle-diagonal.rsi # Nightshade - respritening
     state: state0
   #- type: Reflect # Trauma - annoying, serves no purpose
   #  reflectProb: 1
@@ -969,9 +969,9 @@
   - type: RadiationBlocker
     resistance: 5
   - type: Sprite
-    sprite: Structures/Walls/shuttle.rsi
+    sprite: _Nightshade/Structures/Walls/shuttle.rsi # Nightshade - respritening
   - type: Icon
-    sprite: Structures/Walls/shuttle.rsi
+    sprite: _Nightshade/Structures/Walls/shuttle.rsi # Nightshade - respritening
     state: full
   - type: Construction
     graph: Girder
@@ -1024,13 +1024,13 @@
         Quantity: 2
   # </Trauma>
   - type: Sprite
-    sprite: _Trauma/Structures/Walls/solid.rsi # Trauma
+    sprite: _Nightshade/Structures/Walls/solid.rsi # Nightshade - respritening
   - type: WallReplacementMarker
   - type: Construction
     graph: Girder
     node: wall
   - type: Icon
-    sprite: _Trauma/Structures/Walls/solid.rsi # Trauma
+    sprite: _Nightshade/Structures/Walls/solid.rsi # Nightshade - respritening
   - type: RCDDeconstructable
     cost: 6
     delay: 8
@@ -1059,10 +1059,10 @@
   components:
   - type: Sprite
     drawdepth: Walls
-    sprite: Structures/Walls/solid_diagonal.rsi
+    sprite: _Nightshade/Structures/Walls/solid-diagonal.rsi # Nightshade - respritening
     state: state0
   - type: Icon
-    sprite: Structures/Walls/solid_diagonal.rsi
+    sprite: _Nightshade/Structures/Walls/solid-diagonal.rsi # Nightshade - respritening
     state: state0
   - type: Destructible
     thresholds:
@@ -1089,9 +1089,9 @@
     convertTo: WallCosmicCult
   # </Trauma>
   - type: Sprite
-    sprite: Structures/Walls/solid_rust.rsi
+    sprite: _Nightshade/Structures/Walls/solid-rust.rsi # Nightshade - respritening
   - type: Icon
-    sprite: Structures/Walls/solid_rust.rsi
+    sprite: _Nightshade/Structures/Walls/solid-rust.rsi # Nightshade - respritening
     state: full
   - type: Construction
     graph: Girder
@@ -1108,9 +1108,9 @@
   name: xenoborg wall
   components:
   - type: Sprite
-    sprite: Structures/Walls/xenoborg.rsi
+    sprite: _Nightshade/Structures/Walls/xenoborg.rsi # Nightshade - respritening
   - type: Icon
-    sprite: Structures/Walls/xenoborg.rsi
+    sprite: _Nightshade/Structures/Walls/xenoborg.rsi # Nightshade - respritening
   - type: IconSmooth
     key: walls
     base: xenoborg
@@ -1123,10 +1123,10 @@
   components:
   - type: Sprite
     drawdepth: Walls
-    sprite: Structures/Walls/xenoborg_diagonal.rsi
+    sprite: _Nightshade/Structures/Walls/xenoborg-diagonal.rsi # Nightshade - respritening
     state: state0
   - type: Icon
-    sprite: Structures/Walls/xenoborg_diagonal.rsi
+    sprite: _Nightshade/Structures/Walls/xenoborg-diagonal.rsi # Nightshade - respritening
     state: state0
 
 - type: entity
@@ -1135,9 +1135,9 @@
   name: uranium wall
   components:
   - type: Sprite
-    sprite: Structures/Walls/uranium.rsi
+    sprite: _Nightshade/Structures/Walls/uranium.rsi # Nightshade - respritening
   - type: Icon
-    sprite: Structures/Walls/uranium.rsi
+    sprite: _Nightshade/Structures/Walls/uranium.rsi # Nightshade - respritening
   - type: Construction
     graph: Girder
     node: uraniumWall
@@ -1180,9 +1180,9 @@
   description: The traditional greytide defense.
   components:
   - type: Sprite
-    sprite: Structures/Walls/wood.rsi
+    sprite: _Nightshade/Structures/Walls/wood.rsi # Nightshade - respritening
   - type: Icon
-    sprite: Structures/Walls/wood.rsi
+    sprite: _Nightshade/Structures/Walls/wood.rsi # Nightshade - respritening
   - type: Construction
     graph: Barricade
     node: woodWall
@@ -1219,9 +1219,9 @@
   - type: Damageable
     damageModifierSet: Web
   - type: Sprite
-    sprite: Structures/Walls/web.rsi
+    sprite: _Nightshade/Structures/Walls/web.rsi # Nightshade - respritening
   - type: Icon
-    sprite: Structures/Walls/web.rsi
+    sprite: _Nightshade/Structures/Walls/web.rsi # Nightshade - respritening
   - type: Destructible
     thresholds:
     - trigger:
@@ -1246,7 +1246,7 @@
     node: wall
 
 
-# Lavalend Walls
+# Lavaland Walls
 
 - type: entity
   parent: BaseWall
@@ -1608,9 +1608,9 @@
   - type: Wall
   - type: Sprite
     drawdepth: SmallObjects #so bullets pass 'through'
-    sprite: Structures/Walls/card.rsi
+    sprite: _Nightshade/Structures/Walls/card.rsi # Nightshade - respritening
   - type: Icon
-    sprite: Structures/Walls/card.rsi
+    sprite: _Nightshade/Structures/Walls/card.rsi # Nightshade - respritening
     state: full
   - type: Construction
     graph: Cardwall

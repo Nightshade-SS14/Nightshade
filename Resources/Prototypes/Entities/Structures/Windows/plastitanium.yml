@@ -57,12 +57,12 @@
   components:
   - type: Sprite
     drawdepth: WallTops
-    sprite: Structures/Windows/plastitanium_window.rsi
+    sprite: _Nightshade/Structures/Windows/window-plastitanium.rsi # Nightshade - respritening
   - type: Icon
-    sprite: Structures/Windows/plastitanium_window.rsi
+    sprite: _Nightshade/Structures/Windows/window-plastitanium.rsi # Nightshade - respritening
     state: full
   - type: IconSmooth
-    key: windows
+    key: walls
     base: ptwindow
   - type: Airtight
   - type: Fixtures
@@ -131,18 +131,18 @@
   components:
   - type: Sprite
     drawdepth: WallTops
-    sprite: Structures/Windows/plastitanium_window_diagonal.rsi
+    sprite: _Nightshade/Structures/Windows/window-diagonal-plastitanium.rsi # Nightshade - respritening
     state: state0
   - type: Tag
     tags:
     - Diagonal
     - Window
   - type: Icon
-    sprite: Structures/Windows/plastitanium_window_diagonal.rsi
+    sprite: _Nightshade/Structures/Windows/window-diagonal-plastitanium.rsi # Nightshade - respritening
     state: state0
   - type: IconSmooth
     mode: Diagonal
-    key: windows
+    key: walls
     base: state
   - type: Fixtures
     fixtures:
