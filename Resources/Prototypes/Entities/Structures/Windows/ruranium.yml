@@ -4,9 +4,9 @@
   name: reinforced uranium window
   components:
   - type: Sprite
-    sprite: Structures/Windows/reinforced_uranium_window.rsi
+    sprite: _Nightshade/Structures/Windows/window-uranium-reinf.rsi # Nightshade - respritening
   - type: Icon
-    sprite: Structures/Windows/reinforced_uranium_window.rsi
+    sprite: _Nightshade/Structures/Windows/window-uranium-reinf.rsi # Nightshade - respritening
     state: full
   - type: Damageable
     damageModifierSet: RGlass
@@ -110,7 +110,7 @@
   components:
   - type: Sprite
     drawdepth: WallTops
-    sprite: Structures/Windows/reinforced_uranium_diagonal.rsi
+    sprite: _Nightshade/Structures/Windows/window-diagonal-uranium-reinf.rsi # Nightshade - respritening
     state: state0
   - type: Tag
     tags:
@@ -118,10 +118,10 @@
     - Window
   - type: IconSmooth
     mode: Diagonal
-    key: windows
+    key: walls
     base: state
   - type: Icon
-    sprite: Structures/Windows/reinforced_uranium_diagonal.rsi
+    sprite: _Nightshade/Structures/Windows/window-diagonal-uranium-reinf.rsi # Nightshade - respritening
     state: state0
   - type: Fixtures
     fixtures:

@@ -4,9 +4,9 @@
   name: shuttle window
   components:
   - type: Sprite
-    sprite: Structures/Windows/shuttle_window.rsi
+    sprite: _Nightshade/Structures/Windows/window-shuttle.rsi # Nightshade - respritening
   - type: Icon
-    sprite: Structures/Windows/shuttle_window.rsi
+    sprite: _Nightshade/Structures/Windows/window-shuttle.rsi # Nightshade - respritening
     state: full
   - type: Repairable
     fuelCost: 15
@@ -62,7 +62,7 @@
   components:
   - type: Sprite
     drawdepth: WallTops
-    sprite: Structures/Windows/shuttle_window_diagonal.rsi
+    sprite: _Nightshade/Structures/Windows/window-diagonal-shuttle.rsi # Nightshade - respritening
     state: state0
   - type: Tag
     tags:
@@ -70,10 +70,10 @@
     - Window
   - type: IconSmooth
     mode: Diagonal
-    key: windows
+    key: walls
     base: state
   - type: Icon
-    sprite: Structures/Windows/shuttle_window_diagonal.rsi
+    sprite: _Nightshade/Structures/Windows/window-diagonal-shuttle.rsi # Nightshade - respritening
     state: state0
   - type: Fixtures
     fixtures:
