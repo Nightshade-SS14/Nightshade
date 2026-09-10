@@ -1,13 +1,15 @@
 - type: entity
   abstract: true # Trauma - xeno station wasn't cherry picked
+  # Nightshade - todo: figure out how to re-enable this
   parent: ReinforcedWindow
   id: XenoResinWindow
   name: resin window
   description: Transparent and hardened, yet slightly sticky to the touch.
   components:
   - type: Sprite
-    sprite: Structures/Windows/xeno_resin.rsi
+    sprite: _Nightshade/Structures/Windows/xeno-resin.rsi # Nightshade - respritening
   - type: Icon
-    sprite: Structures/Windows/xeno_resin.rsi
+    sprite: _Nightshade/Structures/Windows/xeno-resin.rsi # Nightshade - respritening
   - type: IconSmooth
+    key: walls
     base: xwindow
