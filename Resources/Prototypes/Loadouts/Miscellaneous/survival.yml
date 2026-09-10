@@ -22,6 +22,9 @@
     - Moth
     - Reptilian
     - Vulpkanin
+    # Nightshade Start - Hydrakin
+    - Hydrakin
+    # Nightshade End
 
 - type: loadoutEffectGroup
   id: EffectSpeciesVox

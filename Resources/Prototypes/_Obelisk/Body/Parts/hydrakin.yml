@@ -1,0 +1,146 @@
+# SPDX-License-Identifier: MPL-2.0
+
+# Nightshade - Hydrakin external organs adapted from the old body-part graph
+# to the current Trauma organ body system. Hydrakin has a physical tail organ,
+# following Nightshade's current Reptilian tail anatomy model.
+
+# Nightshade - Hydrakin uses chest_m/chest_f instead of torso_m/torso_f.
+- type: entity
+  id: OrganHydrakinTorsoSexed
+  abstract: true
+  components:
+  - type: Sprite
+    state: chest_m
+  - type: VisualOrgan
+    data:
+      state: chest_m
+    sexStateOverrides:
+      Male: chest_m
+      Female: chest_f
+
+- type: entity
+  id: PartHydrakin
+  parent: OrganBaseOrganic
+  name: hydrakin body part
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _Obelisk/Mobs/Species/Hydrakin/parts.rsi
+  - type: VisualOrgan
+    data:
+      sprite: _Obelisk/Mobs/Species/Hydrakin/parts.rsi
+  - type: VisualOrganMarkings
+    markingData:
+      group: Hydrakin
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: Fat
+        Quantity: 3
+      - ReagentId: AmmoniaBlood
+        Quantity: 10
+
+- type: entity
+  id: TorsoHydrakin
+  name: hydrakin torso
+  parent: [ OrganHydrakinTorsoSexed, OrganBaseTorso, PartHydrakin ]
+  components:
+  - type: Sprite
+    state: chest_m
+  - type: VisualOrganMarkings
+    markingData:
+      group: Hydrakin
+      layers:
+      - Chest
+      - Tail
+      - Overlay
+      - TailOverlay
+      - UndergarmentTop
+      - UndergarmentBottom
+      - Special
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: Fat
+        Quantity: 10
+      - ReagentId: AmmoniaBlood
+        Quantity: 20
+
+- type: entity
+  id: HeadHydrakin
+  name: hydrakin head
+  parent: [ OrganBaseHeadSexed, OrganBaseHead, PartHydrakin ]
+  components:
+  - type: Sprite
+    state: head_m
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: Fat
+        Quantity: 5
+      - ReagentId: AmmoniaBlood
+        Quantity: 10
+
+- type: entity
+  id: LeftArmHydrakin
+  name: left hydrakin arm
+  parent: [ OrganBaseArmLeft, PartHydrakin ]
+  components:
+  - type: Sprite
+    state: l_arm
+
+- type: entity
+  id: RightArmHydrakin
+  name: right hydrakin arm
+  parent: [ OrganBaseArmRight, PartHydrakin ]
+  components:
+  - type: Sprite
+    state: r_arm
+
+- type: entity
+  id: LeftHandHydrakin
+  name: left hydrakin hand
+  parent: [ OrganBaseHandLeft, PartHydrakin ]
+  components:
+  - type: Sprite
+    state: l_hand
+
+- type: entity
+  id: RightHandHydrakin
+  name: right hydrakin hand
+  parent: [ OrganBaseHandRight, PartHydrakin ]
+  components:
+  - type: Sprite
+    state: r_hand
+
+- type: entity
+  id: LeftLegHydrakin
+  name: left hydrakin leg
+  parent: [ OrganBaseLegLeft, PartHydrakin ]
+  components:
+  - type: Sprite
+    state: l_leg
+
+- type: entity
+  id: RightLegHydrakin
+  name: right hydrakin leg
+  parent: [ OrganBaseLegRight, PartHydrakin ]
+  components:
+  - type: Sprite
+    state: r_leg
+
+- type: entity
+  id: LeftFootHydrakin
+  name: left hydrakin foot
+  parent: [ OrganBaseFootLeft, PartHydrakin ]
+  components:
+  - type: Sprite
+    state: l_foot
+
+- type: entity
+  id: RightFootHydrakin
+  name: right hydrakin foot
+  parent: [ OrganBaseFootRight, PartHydrakin ]
+  components:
+  - type: Sprite
+    state: r_foot

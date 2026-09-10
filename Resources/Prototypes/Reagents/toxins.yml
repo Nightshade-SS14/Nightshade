@@ -535,7 +535,7 @@
       - !type:PopupMessage
         conditions:
         - !type:MetabolizerTypeCondition
-          type: [ Animal, Vox, Arachnid, Avali, Plant, Bloodsucker ] # Trauma - Plant, Bloodsucker # Nightshade - Avali
+          type: [ Animal, Vox, Arachnid, Plant, Bloodsucker, Avali, Hydrakin ] # Trauma - Plant, Bloodsucker # Nightshade - Avali, Hydrakin
           inverted: true
         type: Local
         visualType: MediumCaution
@@ -545,14 +545,14 @@
         probability: 0.1
         conditions:
         - !type:MetabolizerTypeCondition
-          type: [ Animal, Vox, Arachnid, Avali, Plant, Bloodsucker ] # Trauma, Bloodsucker # Nightshade - Avali
+          type: [ Animal, Vox, Arachnid, Plant, Bloodsucker, Avali, Hydrakin ] # Trauma, Bloodsucker # Nightshade - Avali, Hydrakin
           inverted: true
       - !type:InfectDisease
         probability: 0.02 # Nightshade - lowered from 0.05
         scaleProbability: false
         conditions:
         - !type:MetabolizerTypeCondition
-          type: [ Animal, Rat, Vox, Bloodsucker ] # Trauma, Bloodsucker # Nightshade - Animal, Avali
+          type: [ Animal, Rat, Vox, Bloodsucker, Avali, Hydrakin ] # Trauma, Bloodsucker # Nightshade - Animal, Avali, Hydrakin
           inverted: true
         - !type:ReagentCondition
           reagent: UncookedAnimalProteins
@@ -580,7 +580,7 @@
       - !type:AdjustReagent
         conditions:
         - !type:MetabolizerTypeCondition
-          type: [ Animal, Arachnid, Plant ] # Trauma - added Plant
+          type: [ Animal, Arachnid, Plant, Hydrakin ] # Trauma - added Plant; Nightshade - Hydrakin raw food
         reagent: Protein
         amount: 0.5
       - !type:AdjustReagent
