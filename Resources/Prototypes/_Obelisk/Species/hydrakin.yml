@@ -22,7 +22,6 @@
   voices:
   - UnisexHydrakin
 
-# Nightshade - Hydrakin marking limits adapted to the current organ/markings system.
 - type: markingsGroup
   parent: Undergarments
   id: Hydrakin

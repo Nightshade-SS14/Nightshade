@@ -1,4 +1,3 @@
-# Avali voice/emote content adapted from Starlight.
 # See LICENSE-Starlight.TXT.
 
 # --------------------------------------------------------------------------
@@ -185,10 +184,7 @@
     Chirp:
       collection: ResomiChirp
 
-# --------------------------------------------------------------------------
-# Avali-usable emotes missing from Nightshade
-# Starlight-only Felionoid/Resomi action icons intentionally omitted.
-# --------------------------------------------------------------------------
+
 
 - type: emote
   id: Purr

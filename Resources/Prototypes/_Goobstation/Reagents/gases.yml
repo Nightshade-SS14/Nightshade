@@ -16,7 +16,7 @@
         type: [ Slime ]
         inverted: true
       effects:
-      # Nightshade Start - Hydrakin
+      # Nightshade Start
       - !type:Oxygenate
         conditions:
         - !type:MetabolizerTypeCondition
@@ -36,7 +36,9 @@
           reagent: BZ
           min: 0.5
         - !type:MetabolizerTypeCondition
-          type: [ Cybernetic, Hydrakin ] # Nightshade - Hydrakin
+          # Nightshade Start
+          type: [ Cybernetic, Hydrakin ]
+          # Nightshade End
           inverted: true
         scaling: true
         ignoreResistances: true
@@ -49,7 +51,7 @@
         - !type:ReagentCondition
           reagent: BZ
           min: 0.3
-        # Nightshade Start - Hydrakin
+        # Nightshade Start
         - !type:MetabolizerTypeCondition
           type: [ Hydrakin ]
           inverted: true
@@ -84,7 +86,7 @@
         - !type:ReagentCondition
           reagent: BZ
           min: 0.5
-        # Nightshade Start - Hydrakin
+        # Nightshade Start
         - !type:MetabolizerTypeCondition
           type: [ Hydrakin ]
           inverted: true
@@ -101,7 +103,7 @@
         - !type:ReagentCondition
           reagent: BZ
           min: 1
-        # Nightshade Start - Hydrakin
+        # Nightshade Start
         - !type:MetabolizerTypeCondition
           type: [ Hydrakin ]
           inverted: true
@@ -115,7 +117,7 @@
         - !type:ReagentCondition
           reagent: BZ
           min: 1
-        # Nightshade Start - Hydrakin
+        # Nightshade Start
         - !type:MetabolizerTypeCondition
           type: [ Hydrakin ]
           inverted: true
@@ -132,7 +134,7 @@
         type: [ Slime ]
         inverted: true
       effects:
-      # Nightshade Start - Hydrakin
+      # Nightshade Start
       - !type:Oxygenate
         conditions:
         - !type:MetabolizerTypeCondition
@@ -166,7 +168,9 @@
           reagent: BZ
           min: 0.5
         - !type:MetabolizerTypeCondition
-          type: [ Cybernetic, Hydrakin ] # Nightshade - Hydrakin
+          # Nightshade Start
+          type: [ Cybernetic, Hydrakin ]
+          # Nightshade End
           inverted: true
         scaling: true
         ignoreResistances: true
@@ -209,7 +213,7 @@
         - !type:ReagentCondition
           reagent: BZ
           min: 0.5
-        # Nightshade Start - Hydrakin
+        # Nightshade Start
         - !type:MetabolizerTypeCondition
           type: [ Hydrakin ]
           inverted: true
@@ -226,7 +230,7 @@
         - !type:ReagentCondition
           reagent: BZ
           min: 1
-        # Nightshade Start - Hydrakin
+        # Nightshade Start
         - !type:MetabolizerTypeCondition
           type: [ Hydrakin ]
           inverted: true
@@ -240,7 +244,7 @@
         - !type:ReagentCondition
           reagent: BZ
           min: 1
-        # Nightshade Start - Hydrakin
+        # Nightshade Start
         - !type:MetabolizerTypeCondition
           type: [ Hydrakin ]
           inverted: true
@@ -262,7 +266,7 @@
   metabolisms:
     Bloodstream:
       effects:
-      # Nightshade Start - Hydrakin
+      # Nightshade Start
       - !type:Oxygenate
         conditions:
         - !type:MetabolizerTypeCondition
@@ -317,7 +321,7 @@
           min: 4
     Respiration:
       effects:
-      # Nightshade Start - Hydrakin
+      # Nightshade Start
       - !type:Oxygenate
         conditions:
         - !type:MetabolizerTypeCondition
@@ -381,7 +385,7 @@
   metabolisms:
     Bloodstream:
       effects:
-      # Nightshade Start - Hydrakin
+      # Nightshade Start
       - !type:Oxygenate
         conditions:
         - !type:MetabolizerTypeCondition
@@ -432,7 +436,7 @@
             Asphyxiation: 15
     Respiration:
       effects:
-      # Nightshade Start - Hydrakin
+      # Nightshade Start
       - !type:Oxygenate
         conditions:
         - !type:MetabolizerTypeCondition
@@ -460,7 +464,7 @@
         speedModifier: 1.6
       - !type:AddReagentToBlood
         conditions:
-        # Nightshade Start - Hydrakin
+        # Nightshade Start
         - !type:MetabolizerTypeCondition
           type: [ Hydrakin ]
           inverted: true
@@ -480,7 +484,7 @@
         time: 8
       - !type:HealthChange
         conditions:
-        # Nightshade Start - Hydrakin
+        # Nightshade Start
         - !type:MetabolizerTypeCondition
           type: [ Hydrakin ]
           inverted: true
@@ -506,7 +510,9 @@
         factor: 8
         conditions:
         - !type:MetabolizerTypeCondition
-          type: [ Human, Animal, Rat, Plant, Cybernetic, Hydrakin ] # Nightshade - Hydrakin
+          # Nightshade Start
+          type: [ Human, Animal, Rat, Plant, Cybernetic, Hydrakin ]
+          # Nightshade End
       # Convert Pluox into CO2.
       - !type:ModifyLungGas
         conditions:
@@ -541,7 +547,9 @@
         factor: 8
         conditions:
         - !type:MetabolizerTypeCondition
-          type: [ Human, Animal, Rat, Plant, Cybernetic, Hydrakin ] # Nightshade - Hydrakin
+          # Nightshade Start
+          type: [ Human, Animal, Rat, Plant, Cybernetic, Hydrakin ]
+          # Nightshade End
       # Convert Pluox into CO2.
       - !type:ModifyLungGas
         conditions:

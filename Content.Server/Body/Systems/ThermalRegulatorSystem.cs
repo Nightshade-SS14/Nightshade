@@ -46,15 +46,12 @@ public sealed partial class ThermalRegulatorSystem : EntitySystem
         }
     }
 
-    /// <summary>
-    /// Processes thermal regulation for a mob
-    /// </summary>
     private void ProcessThermalRegulation(Entity<ThermalRegulatorComponent, TemperatureComponent?> ent)
     {
         if (!Resolve(ent, ref ent.Comp2, logMissing: false))
             return;
 
-        // Nightshade Start - Hydrakin thermal state handling
+        // Nightshade Start
         if (TryComp<MobStateComponent>(ent, out var mobState))
         {
             if (!ent.Comp1.ProcessWhileDead && mobState.CurrentState == MobState.Dead)

@@ -145,7 +145,7 @@
     nameSegments:
     - NamesVox
 
-# Nightshade Start - Hydrakin
+# Nightshade Start
 - type: entity
   parent: MobHydrakin
   id: MobHydrakinRandom

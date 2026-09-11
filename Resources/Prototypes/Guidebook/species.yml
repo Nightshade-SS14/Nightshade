@@ -4,10 +4,10 @@
   text: "/ServerInfo/Guidebook/Mobs/Species.xml"
   children:
   - Arachnid
-  # Nightshade
+  # Nightshade Start
   - Avali
   - Hydrakin
-  # /Nightshade
+  # Nightshade End
   - Diona
   - Dwarf
   - Human
@@ -68,7 +68,7 @@
 #  name: species-name-vulpkanin
 #  text: "/ServerInfo/Guidebook/Mobs/Vulpkanin.xml"
 
-# Nightshade Start - Hydrakin
+# Nightshade Start
 - type: guideEntry
   id: Hydrakin
   name: species-name-hydrakin

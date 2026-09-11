@@ -2,10 +2,14 @@
   id: names_avali_first
   values:
     prefix: names-avali-first-dataset-
-    count: 100 # Nightshade
+    # Nightshade Start
+    count: 100
+    # Nightshade End
 
 - type: localizedDataset
   id: names_avali_packs
   values:
     prefix: names-avali-packs-dataset-
-    count: 40 # Nightshade
+    # Nightshade Start
+    count: 40
+    # Nightshade End

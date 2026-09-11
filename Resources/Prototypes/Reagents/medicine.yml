@@ -210,7 +210,7 @@
           Brute: -2
           Burn: -2
           Toxin: -2
-      # Nightshade Start - Hydrakin cryo response
+      # Nightshade Start
       - !type:ModifyStatusEffect
         conditions:
         - !type:MetabolizerTypeCondition
@@ -241,7 +241,7 @@
           damage:
             types:
              Cellular: -2
-        # Nightshade Start - Hydrakin cryo response
+        # Nightshade Start
         - !type:ModifyStatusEffect
           conditions:
           - !type:MetabolizerTypeCondition
@@ -566,7 +566,7 @@
         conditions:
         - !type:TemperatureCondition
           max: 293.15
-        # Nightshade Start - Hydrakin Leporazine
+        # Nightshade Start
         - !type:MetabolizerTypeCondition
           type: [ Hydrakin ]
           inverted: true
@@ -576,7 +576,7 @@
         conditions:
         - !type:TemperatureCondition
           min: 293.15
-        # Nightshade Start - Hydrakin Leporazine
+        # Nightshade Start
         - !type:MetabolizerTypeCondition
           type: [ Hydrakin ]
           inverted: true
@@ -590,7 +590,7 @@
       - !type:AdjustReagent
         reagent: Fresium
         amount: -5
-      # Nightshade Start - Hydrakin Leporazine
+      # Nightshade Start
       - !type:AdjustTemperature
         conditions:
         - !type:TemperatureCondition

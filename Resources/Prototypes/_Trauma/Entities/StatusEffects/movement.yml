@@ -64,7 +64,7 @@
   name: nitrium speedup
   # modifier set dynamically by the effect
 
-# Nightshade Start - Hydrakin
+# Nightshade Start
 - type: entity
   parent: StatusEffectSpeed
   id: NitrousStatusEffect
