@@ -1,0 +1,48 @@
+# See LICENSE-Starlight.TXT.
+
+- type: language
+  id: Scratch
+  speech:
+    color: "#fc7921"
+  obfuscation:
+    !type:SyllableObfuscation
+    minSyllables: 1
+    maxSyllables: 3
+    replacement:
+    - ka
+    - ki
+    - ko
+    - kha
+    - ra
+    - ri
+    - ru
+    - rei
+    - na
+    - ni
+    - no
+    - la
+    - li
+    - lo
+    - ma
+    - mi
+    - mo
+    - sa
+    - si
+    - so
+    - ta
+    - ti
+    - to
+    - ha
+    - hi
+    - ya
+    - yo
+    - ei
+    - ai
+    - ii
+
+- type: entity
+  parent: BaseLanguageKnowledge
+  id: LanguageScratch
+  components:
+  - type: LanguageKnowledge
+    languageId: Scratch

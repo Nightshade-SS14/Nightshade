@@ -1,0 +1,13 @@
+#Added by Nightshade
+
+- type: localizedDataset
+  id: NamesReptilianFirst
+  values:
+    prefix: names-reptilian-first-dataset-
+    count: 130
+
+- type: localizedDataset
+  id: NamesReptilianLast
+  values:
+    prefix: names-reptilian-last-dataset-
+    count: 100

@@ -1,0 +1,65 @@
+# SPDX-License-Identifier: MPL-2.0
+
+- type: entity
+  parent: BaseSpeciesAppearance
+  id: AppearanceHydrakin
+  categories: [ HideSpawnMenu ]
+  name: hydrakin appearance
+  components:
+  - type: Inventory
+    speciesId: hydrakin
+    templateId: hydrakin
+    displacements:
+      jumpsuit:
+        sizeMaps:
+          32:
+            sprite: _Obelisk/Mobs/Species/Hydrakin/displacement.rsi
+            state: jumpsuit
+      gloves:
+        sizeMaps:
+          32:
+            sprite: _Obelisk/Mobs/Species/Hydrakin/displacement.rsi
+            state: gloves
+      shoes:
+        sizeMaps:
+          32:
+            sprite: _Obelisk/Mobs/Species/Hydrakin/displacement.rsi
+            state: shoes
+      head:
+        sizeMaps:
+          32:
+            sprite: _Obelisk/Mobs/Species/Hydrakin/displacement.rsi
+            state: head
+      neck: # Goob
+        sizeMaps:
+          32:
+            sprite: _Obelisk/Mobs/Species/Hydrakin/displacement.rsi
+            state: neck
+      belt: # Goob
+        sizeMaps:
+          32:
+            sprite: _Obelisk/Mobs/Species/Hydrakin/displacement.rsi
+            state: belt
+  - type: InitialBody
+    organs:
+      Torso: TorsoHydrakin
+      Head: HeadHydrakin
+      ArmLeft: LeftArmHydrakin
+      ArmRight: RightArmHydrakin
+      HandLeft: LeftHandHydrakin
+      HandRight: RightHandHydrakin
+      LegLeft: LeftLegHydrakin
+      LegRight: RightLegHydrakin
+      FootLeft: LeftFootHydrakin
+      FootRight: RightFootHydrakin
+      Brain: OrganHydrakinBrain
+      Eyes: OrganHumanEyes
+      Tongue: OrganHumanTongue
+      Ears: OrganHumanEars
+      Lungs: OrganHydrakinLungs
+      Heart: OrganHydrakinHeart
+      Stomach: OrganHydrakinStomach
+      Liver: OrganHydrakinLiver
+      Kidneys: OrganHumanKidneys
+  - type: HumanoidProfile
+    species: Hydrakin

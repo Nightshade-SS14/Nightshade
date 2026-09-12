@@ -1,0 +1,70 @@
+- type: metabolizerType
+  id: Hydrakin
+  name: metabolizer-type-hydrakin
+
+# Nightshade Start
+
+- type: entity
+  id: BaseHydrakinOrgan
+  parent: OrganBaseOrganic
+  name: hydrakin organ
+  abstract: true
+  components:
+  - type: InternalChildOrgan
+  - type: Sprite
+    sprite: Mobs/Species/Human/organs.rsi
+
+
+- type: entity
+  parent: Solution
+  id: SolutionHydrakinStomach
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Solution
+    id: stomach
+    solution:
+      maxVol: 30
+
+- type: entity
+  id: OrganHydrakinStomach
+  parent: [ OrganBaseStomach, BaseHydrakinOrgan ]
+  name: hydrakin stomach
+  components:
+  - type: SolutionManager
+    solutions:
+    - SolutionHydrakinStomach
+  - type: Metabolizer
+    metabolizerTypes: [ Hydrakin, Animal ]
+
+- type: entity
+  id: OrganHydrakinBrain
+  parent: [ OrganBaseBrain, BaseHydrakinOrgan ]
+  name: hydrakin brain
+
+- type: entity
+  id: OrganHydrakinLiver
+  parent: [ OrganBaseLiver, BaseHydrakinOrgan ]
+  name: hydrakin liver
+  components:
+
+  - type: Metabolizer
+    metabolizerTypes: [ Human ]
+
+- type: entity
+  id: OrganHydrakinHeart
+  parent: [ OrganBaseHeart, BaseHydrakinOrgan ]
+  name: hydrakin heart
+  components:
+  - type: Metabolizer
+    metabolizerTypes: [ Hydrakin, Animal ]
+
+- type: entity
+  id: OrganHydrakinLungs
+  parent: [ OrganBaseLungs, BaseHydrakinOrgan ]
+  name: hydrakin lungs
+  description: "Hydrakin lungs, adapted to metabolize a wide range of gases."
+  components:
+  - type: Metabolizer
+    metabolizerTypes: [ Hydrakin ]
+
+# Nightshade End

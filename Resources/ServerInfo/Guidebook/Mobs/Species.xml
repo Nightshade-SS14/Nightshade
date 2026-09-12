@@ -18,6 +18,10 @@
   </Box>
   <Box>
     <GuideEntityEmbed Entity="AppearanceIPC" Caption="IPC"/>
-  <GuideEntityEmbed Entity="MobDecapoid" Caption="Decapoid"/>
+    <GuideEntityEmbed Entity="MobDecapoid" Caption="Decapoid"/>
+  <!-- Nightshade Start -->
+    <GuideEntityEmbed Entity="AppearanceAvali" Caption="Avali"/>
+    <GuideEntityEmbed Entity="MobHydrakin" Caption="Hydrakin"/>
+  <!-- Nightshade End -->
   </Box>
 </Document>

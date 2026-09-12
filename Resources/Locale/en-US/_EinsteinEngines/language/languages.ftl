@@ -133,3 +133,10 @@ language-NewKinPidgin-description = A debased dialect cobbled together by lower-
     While a primitive and clumsy attempt resulting in a dull, simplified mockery of their true language,
     higher-caste Vox can still discern meaning within the crude approximations.
     It sounds like chaotic shrieking to everyone else.
+
+# Nightshade Start
+language-Hydraspeak-name = Hy'drav'tha
+language-Hydraspeak-description =
+    A Mix of warbles, trills and chirps, with heavy tonal shifts and pitch changes make up this unusual language.
+    Due to the avian nature of hydrakin, one word can mean a million other things at the same time, which makes this language next to incomprehensible for even other birdlike races to figure out.
+# Nightshade End

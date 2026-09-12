@@ -210,6 +210,16 @@
           Brute: -2
           Burn: -2
           Toxin: -2
+      # Nightshade Start
+      - !type:ModifyStatusEffect
+        conditions:
+        - !type:MetabolizerTypeCondition
+          type: [ Hydrakin ]
+        - !type:TemperatureCondition
+          max: 213.0
+        effectProto: StatusEffectForcedSleeping
+        type: Add
+      # Nightshade End
 
 - type: reagent
   id: Doxarubixadone
@@ -231,6 +241,16 @@
           damage:
             types:
              Cellular: -2
+        # Nightshade Start
+        - !type:ModifyStatusEffect
+          conditions:
+          - !type:MetabolizerTypeCondition
+            type: [ Hydrakin ]
+          - !type:TemperatureCondition
+            max: 213.0
+          effectProto: StatusEffectForcedSleeping
+          type: Add
+        # Nightshade End
 
 - type: reagent
   id: Dermaline
@@ -546,11 +566,21 @@
         conditions:
         - !type:TemperatureCondition
           max: 293.15
+        # Nightshade Start
+        - !type:MetabolizerTypeCondition
+          type: [ Hydrakin ]
+          inverted: true
+        # Nightshade End
         amount: 1000000 # thermal energy, not temperature!
       - !type:AdjustTemperature
         conditions:
         - !type:TemperatureCondition
           min: 293.15
+        # Nightshade Start
+        - !type:MetabolizerTypeCondition
+          type: [ Hydrakin ]
+          inverted: true
+        # Nightshade End
         amount: -1000000
       - !type:PopupMessage
         type: Local
@@ -560,6 +590,15 @@
       - !type:AdjustReagent
         reagent: Fresium
         amount: -5
+      # Nightshade Start
+      - !type:AdjustTemperature
+        conditions:
+        - !type:TemperatureCondition
+          min: 215.15
+        - !type:MetabolizerTypeCondition
+          type: [ Hydrakin ]
+        amount: -75000
+      # Nightshade End
 
 - type: reagent
   id: Barozine
@@ -619,7 +658,9 @@
   plantMetabolism:
     - !type:PlantAdjustToxins
       amount: 6
-    - !type:PlantPhalanximine
+    - !type:PlantChangeTraits
+      trait: PlantTraitUnviable
+      type: Remove
       minScale: 4
   metabolisms:
     Bloodstream:
@@ -1504,7 +1545,7 @@
   flavor: medicine
   color: "#baa15d"
   metabolisms:
-    Bloodstream:
+    Digestion:
       effects:
       # <Trauma>
       - !type:HealthChange

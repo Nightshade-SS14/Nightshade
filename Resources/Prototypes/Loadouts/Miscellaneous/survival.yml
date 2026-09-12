@@ -6,7 +6,9 @@
     species:
     - SlimePerson
     - Vox
-
+    # Nightshade Start
+    - Avali
+    # Nightshade End
 - type: loadoutEffectGroup
   id: OxygenBreather
   effects:
@@ -22,6 +24,9 @@
     - Moth
     - Reptilian
     - Vulpkanin
+    # Nightshade Start
+    - Hydrakin
+    # Nightshade End
 
 - type: loadoutEffectGroup
   id: EffectSpeciesVox

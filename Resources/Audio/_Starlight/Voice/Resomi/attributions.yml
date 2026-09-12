@@ -1,0 +1,30 @@
+# These five repository files were introduced together in Starlight commit
+# 901fa76a4a2 with the xeno-canto attribution below. Starlight's original
+# attribution block listed the source filenames BirdChirp.ogg, BirdGiggle.ogg,
+# BirdSquawk.ogg, BirdSting.ogg, and HighBirdCall.ogg rather than the repository
+# filenames used here.
+- files:
+  - resomi_call_1.ogg
+  - resomi_call_2.ogg
+  - resomi_scree_1.ogg
+  - resomi_scree_2.ogg
+  - resomi_squawk_1.ogg
+  license: "CC-BY-SA-3.0"
+  copyright: "Taken from public wildlife sound library xeno-canto.org"
+  source: "https://xeno-canto.org"
+
+- files:
+  - resomi_chirp1.ogg
+  - resomi_chirp2.ogg
+  - resomi_chirp3.ogg
+  - resomi_chirp4.ogg
+  - resomi_chirp5.ogg
+  copyright: "Bird Chirps by whiskeyecho, Taken from https://freesound.org/"
+  license: "CC0-1.0"
+  source: https://freesound.org/s/727256/
+
+- files:
+  - resomi_whistle.ogg
+  copyright: "CanaryArtie-3.wav by ReadeOnly, Taken from https://freesound.org/"
+  license: "CC0-1.0"
+  source: https://freesound.org/s/85403/

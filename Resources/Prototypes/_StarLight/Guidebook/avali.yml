@@ -1,0 +1,6 @@
+# See LICENSE-Starlight.TXT.
+
+- type: guideEntry
+  id: Avali
+  name: species-name-avali
+  text: "/ServerInfo/_Starlight/Guidebook/Mobs/Avali.xml"

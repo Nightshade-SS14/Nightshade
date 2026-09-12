@@ -7,6 +7,7 @@
   whitelist:
     tags:
     - ReptilianEmotes
+    - Avali
   blacklist:
     components:
     - BorgChassis

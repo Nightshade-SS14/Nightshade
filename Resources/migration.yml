@@ -164,11 +164,6 @@ TaskJug: Jug
 
 # 2026-08-24
 LightReplacerEmpty: LightReplacer
-
-# 2026-08-30
-MachinePowerTransmissionLaser: null
-MachinePowerTransmissionLaserCrate: null
-MachinePowerTransmissionLaserFlatpack: null
 # </Trauma>
 
 # Goobstation - Submarine from DeltaV
@@ -1269,3 +1264,9 @@ LightReplacer: LightReplacerFilled
 
 #2026-08-18
 DrinkNeurotoxinGlass: null
+
+#2026-08-31
+DrinkWaterJug: JugWater
+
+#2026-09-05
+AsimovCircuitBoard: CrewsimovCircuitBoard

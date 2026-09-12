@@ -16,6 +16,12 @@
         type: [ Slime ]
         inverted: true
       effects:
+      # Nightshade Start
+      - !type:Oxygenate
+        conditions:
+        - !type:MetabolizerTypeCondition
+          type: [ Hydrakin ]
+      # Nightshade End
       - !type:Emote
         conditions:
         - !type:ReagentCondition
@@ -30,7 +36,9 @@
           reagent: BZ
           min: 0.5
         - !type:MetabolizerTypeCondition
-          type: [ Cybernetic ]
+          # Nightshade Start
+          type: [ Cybernetic, Hydrakin ]
+          # Nightshade End
           inverted: true
         scaling: true
         ignoreResistances: true
@@ -43,6 +51,11 @@
         - !type:ReagentCondition
           reagent: BZ
           min: 0.3
+        # Nightshade Start
+        - !type:MetabolizerTypeCondition
+          type: [ Hydrakin ]
+          inverted: true
+        # Nightshade End
         effectProto: StatusEffectSeeingRainbow
         type: Add
         time: 150
@@ -51,6 +64,9 @@
         - !type:ReagentCondition
           reagent: BZ
           min: 0.2
+        - !type:MetabolizerTypeCondition
+          type: [ Hydrakin ]
+          inverted: true
         emote: Laugh
         showInChat: true
         probability: 0.1
@@ -59,6 +75,9 @@
         - !type:ReagentCondition
           reagent: BZ
           min: 0.2
+        - !type:MetabolizerTypeCondition
+          type: [ Hydrakin ]
+          inverted: true
         emote: Scream
         showInChat: true
         probability: 0.01
@@ -67,6 +86,11 @@
         - !type:ReagentCondition
           reagent: BZ
           min: 0.5
+        # Nightshade Start
+        - !type:MetabolizerTypeCondition
+          type: [ Hydrakin ]
+          inverted: true
+        # Nightshade End
         - !type:ReagentCondition
           reagent: NitrosylPlasmide
           max: 0.1
@@ -79,6 +103,11 @@
         - !type:ReagentCondition
           reagent: BZ
           min: 1
+        # Nightshade Start
+        - !type:MetabolizerTypeCondition
+          type: [ Hydrakin ]
+          inverted: true
+        # Nightshade End
         - !type:ReagentCondition
           reagent: NitrosylPlasmide
           max: 0.1
@@ -88,6 +117,11 @@
         - !type:ReagentCondition
           reagent: BZ
           min: 1
+        # Nightshade Start
+        - !type:MetabolizerTypeCondition
+          type: [ Hydrakin ]
+          inverted: true
+        # Nightshade End
         - !type:ReagentCondition
           reagent: NitrosylPlasmide
           max: 0.1
@@ -100,11 +134,31 @@
         type: [ Slime ]
         inverted: true
       effects:
+      # Nightshade Start
+      - !type:Oxygenate
+        conditions:
+        - !type:MetabolizerTypeCondition
+          type: [ Hydrakin ]
+      - !type:HealthChange
+        conditions:
+        - !type:MetabolizerTypeCondition
+          type: [ Hydrakin ]
+        - !type:ReagentCondition
+          reagent: BZ
+          min: 0.5
+        damage:
+          types:
+            Cellular: -0.5
+            Poison: -2.0
+      # Nightshade End
       - !type:Emote
         conditions:
         - !type:ReagentCondition
           reagent: BZ
           min: 0.2
+        - !type:MetabolizerTypeCondition
+          type: [ Hydrakin ]
+          inverted: true
         emote: Cough
         showInChat: true
         probability: 0.1
@@ -114,7 +168,9 @@
           reagent: BZ
           min: 0.5
         - !type:MetabolizerTypeCondition
-          type: [ Cybernetic ]
+          # Nightshade Start
+          type: [ Cybernetic, Hydrakin ]
+          # Nightshade End
           inverted: true
         scaling: true
         ignoreResistances: true
@@ -135,6 +191,9 @@
         - !type:ReagentCondition
           reagent: BZ
           min: 0.2
+        - !type:MetabolizerTypeCondition
+          type: [ Hydrakin ]
+          inverted: true
         emote: Laugh
         showInChat: true
         probability: 0.1
@@ -143,6 +202,9 @@
         - !type:ReagentCondition
           reagent: BZ
           min: 0.2
+        - !type:MetabolizerTypeCondition
+          type: [ Hydrakin ]
+          inverted: true
         emote: Scream
         showInChat: true
         probability: 0.01
@@ -151,6 +213,11 @@
         - !type:ReagentCondition
           reagent: BZ
           min: 0.5
+        # Nightshade Start
+        - !type:MetabolizerTypeCondition
+          type: [ Hydrakin ]
+          inverted: true
+        # Nightshade End
         - !type:ReagentCondition
           reagent: NitrosylPlasmide
           max: 0.1
@@ -163,6 +230,11 @@
         - !type:ReagentCondition
           reagent: BZ
           min: 1
+        # Nightshade Start
+        - !type:MetabolizerTypeCondition
+          type: [ Hydrakin ]
+          inverted: true
+        # Nightshade End
         - !type:ReagentCondition
           reagent: NitrosylPlasmide
           max: 0.1
@@ -172,6 +244,11 @@
         - !type:ReagentCondition
           reagent: BZ
           min: 1
+        # Nightshade Start
+        - !type:MetabolizerTypeCondition
+          type: [ Hydrakin ]
+          inverted: true
+        # Nightshade End
         - !type:ReagentCondition
           reagent: NitrosylPlasmide
           max: 0.1
@@ -189,6 +266,12 @@
   metabolisms:
     Bloodstream:
       effects:
+      # Nightshade Start
+      - !type:Oxygenate
+        conditions:
+        - !type:MetabolizerTypeCondition
+          type: [ Hydrakin ]
+      # Nightshade End
       - !type:EvenHealthChange
         conditions:
         - !type:ReagentCondition
@@ -238,6 +321,12 @@
           min: 4
     Respiration:
       effects:
+      # Nightshade Start
+      - !type:Oxygenate
+        conditions:
+        - !type:MetabolizerTypeCondition
+          type: [ Hydrakin ]
+      # Nightshade End
       - !type:EvenHealthChange
         conditions:
         - !type:ReagentCondition
@@ -296,6 +385,12 @@
   metabolisms:
     Bloodstream:
       effects:
+      # Nightshade Start
+      - !type:Oxygenate
+        conditions:
+        - !type:MetabolizerTypeCondition
+          type: [ Hydrakin ]
+      # Nightshade End
       - !type:NitriumMovespeedModifier
         conditions:
         - !type:ReagentCondition
@@ -341,6 +436,12 @@
             Asphyxiation: 15
     Respiration:
       effects:
+      # Nightshade Start
+      - !type:Oxygenate
+        conditions:
+        - !type:MetabolizerTypeCondition
+          type: [ Hydrakin ]
+      # Nightshade End
       - !type:NitriumMovespeedModifier
         conditions:
         - !type:ReagentCondition
@@ -363,6 +464,11 @@
         speedModifier: 1.6
       - !type:AddReagentToBlood
         conditions:
+        # Nightshade Start
+        - !type:MetabolizerTypeCondition
+          type: [ Hydrakin ]
+          inverted: true
+        # Nightshade End
         - !type:ReagentCondition
           reagent: Nitrium
           min: 6
@@ -378,6 +484,11 @@
         time: 8
       - !type:HealthChange
         conditions:
+        # Nightshade Start
+        - !type:MetabolizerTypeCondition
+          type: [ Hydrakin ]
+          inverted: true
+        # Nightshade End
         - !type:ReagentCondition
           reagent: Nitrium
           min: 10
@@ -399,7 +510,9 @@
         factor: 8
         conditions:
         - !type:MetabolizerTypeCondition
-          type: [ Human, Animal, Rat, Plant, Cybernetic ]
+          # Nightshade Start
+          type: [ Human, Animal, Rat, Plant, Cybernetic, Hydrakin ]
+          # Nightshade End
       # Convert Pluox into CO2.
       - !type:ModifyLungGas
         conditions:
@@ -434,7 +547,9 @@
         factor: 8
         conditions:
         - !type:MetabolizerTypeCondition
-          type: [ Human, Animal, Rat, Plant, Cybernetic ]
+          # Nightshade Start
+          type: [ Human, Animal, Rat, Plant, Cybernetic, Hydrakin ]
+          # Nightshade End
       # Convert Pluox into CO2.
       - !type:ModifyLungGas
         conditions:

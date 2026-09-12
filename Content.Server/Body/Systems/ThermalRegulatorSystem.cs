@@ -4,6 +4,9 @@ using Content.Shared.ActionBlocker;
 using Content.Shared.Temperature.Components;
 using Robust.Shared.Timing;
 
+using Content.Shared.Mobs;
+using Content.Shared.Mobs.Components;
+
 namespace Content.Server.Body.Systems;
 
 public sealed partial class ThermalRegulatorSystem : EntitySystem
@@ -43,13 +46,21 @@ public sealed partial class ThermalRegulatorSystem : EntitySystem
         }
     }
 
-    /// <summary>
-    /// Processes thermal regulation for a mob
-    /// </summary>
     private void ProcessThermalRegulation(Entity<ThermalRegulatorComponent, TemperatureComponent?> ent)
     {
         if (!Resolve(ent, ref ent.Comp2, logMissing: false))
             return;
+
+        // Nightshade Start
+        if (TryComp<MobStateComponent>(ent, out var mobState))
+        {
+            if (!ent.Comp1.ProcessWhileDead && mobState.CurrentState == MobState.Dead)
+                return;
+
+            if (!ent.Comp1.ProcessWhileCrit && mobState.CurrentState == MobState.Critical)
+                return;
+        }
+        // Nightshade End
 
         // TODO: Why do we have two datafields for this if they are only ever used once here?
         var totalMetabolismTempChange = ent.Comp1.MetabolismHeat - ent.Comp1.RadiatedHeat;

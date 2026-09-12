@@ -1,0 +1,26 @@
+# See LICENSE-Starlight.TXT.
+
+- type: species
+  id: Avali
+  name: species-name-avali
+  roundStart: true
+  prototype: MobAvali
+  defaultSkinTone: "#D2B48C"
+  dollPrototype: AppearanceAvali
+  skinColoration: Hues
+  maleFirstNames: names_avali_first
+  femaleFirstNames: names_avali_first
+  lastNames: names_avali_packs
+  naming: FirstLast
+  knowledge: Avali
+  defaultSoundsBySex:
+  - MaleAvali
+  - FemaleAvali
+  - MaleAvali
+  voices:
+  - MaleAvali
+  - FemaleAvali
+  minAge: 20
+  youngAge: 100
+  oldAge: 250
+  maxAge: 350

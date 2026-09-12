@@ -14,7 +14,7 @@
   maleFirstNames: IpcFirst
   femaleFirstNames: IpcFirst
   lastNames: IpcLast
-  naming: FirstDashLast
+  naming: FirstLast # Nightshade
   sexes:
   - Unsexed
   knowledge: IPC
