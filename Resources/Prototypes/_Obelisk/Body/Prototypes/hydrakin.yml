@@ -1,7 +1,5 @@
 # SPDX-License-Identifier: MPL-2.0
 
-# Nightshade - adapted from Hydrakin's old BodyPrototype graph to the current
-# Trauma InitialBody/organ architecture.
 - type: entity
   parent: BaseSpeciesAppearance
   id: AppearanceHydrakin

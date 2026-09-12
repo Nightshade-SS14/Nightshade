@@ -16,7 +16,7 @@
       - !type:Oxygenate
         conditions:
         - !type:MetabolizerTypeCondition
-          type: [ Human, Animal, Rat, Plant, Arachnid, Cybernetic, Hydrakin ] # Trauma - added Cybernetic; Nightshade - Hydrakin
+          type: [ Human, Animal, Rat, Plant, Arachnid, Cybernetic, Hydrakin ] # Trauma - added Cybernetic / Nightshade added - Hydrakin
       # Convert Oxygen into CO2.
       - !type:ModifyLungGas
         conditions:
@@ -57,7 +57,7 @@
       - !type:Oxygenate
         conditions:
         - !type:MetabolizerTypeCondition
-          type: [ Human, Animal, Rat, Plant, Arachnid, Moth, Cybernetic, Hydrakin ] # Goob - add Cybernetic; Nightshade - Hydrakin
+          type: [ Human, Animal, Rat, Plant, Arachnid, Moth, Cybernetic, Hydrakin ] # Goob - add Cybernetic / Nightshade added - Hydrakin
       # Convert Oxygen into CO2.
       - !type:ModifyLungGas
         conditions:
@@ -156,7 +156,7 @@
       - !type:HealthChange
         conditions:
         - !type:MetabolizerTypeCondition # Goob
-          type: [ Plasmaman, Cybernetic, Hydrakin ] # Nightshade - Hydrakin
+          type: [ Plasmaman, Cybernetic, Hydrakin ] # Nightshade added - Hydrakin
           inverted: true
         ignoreResistances: true
         damage:
@@ -170,7 +170,7 @@
         - !type:MetabolizerTypeCondition
           type: [ Plasmaman ]
           inverted: true
-        # Nightshade Start - Hydrakin
+        # Nightshade Start
         - !type:MetabolizerTypeCondition
           type: [ Hydrakin ]
           inverted: true
@@ -187,7 +187,7 @@
         conditions:
         - !type:MetabolizerTypeCondition
           type: [ Plasmaman ]
-      # Nightshade Start - Hydrakin
+      # Nightshade Start
       - !type:Oxygenate
         factor: 4
         conditions:
@@ -211,7 +211,7 @@
           types:
             Poison:
               0.5
-      # Nightshade Start - Hydrakin
+      # Nightshade Start
       - !type:HealthChange
         conditions:
         - !type:MetabolizerTypeCondition
@@ -261,7 +261,9 @@
       - !type:HealthChange # Goob - cybernetic lungs take less damage from breathing trit
         conditions:
         - !type:MetabolizerTypeCondition
-          type: [ Cybernetic, Hydrakin ] # Nightshade - Hydrakin
+          # Nightshade Start
+          type: [ Cybernetic, Hydrakin ]
+          # Nightshade End
           inverted: true
         damage:
           types:
@@ -275,7 +277,7 @@
             Radiation: 1.5
     Respiration:
       effects:
-      # Nightshade Start - Hydrakin
+      # Nightshade Start
       - !type:Oxygenate
         conditions:
         - !type:MetabolizerTypeCondition
@@ -284,7 +286,7 @@
       - !type:HealthChange
         conditions:
         - !type:MetabolizerTypeCondition # Shitmed
-          type: [ Cybernetic, Hydrakin ] # Nightshade - Hydrakin
+          type: [ Cybernetic, Hydrakin ] # Nightshade added - Hydrakin
           inverted: true
         ignoreResistances: true
         damage:
@@ -297,7 +299,7 @@
         minScale: 1.5
         clear: True
         time: 5
-        # Nightshade Start - Hydrakin
+        # Nightshade Start
         conditions:
         - !type:MetabolizerTypeCondition
           type: [ Hydrakin ]
@@ -313,7 +315,7 @@
           types:
             Radiation:
               0.5
-      # Nightshade Start - Hydrakin
+      # Nightshade Start
       - !type:HealthChange
         conditions:
         - !type:MetabolizerTypeCondition
@@ -366,7 +368,7 @@
         minScale: 0.5
         conditions:
         - !type:MetabolizerTypeCondition
-          type: [ Plant, Vox, Cybernetic, Hydrakin ] # Goob - added Cybernetic; Nightshade - Hydrakin
+          type: [ Plant, Vox, Cybernetic, Hydrakin ] # Goob - added Cybernetic / Nightshade added - Hydrakin
           inverted: true
         # Don't want people to get toxin damage from the gas they just
         # exhaled, right?
@@ -378,7 +380,7 @@
       - !type:Oxygenate # carbon dioxide displaces oxygen from the bloodstream, causing asphyxiation
         conditions:
         - !type:MetabolizerTypeCondition
-          type: [ Plant, Cybernetic, Hydrakin ] # Goob - added Cybernetic; Nightshade - Hydrakin
+          type: [ Plant, Cybernetic, Hydrakin ] # Goob - added Cybernetic / Nightshade added - Hydrakin
           inverted: true
         factor: -4
       # We need a metabolism effect on reagent removal
@@ -406,7 +408,7 @@
       - !type:Oxygenate
         conditions:
         - !type:MetabolizerTypeCondition
-          type: [ Vox, Slime, Cybernetic, Hydrakin ] # Goob - added Cybernetic; Nightshade - Hydrakin
+          type: [ Vox, Slime, Cybernetic, Hydrakin ] # Goob - added Cybernetic / Nightshade added - Hydrakin
       # Converts Nitrogen into Ammonia
       - !type:ModifyLungGas
         conditions:
@@ -448,7 +450,7 @@
             Poison: 1
     Respiration:
       effects:
-      # Nightshade Start - Hydrakin
+      # Nightshade Start
       - !type:Oxygenate
         conditions:
         - !type:MetabolizerTypeCondition
@@ -485,7 +487,9 @@
           reagent: NitrosylPlasmide
           max: 0.1
         - !type:MetabolizerTypeCondition
-          type: [ Slime, Cybernetic, Hydrakin ] # Goob - added Cybernetic; Nightshade - Hydrakin
+          # Nightshade Start
+          type: [ Slime, Cybernetic, Hydrakin ] # Goob - added Cybernetic
+          # Nightshade End
           inverted: true
         type: Local
         visualType: Medium
@@ -498,7 +502,7 @@
           reagent: NitrosylPlasmide
           max: 0.1
         - !type:MetabolizerTypeCondition
-          type: [ Slime, Cybernetic, Hydrakin ] # Goob - added Cybernetic; Nightshade - Hydrakin
+          type: [ Slime, Cybernetic, Hydrakin ] # Goob - added Cybernetic / Nightshade added - Hydrakin
           inverted: true
         walkSpeedModifier: 0.65
         sprintSpeedModifier: 0.65
@@ -509,7 +513,7 @@
           reagent: NitrosylPlasmide
           max: 0.1
         - !type:MetabolizerTypeCondition
-          type: [ Slime, Cybernetic, Hydrakin ] # Goob - added Cybernetic; Nightshade - Hydrakin
+          type: [ Slime, Cybernetic, Hydrakin ] # Goob - added Cybernetic / Nightshade added - Hydrakin
           inverted: true
         effectProto: StatusEffectForcedSleeping
         time: 3
@@ -518,7 +522,7 @@
         minScale: 3.5
         conditions:
         - !type:MetabolizerTypeCondition
-          type: [ Slime, Cybernetic, Hydrakin ] # Goob - added Cybernetic; Nightshade - Hydrakin
+          type: [ Slime, Cybernetic, Hydrakin ] # Goob - added Cybernetic / Nightshade added - Hydrakin
           inverted: true
         ignoreResistances: true
         scaling: true
@@ -567,7 +571,7 @@
         minScale: 2
     Respiration:
       effects:
-      # Nightshade Start - Hydrakin
+      # Nightshade Start
       - !type:Oxygenate
         conditions:
         - !type:MetabolizerTypeCondition
@@ -589,7 +593,7 @@
       - !type:HealthChange
         conditions: # Goob
         - !type:MetabolizerTypeCondition
-          type: [ Cybernetic, Hydrakin ] # Nightshade - Hydrakin
+          type: [ Cybernetic, Hydrakin ] # Nightshade added - Hydrakin
           inverted: true
         - !type:ReagentCondition
           reagent: Frezon
@@ -614,7 +618,7 @@
             Cellular: 0.025
       - !type:ModifyStatusEffect
         minScale: 1
-        # Nightshade Start - Hydrakin
+        # Nightshade Start
         conditions:
         - !type:MetabolizerTypeCondition
           type: [ Hydrakin ]
@@ -626,7 +630,7 @@
       - !type:Drunk
         boozePower: 500
         minScale: 1
-        # Nightshade Start - Hydrakin
+        # Nightshade Start
         conditions:
         - !type:MetabolizerTypeCondition
           type: [ Hydrakin ]
@@ -637,7 +641,7 @@
         messages: [ "frezon-lungs-cold" ]
         probability: 0.1
         minScale: 1
-        # Nightshade Start - Hydrakin
+        # Nightshade Start
         conditions:
         - !type:MetabolizerTypeCondition
           type: [ Hydrakin ]
@@ -649,13 +653,13 @@
         messages: [ "frezon-euphoric" ]
         probability: 0.1
         minScale: 1
-        # Nightshade Start - Hydrakin
+        # Nightshade Start
         conditions:
         - !type:MetabolizerTypeCondition
           type: [ Hydrakin ]
           inverted: true
         # Nightshade End
-      # Nightshade Start - Hydrakin
+      # Nightshade Start
       - !type:AdjustTemperature
         conditions:
         - !type:ReagentCondition

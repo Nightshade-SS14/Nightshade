@@ -1,4 +1,3 @@
-# Avali body adapted from Starlight to Nightshade/Trauma's organ body system.
 # See LICENSE-Starlight.TXT.
 
 - type: markingsGroup
@@ -85,8 +84,7 @@
             sprite: _Starlight/Mobs/Species/Avali/displacement.rsi
             state: gloves
 
-  # Starlight's old inventory implementation called this displacement "hand".
-  # Nightshade handles held-item displacement through Hands instead.
+
   - type: Hands
     leftHandDisplacement:
       sizeMaps:
@@ -378,8 +376,7 @@
       sprite: _Starlight/Mobs/Species/Avali/parts.rsi
       state: eyes
 
-# Avali use the existing humanoid tongue/appendix/ear sprites because the
-# Avali organ RSI has no dedicated states for these.
+
 
 - type: entity
   parent: [ OrganBaseTongue, OrganSpriteHumanInternal ]
@@ -393,9 +390,7 @@
   parent: [ OrganBaseEars, OrganSpriteHumanInternal ]
   id: OrganAvaliEars
 
-# Starlight's Avali lungs accept Resomi + Human metabolism.
-# We deliberately use the existing Human respiratory type instead of
-# importing Resomi as a species dependency.
+
 
 - type: entity
   parent: [ OrganBaseLungs, OrganAvaliInternal ]
@@ -419,7 +414,9 @@
       - Pill
       - Crayon
       - Paper
-    isSpecialDigestibleExclusive: true # Nightshade - making avali carnivorous
+    # Nightshade Start
+    isSpecialDigestibleExclusive: true
+    # Nightshade End
 
 - type: entity
   parent: [ OrganBaseLiver, OrganSpriteHumanInternal, OrganAvaliInternal, OrganAvaliMetabolizer ]

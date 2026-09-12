@@ -602,9 +602,7 @@
   - sprite: _Starlight/Mobs/Customization/Avali/avali_parts.rsi
     state: tail_chevrontailtip
 
-# Avali eye markings adapted from Starlight's tattoos.yml.
-# Starlight's markingCategory/speciesRestriction fields are replaced with
-# Nightshade's bodyPart/groupWhitelist model.
+
 
 - type: marking
   id: AvaliTattooEyeLeft

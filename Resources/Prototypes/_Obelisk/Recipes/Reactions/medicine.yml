@@ -1,5 +1,3 @@
-# Hydrakin dependency adapted from OmuStation for Nightshade.
-
 - type: reaction
   id: Peranol
   reactants:

@@ -134,7 +134,7 @@ language-NewKinPidgin-description = A debased dialect cobbled together by lower-
     higher-caste Vox can still discern meaning within the crude approximations.
     It sounds like chaotic shrieking to everyone else.
 
-# Nightshade Start - Hydrakin
+# Nightshade Start
 language-Hydraspeak-name = Hy'drav'tha
 language-Hydraspeak-description =
     A Mix of warbles, trills and chirps, with heavy tonal shifts and pitch changes make up this unusual language.

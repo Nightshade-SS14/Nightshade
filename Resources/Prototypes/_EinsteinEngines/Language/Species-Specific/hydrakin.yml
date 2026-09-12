@@ -1,4 +1,5 @@
 # Spoken by Hydrakin. Have fun.
+
 - type: language
   id: Hydraspeak
   isVisibleLanguage: true
@@ -52,7 +53,7 @@
     - ∴
     - ⨅
 
-# Nightshade - Trauma knowledge bridge for Hydraspeak.
+
 - type: entity
   parent: BaseLanguageKnowledge
   id: LanguageHydraspeak

@@ -2,9 +2,8 @@
   id: Hydrakin
   name: metabolizer-type-hydrakin
 
-# Nightshade Start - Hydrakin organ modernization
+# Nightshade Start
 
-# Modern organic/internal organ base for Hydrakin organs.
 - type: entity
   id: BaseHydrakinOrgan
   parent: OrganBaseOrganic
@@ -15,8 +14,7 @@
   - type: Sprite
     sprite: Mobs/Species/Human/organs.rsi
 
-# Preserve the original Hydrakin stomach capacity while using
-# Nightshade's current SolutionManager architecture.
+
 - type: entity
   parent: Solution
   id: SolutionHydrakinStomach
@@ -48,9 +46,7 @@
   parent: [ OrganBaseLiver, BaseHydrakinOrgan ]
   name: hydrakin liver
   components:
-  # Keep the source behavior of using ordinary human-compatible
-  # metabolism here. OrganBaseLiver supplies maxReagents: 1 and
-  # the Metabolites stage.
+
   - type: Metabolizer
     metabolizerTypes: [ Human ]
 
@@ -71,4 +67,4 @@
   - type: Metabolizer
     metabolizerTypes: [ Hydrakin ]
 
-# Nightshade End - Hydrakin organ modernization
+# Nightshade End

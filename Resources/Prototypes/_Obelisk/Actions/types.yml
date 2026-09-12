@@ -11,7 +11,7 @@
     checkCanInteract: false
     useDelay: 5
     itemIconStyle: BigAction
-  # Nightshade - explicit layers override BaseAction's inherited sprite layers.
+
   - type: Sprite
     sprite: _Obelisk/Actions/hydrakin_cooldown.rsi
     layers:

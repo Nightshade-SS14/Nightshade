@@ -1,10 +1,5 @@
 # SPDX-License-Identifier: MPL-2.0
 
-# Nightshade - Hydrakin external organs adapted from the old body-part graph
-# to the current Trauma organ body system. Hydrakin has a physical tail organ,
-# following Nightshade's current Reptilian tail anatomy model.
-
-# Nightshade - Hydrakin uses chest_m/chest_f instead of torso_m/torso_f.
 - type: entity
   id: OrganHydrakinTorsoSexed
   abstract: true
