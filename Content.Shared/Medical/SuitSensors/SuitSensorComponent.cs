@@ -24,6 +24,14 @@ public sealed partial class SuitSensorComponent : Component
     [DataField, AutoNetworkedField]
     public bool ControlsLocked = false;
 
+    // Nightshade Start
+    /// <summary>
+    /// Whether this sensor belongs to the Blueshield command-tracking network.
+    /// </summary>
+    [DataField]
+    public bool CommandTracker = false;
+    // Nightshade End
+
     /// <summary>
     ///  How much time it takes to change another player's sensors
     /// </summary>

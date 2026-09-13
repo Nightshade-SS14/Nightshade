@@ -18,3 +18,11 @@ guide-entry-plumbing = Plumbing
 guide-entry-alcoholic-drinks = Alcoholic Drinks
 guide-entry-non-alcoholic-drinks = Non-Alcoholic Drinks
 guide-entry-enchanting = Enchanting
+
+# Nightshade Start - BSO final role locale: guide-entry-sop-bso
+guide-entry-sop-bso = Blueshield Officer
+# Nightshade End
+
+# Nightshade Start - BSO final role locale: guide-entry-sop-succession
+guide-entry-sop-succession = Chain of Command
+# Nightshade End

@@ -1,0 +1,13 @@
+# Nightshade Start - BSO locker contents
+- type: entity
+  name: Blueshield officer rubber stamp
+  parent: [RubberStampBase, BaseCentcommContraband]
+  id: RubberStampBlueshieldOfficer
+  components:
+  - type: Stamp
+    stampedName: stamp-component-stamped-name-blueshield-officer
+    stampedColor: "#000080"
+    stampState: "paper_stamp-cap"
+  - type: Sprite
+    state: stamp-cap
+# Nightshade End

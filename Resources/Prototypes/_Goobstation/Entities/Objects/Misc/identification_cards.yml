@@ -247,3 +247,23 @@
     - state: idvirologist
   - type: PresetIdCard
     job: Virologist
+
+# Nightshade Start - BSO final role import: BlueshieldIDCard
+- type: entity
+  parent: IDCardStandard
+  id: BlueshieldIDCard
+  name: blueshield officer ID card
+  components:
+  - type: Sprite
+    layers:
+    - state: centcom
+    - state: idcentcom
+  - type: Item
+    heldPrefix:
+  - type: PresetIdCard
+    job: BlueshieldOfficer
+  - type: Access
+    tags:
+    - CentralCommand
+    - BlueshieldOfficer
+# Nightshade End

@@ -107,3 +107,10 @@ reagent-desc-spaceacilin = Commonly used and effective anti-bacterial medicine. 
 
 reagent-name-devirate = devirate
 reagent-desc-devirate = Anti-viral medicine. Slightly toxic.
+
+# Nightshade Start - BSO support locale: reagent-name-ebifin, reagent-desc-ebifin, reagent-name-syriniver, reagent-desc-syriniver
+reagent-name-ebifin = ebifin
+reagent-desc-ebifin = Extremely strong burn compound with cripplingly low overdose threshold. Reacts violently in bloodstream, quickly healing most burn injuries when used in low amounts.
+reagent-name-syriniver = syriniver
+reagent-desc-syriniver = An experimental antipoison that repairs toxin-based cell failure regardless of whether the patient is alive. Has a horribly low overdose and causes internal bleeding when injected even in trace quantities.
+# Nightshade End

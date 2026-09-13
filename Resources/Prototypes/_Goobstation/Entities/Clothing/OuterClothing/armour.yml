@@ -394,3 +394,18 @@
     sprite: _ShitChap/Clothing/OuterClothing/Misc/bishop.rsi
   - type: Clothing
     sprite: _ShitChap/Clothing/OuterClothing/Misc/bishop.rsi
+
+# Nightshade Start - BSO final role import: ClothingBlueshieldArmourVest
+- type: entity
+  parent: [ BaseCentcommContraband, ClothingOuterArmorCaptainCarapace ]
+  id: ClothingBlueshieldArmourVest
+  name: blueshield's security armour
+  description: An armoured vest with the badge of the blueshield. Utilizes bluespace technology to be more compact.
+  components:
+  - type: Sprite
+    sprite: _Goobstation/Clothing/Armor/bso_armour.rsi
+  - type: Clothing
+    sprite: _Goobstation/Clothing/Armor/bso_armour.rsi
+  - type: Item
+    size: Normal
+# Nightshade End

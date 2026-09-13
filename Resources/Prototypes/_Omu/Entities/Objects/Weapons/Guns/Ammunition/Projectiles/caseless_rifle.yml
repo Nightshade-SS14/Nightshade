@@ -1,0 +1,12 @@
+# Nightshade Start - BSO BRDI set
+- type: entity
+  id: BulletCaselessRifleFMJ
+  name: bullet (9.5mm full metal jacket)
+  parent: BaseBullet
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 16
+# Nightshade End

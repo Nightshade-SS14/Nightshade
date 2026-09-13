@@ -16,6 +16,16 @@
   - type: AccessReader
     access: [["NanotrasenRepresentative"]]
 
+# Nightshade Start
+- type: entity
+  parent: DoorElectronics
+  id: DoorElectronicsBSO
+  suffix: BlueshieldOfficer, Locked
+  components:
+  - type: AccessReader
+    access: [["BlueshieldOfficer"]]
+# Nightshade End
+
 - type: entity
   parent: DoorElectronics
   id: DoorElectronicsRobotics

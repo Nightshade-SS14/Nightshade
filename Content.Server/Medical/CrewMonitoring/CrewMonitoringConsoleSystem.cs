@@ -5,6 +5,8 @@ using Content.Shared.Pinpointer;
 using Content.Shared.PowerCell;
 using Robust.Server.GameObjects;
 
+using Content.Goobstation.Shared.CrewMonitoring;
+
 namespace Content.Server.Medical.CrewMonitoring;
 
 public sealed partial class CrewMonitoringConsoleSystem : EntitySystem
@@ -54,7 +56,17 @@ public sealed partial class CrewMonitoringConsoleSystem : EntitySystem
             EnsureComp<NavMapComponent>(xform.GridUid.Value);
 
         // Update all sensors info
-        var allSensors = component.ConnectedSensors.Values.ToList();
-        _uiSystem.SetUiState(uid, CrewMonitoringUIKey.Key, new CrewMonitoringState(allSensors));
+        // Nightshade Start
+        var isCommandOnly = HasComp<CrewMonitorScanningComponent>(uid);
+
+        var filteredSensors = component.ConnectedSensors
+            .Where(pair => isCommandOnly
+                ? pair.Value.IsCommandTracker
+                : !pair.Value.IsCommandTracker)
+            .Select(pair => pair.Value)
+            .ToList();
+
+        _uiSystem.SetUiState(uid, CrewMonitoringUIKey.Key, new CrewMonitoringState(filteredSensors));
+        // Nightshade End
     }
 }

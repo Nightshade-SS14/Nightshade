@@ -25,3 +25,34 @@
         Quantity: 5
   - type: SolutionTransfer
     maxTransferAmount: 9
+
+# Nightshade Start - BSO Chester set
+- type: entity # Omu start, uncomment this all.
+  id: CartridgeMagnumEnsnaring
+  name: cartridge (.45 magnum ensnaring)
+  parent: BaseCartridgeMagnum
+  components:
+  - type: CartridgeAmmo
+    proto: BulletMagnumEnsnaring
+  - type: Sprite
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+      - state: tip
+        map: [ "enum.AmmoVisualLayers.Tip" ]
+        color: "#cfff77"
+- type: entity
+  id: CartridgeMagnumFlash
+  name: cartridge (.45 magnum flash)
+  parent: BaseCartridgeMagnum
+  components:
+  - type: CartridgeAmmo
+    proto: BulletMagnumFlash
+  - type: Sprite
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+      - state: tip
+        map: [ "enum.AmmoVisualLayers.Tip" ]
+        color: "#fff94d" # Omu end.
+# Nightshade End

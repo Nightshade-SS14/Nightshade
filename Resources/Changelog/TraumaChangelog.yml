@@ -2082,7 +2082,7 @@ Entries:
 - author: JohnJJohn
   changes:
   - type: Remove
-    message: Removed Power game species (Yowie)
+    message: Removed Power game species
   id: 255
   time: '2026-01-28T18:32:03.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/553

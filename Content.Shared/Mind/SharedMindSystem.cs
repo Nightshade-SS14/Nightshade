@@ -730,6 +730,24 @@ public abstract partial class SharedMindSystem : EntitySystem
         return _random.Pick(_pickingMinds);
     }
 
+    // Nightshade Start - BSO target objective immunity
+    public Entity<MindComponent>? PickFromPoolFiltered(
+        IMindPool pool,
+        System.Predicate<Entity<MindComponent>> isValid,
+        EntityUid? exclude = null,
+        params EntityCondition[] conditions)
+    {
+        _pickingMinds.Clear();
+        pool.FindMinds(_pickingMinds, _dependency, exclude, conditions);
+        _pickingMinds.RemoveWhere(mind => !isValid(mind));
+
+        if (_pickingMinds.Count == 0)
+            return null;
+
+        return _random.Pick(_pickingMinds);
+    }
+    // Nightshade End
+
     /// <summary>
     /// Filters minds from a hashset using a single <see cref="EntityCondition"/>.
     /// </summary>

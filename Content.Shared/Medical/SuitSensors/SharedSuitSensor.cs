@@ -40,6 +40,10 @@ public partial struct SuitSensorStatus : IEquatable<SuitSensorStatus>
     public float? DamagePercentage => TotalDamageThreshold == null || TotalDamage == null ? null : TotalDamage / (float) TotalDamageThreshold;
     public NetCoordinates? Coordinates;
 
+    // Nightshade Start
+    public bool IsCommandTracker;
+    // Nightshade End
+
     public bool Equals(SuitSensorStatus other)
     {
         return Timestamp.Equals(other.Timestamp)
@@ -51,7 +55,10 @@ public partial struct SuitSensorStatus : IEquatable<SuitSensorStatus>
                && IsAlive == other.IsAlive
                && TotalDamage == other.TotalDamage
                && TotalDamageThreshold == other.TotalDamageThreshold
-               && Nullable.Equals(Coordinates, other.Coordinates);
+               && Nullable.Equals(Coordinates, other.Coordinates)
+               // Nightshade Start
+               && IsCommandTracker == other.IsCommandTracker;
+               // Nightshade End
     }
 
     public override bool Equals(object? obj)
@@ -72,6 +79,9 @@ public partial struct SuitSensorStatus : IEquatable<SuitSensorStatus>
         hashCode.Add(TotalDamage);
         hashCode.Add(TotalDamageThreshold);
         hashCode.Add(Coordinates);
+        // Nightshade Start
+        hashCode.Add(IsCommandTracker);
+        // Nightshade End
         return hashCode.ToHashCode();
     }
 

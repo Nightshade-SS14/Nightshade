@@ -1,0 +1,44 @@
+# Nightshade Start - BSO support package: ClothingBeltExtractionRigBSOFilled, ClothingBeltMilitaryWebbingBSOFilledMed, ClothingBeltChemBagBSOFilled
+- type: entity
+  id: ClothingBeltExtractionRigBSOFilled
+  parent: ClothingBeltExtractionRigBSO
+  suffix: Filled
+  components:
+  - type: StorageFill
+    contents:
+    - id: FultonBeaconBlueshield
+    - id: FultonBlueshield
+    - id: MedkitCombatBlueFilled
+- type: entity
+  id: ClothingBeltMilitaryWebbingBSOFilledMed
+  parent: ClothingBeltMilitaryWebbingBSOMedical
+  suffix: Filled, Medical Set
+  components:
+  - type: StorageFill
+    contents:
+    - id: DefibrillatorCompact
+    - id: MedkitCombatFilled
+      amount: 2
+    - id: BodyBagBluespaceBSOFolded # moved from surgical
+- type: entity
+  id: ClothingBeltChemBagBSOFilled
+  parent: ClothingBeltChemBagBSO
+  suffix: Filled
+  components:
+  - type: StorageFill
+    contents:
+    - id: CombatInjector
+      amount: 1
+    - id: ProcenylLazideChemistryVial
+      amount: 1
+    - id: EbifinlLazideChemistryVial
+      amount: 1
+    - id: SyriniverChemistryVial
+      amount: 1
+    - id: TirimolChemistryVial
+      amount: 1
+    - id: ArtiplatesChemistryVial
+      amount: 1
+    - id: OmnizineChemistryVial
+      amount: 1
+# Nightshade End

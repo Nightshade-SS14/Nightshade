@@ -27,6 +27,12 @@
       quickEquip: false
       slots:
       - Belt
+      # Nightshade Start - BSO suit storage
+      - suitStorage
+      clothingVisuals:
+        suitstorage:
+          - state: equipped-BACKPACK
+      # Nightshade End
     - type: ComponentToggler
       components:
       - type: DisarmMalus
@@ -54,6 +60,12 @@
         right:
           - state: inhand-right-on
             shader: unshaded
+      # Nightshade Start - BSO suit storage
+      clothingVisuals:
+        suitstorage:
+          - state: equipped-BACKPACK-on
+            shader: unshaded
+      # Nightshade End
     - type: PointLight
       netsync: false
       enabled: false

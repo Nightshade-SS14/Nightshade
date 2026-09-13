@@ -40,6 +40,28 @@
     containers:
       board: [ DoorElectronicsCentralCommandCaptain ]
 
+# Nightshade Start
+# BSO locked
+
+- type: entity
+  parent: AirlockCentralCommand
+  id: AirlockBlueshieldOfficerCommandLocked
+  suffix: Blueshield, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsBSO ]
+
+- type: entity
+  parent: AirlockCentralCommandGlass
+  id: AirlockBlueshieldOfficerCommandGlassLocked
+  suffix: Blueshield, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsBSO ]
+# Nightshade End
+
 # NTR locked
 
 - type: entity

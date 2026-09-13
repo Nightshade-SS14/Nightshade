@@ -13,3 +13,19 @@
         state: ntr
   - type: UniqueEntityMarker
     markerName: NanorepLocker
+
+# Nightshade Start - BSO
+- type: entity
+  name: blueshield locker unique marker
+  id: UniqueMarkerBlueshieldLocker
+  parent: MarkerBase
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    layers:
+      - state: red
+      - sprite: _Goobstation/Structures/Storage/closet.rsi
+        state: bso
+  - type: UniqueEntityMarker
+    markerName: BlueshieldLocker
+# Nightshade End

@@ -309,3 +309,46 @@
     rotation: 30
     energy: 6
     radius: 4
+
+# Nightshade Start - BSO light hardsuit
+- type: entity
+  # Nightshade Start - local hardsuit parent compatibility
+  parent: [ ClothingHeadHardsuitBase, ClothingHeadSuitWithLightBase ]
+  # Nightshade End
+  id: ClothingHeadHelmetHardsuitBlueshield
+  name: blueshield hardsuit helmet
+  description: The helmet of the captain's bodyguard's hardsuit.
+  components:
+  - type: BreathMask
+  - type: Sprite
+    sprite: _Goobstation/Clothing/Head/Hardsuits/bso.rsi
+  - type: Clothing
+    sprite: _Goobstation/Clothing/Head/Hardsuits/bso.rsi
+  - type: PointLight
+    color: "#4d7ae3"
+    rotation: 30
+    energy: 10
+    radius: 5
+  - type: PressureProtection
+    highPressureMultiplier: 0.525
+    lowPressureMultiplier: 1000
+  - type: Armor
+    traumaDeductions:
+      Dismemberment: 0.3
+      OrganDamage: 0.3
+      BoneDamage: 0.3
+      VeinsDamage: 0
+      NerveDamage: 0
+    modifiers:
+      coefficients:
+        Blunt: 0.65
+        Slash: 0.65
+        Piercing: 0.7
+        Heat: 0.7
+        Radiation: 0.6
+        Caustic: 0.6
+  - type: FlashImmunity
+  - type: FlashSoundSuppression
+
+# cybersun stealth
+# Nightshade End

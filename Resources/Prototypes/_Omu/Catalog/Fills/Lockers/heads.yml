@@ -1,0 +1,25 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+# Nightshade Start - BSO locker infrastructure: LockerFillBlueshieldOfficerOmu
+- type: entityTable
+  id: LockerFillBlueshieldOfficerOmu
+  table: !type:AllSelector
+    children:
+    - id: BlueshieldUndeterminedHardsuit
+    - id: BlueshieldUndeterminedOffensive
+    - id: BlueshieldUndeterminedSupport
+    - id: HandheldCrewMonitorBSO
+    - id: FlippoLighterBlueshield
+    - id: CigPackBlueshield
+    - id: OxygenTankFilled
+    - id: NitrogenTankFilled
+    - id: BoxZiptie
+    - id: BlueshieldRollerBedSpawnFolded
+    - id: BlueshieldRollerBedStasisSpawnFolded
+    - id: FlashlightSeclite
+    - id: MedkitBSOFilled
+    - id: MedkitBSOIPCFilled
+    - id: ParamedHypo
+    - id: WeaponDisabler
+    - id: RubberStampBlueshieldOfficer
+# Nightshade End
