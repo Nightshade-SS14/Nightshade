@@ -78,7 +78,8 @@
   id: PlatingSnow
   name: tiles-snow-plating
   parent: BasePlating
-  sprite: /Textures/Tiles/snow_plating.png #Not in the snow planet RSI because it doesn't have any metadata. Should probably be moved to its own folder later.
+  sprite: /Textures/Tiles/Planet/Snow/snow-plating.png # Nightshade
+  #Not in the snow planet RSI because it doesn't have any metadata. Should probably be moved to its own folder later.
   friction: 0.75 #a little less then actual snow
 
 - type: tile
