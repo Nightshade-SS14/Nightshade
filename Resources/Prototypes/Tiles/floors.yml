@@ -1018,7 +1018,10 @@
 - type: tile
   id: FloorGrass
   name: tiles-planet-grass-floor
-  sprite: /Textures/Tiles/grass.png
+# <Nightshade> respritening
+  sprite: /Textures/Tiles/Planet/Grass/grass.png
+  variants: 6
+# </Nightshade>
   baseTurf: FloorDirt
   isSubfloor: true
   footstepSounds:
@@ -1030,7 +1033,20 @@
 - type: tile
   id: FloorGrassJungle
   name: tiles-jungle-grass-floor
-  sprite: /Textures/Tiles/grassjungle.png
+# <Nightshade> respritening
+  sprite: /Textures/Tiles/Planet/GrassJungle/grassjungle.png
+  variants: 6
+  edgeSpritePriority: 4
+  edgeSprites:
+    SouthEast: /Textures/Tiles/Planet/GrassJungle/single_edge_SE.png
+    NorthEast: /Textures/Tiles/Planet/GrassJungle/single_edge_NE.png
+    NorthWest: /Textures/Tiles/Planet/GrassJungle/single_edge_NW.png
+    SouthWest: /Textures/Tiles/Planet/GrassJungle/single_edge_SW.png
+    South: /Textures/Tiles/Planet/GrassJungle/double_edge_S.png
+    East: /Textures/Tiles/Planet/GrassJungle/double_edge_E.png
+    North: /Textures/Tiles/Planet/GrassJungle/double_edge_N.png
+    West: /Textures/Tiles/Planet/GrassJungle/double_edge_W.png
+# </Nightshade>
   baseTurf: FloorDirt
   isSubfloor: true
   footstepSounds:
@@ -1042,8 +1058,20 @@
 - type: tile
   id: FloorGrassDark
   name: tiles-dark-grass-floor
-  sprite: /Textures/Tiles/grassdark.png
-  variants: 4
+# <Nightshade> respritening
+  sprite: /Textures/Tiles/Planet/GrassDark/grassdark.png
+  variants: 6
+  edgeSpritePriority: 3
+  edgeSprites:
+    SouthEast: /Textures/Tiles/Planet/GrassDark/single_edge_SE.png
+    NorthEast: /Textures/Tiles/Planet/GrassDark/single_edge_NE.png
+    NorthWest: /Textures/Tiles/Planet/GrassDark/single_edge_NW.png
+    SouthWest: /Textures/Tiles/Planet/GrassDark/single_edge_SW.png
+    South: /Textures/Tiles/Planet/GrassDark/double_edge_S.png
+    East: /Textures/Tiles/Planet/GrassDark/double_edge_E.png
+    North: /Textures/Tiles/Planet/GrassDark/double_edge_N.png
+    West: /Textures/Tiles/Planet/GrassDark/double_edge_W.png
+# </Nightshade>
   baseTurf: FloorDirt
   isSubfloor: true
   footstepSounds:
@@ -1054,8 +1082,20 @@
 - type: tile
   id: FloorGrassLight
   name: tiles-light-grass-floor
-  sprite: /Textures/Tiles/grasslight.png
-  variants: 4
+# <Nightshade> respritening
+  sprite: /Textures/Tiles/Planet/GrassLight/grasslight.png
+  variants: 6
+  edgeSpritePriority: 3
+  edgeSprites:
+    SouthEast: /Textures/Tiles/Planet/GrassLight/single_edge_SE.png
+    NorthEast: /Textures/Tiles/Planet/GrassLight/single_edge_NE.png
+    NorthWest: /Textures/Tiles/Planet/GrassLight/single_edge_NW.png
+    SouthWest: /Textures/Tiles/Planet/GrassLight/single_edge_SW.png
+    South: /Textures/Tiles/Planet/GrassLight/double_edge_S.png
+    East: /Textures/Tiles/Planet/GrassLight/double_edge_E.png
+    North: /Textures/Tiles/Planet/GrassLight/double_edge_N.png
+    West: /Textures/Tiles/Planet/GrassLight/double_edge_W.png
+# </Nightshade>
   baseTurf: FloorDirt
   isSubfloor: true
   footstepSounds:
@@ -1066,8 +1106,16 @@
 - type: tile
   id: FloorDirt
   name: tiles-dirt-floor
-  sprite: /Textures/Tiles/dirt.png
-  variants: 4
+# <Nightshade> respritening
+  sprite: /Textures/Tiles/Planet/Dirt/dirt.png
+  variants: 5
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+# </Nightshade>
   baseTurf: Plating
   isSubfloor: true
   footstepSounds:
@@ -1200,8 +1248,10 @@
 - type: tile
   id: FloorAsteroidIronsandBorderless
   name: tiles-asteroid-ironsand-borderless
-  sprite: /Textures/Tiles/Asteroid/ironsand.png
-  variants: 15
+# <Nightshade> respritening
+  sprite: /Textures/Tiles/Asteroid/Ironsand/ironsand.png
+  variants: 5
+# </Nightshade>
   baseTurf: Space
   isSubfloor: true
   footstepSounds:
@@ -1213,17 +1263,18 @@
   id: FloorAsteroidIronsand
   parent: FloorAsteroidIronsandBorderless
   name: tiles-asteroid-ironsand
-  edgeSpritePriority: 1
+# <Nightshade> respritening
+  edgeSpritePriority: 7
   edgeSprites:
-    SouthEast: /Textures/Tiles/Asteroid/iron_single_edge.png
-    NorthEast: /Textures/Tiles/Asteroid/iron_single_edge.png
-    NorthWest: /Textures/Tiles/Asteroid/iron_single_edge.png
-    SouthWest: /Textures/Tiles/Asteroid/iron_single_edge.png
-    South: /Textures/Tiles/Asteroid/iron_double_edge.png
-    East: /Textures/Tiles/Asteroid/iron_double_edge.png
-    North: /Textures/Tiles/Asteroid/iron_double_edge.png
-    West: /Textures/Tiles/Asteroid/iron_double_edge.png
-
+    SouthEast: /Textures/Tiles/Asteroid/Ironsand/single_edge_SE.png
+    NorthEast: /Textures/Tiles/Asteroid/Ironsand/single_edge_NE.png
+    NorthWest: /Textures/Tiles/Asteroid/Ironsand/single_edge_NW.png
+    SouthWest: /Textures/Tiles/Asteroid/Ironsand/single_edge_SW.png
+    South: /Textures/Tiles/Asteroid/Ironsand/double_edge_S.png
+    East: /Textures/Tiles/Asteroid/Ironsand/double_edge_E.png
+    North: /Textures/Tiles/Asteroid/Ironsand/double_edge_N.png
+    West: /Textures/Tiles/Asteroid/Ironsand/double_edge_W.png
+# </Nightshade>
 - type: tile
   id: FloorAsteroidSandUnvariantizedBorderless
   name: tiles-asteroid-sand-borderless
@@ -1408,18 +1459,20 @@
   parent: BaseStationTile
   id: FloorAstroGrass
   name: tiles-astro-grass
+# <Nightshade> respritening
   sprite: /Textures/Tiles/Planet/Grass/grass.png
-  variants: 4
-  edgeSpritePriority: 1
+  variants: 6
+  edgeSpritePriority: 5
   edgeSprites:
-    SouthEast: /Textures/Tiles/Planet/Grass/single_edge.png
-    NorthEast: /Textures/Tiles/Planet/Grass/single_edge.png
-    NorthWest: /Textures/Tiles/Planet/Grass/single_edge.png
-    SouthWest: /Textures/Tiles/Planet/Grass/single_edge.png
-    South: /Textures/Tiles/Planet/Grass/double_edge.png
-    East: /Textures/Tiles/Planet/Grass/double_edge.png
-    North: /Textures/Tiles/Planet/Grass/double_edge.png
-    West: /Textures/Tiles/Planet/Grass/double_edge.png
+    SouthEast: /Textures/Tiles/Planet/Grass/single_edge_SE.png
+    NorthEast: /Textures/Tiles/Planet/Grass/single_edge_NE.png
+    NorthWest: /Textures/Tiles/Planet/Grass/single_edge_NW.png
+    SouthWest: /Textures/Tiles/Planet/Grass/single_edge_SW.png
+    South: /Textures/Tiles/Planet/Grass/double_edge_S.png
+    East: /Textures/Tiles/Planet/Grass/double_edge_E.png
+    North: /Textures/Tiles/Planet/Grass/double_edge_N.png
+    West: /Textures/Tiles/Planet/Grass/double_edge_W.png
+# </Nightshade>
   footstepSounds:
     collection: FootstepGrass
   itemDrop: FloorTileItemAstroGrass
@@ -1464,7 +1517,10 @@
   parent: BaseStationTile
   id: FloorAstroIce
   name: tiles-astro-ice
-  sprite: /Textures/Tiles/Planet/Snow/ice.png
+# <Nightshade>
+  sprite: /Textures/Tiles/Planet/Ice/ice.png
+  variants: 4
+# </Nightshade>
   friction: 0.05
   mobFriction: 0.05
   mobAcceleration: 0.1
