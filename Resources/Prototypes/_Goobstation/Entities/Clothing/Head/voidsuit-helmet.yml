@@ -312,9 +312,7 @@
 
 # Nightshade Start - BSO light hardsuit
 - type: entity
-  # Nightshade Start - local hardsuit parent compatibility
   parent: [ ClothingHeadHardsuitBase, ClothingHeadSuitWithLightBase ]
-  # Nightshade End
   id: ClothingHeadHelmetHardsuitBlueshield
   name: blueshield hardsuit helmet
   description: The helmet of the captain's bodyguard's hardsuit.

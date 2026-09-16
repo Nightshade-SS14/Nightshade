@@ -1,4 +1,4 @@
-# Nightshade Start - BSO support package: ArtiplatesChemistryVial
+# Nightshade Start - needs adding or removing
 - type: entity
   id: ArtiplatesChemistryVial
   parent: ChemistryEmptyVial

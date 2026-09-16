@@ -1623,7 +1623,7 @@
 ## Z ##
 # ALPHABETICAL
 
-# Nightshade Start - BSO BRDI set
+# Nightshade Start
 - type: Tag
   id: MagazineCaselessRifle # Unused (Exists on BaseMagazineCaselessRifle)
 # Nightshade End

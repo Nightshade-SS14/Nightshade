@@ -137,13 +137,11 @@
   - VirologyEnvirogloves
   - ExclusiveItems
 
-# Nightshade Start - BSO final role - minimal generic role loadout
+# Nightshade Start
 - type: roleLoadout
   id: JobBlueshieldOfficer
   groups:
-  # Nightshade Start - reuse only generic loadout groups that exist in Trauma/Nightshade
   - Trinkets
   - GroupSpeciesBreathTool
   - SurvivalSecurity
-  # Nightshade End
 # Nightshade End

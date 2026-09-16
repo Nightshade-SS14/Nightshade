@@ -1,4 +1,3 @@
-# Nightshade Start - BSO support package: BodyBagBluespaceBSO, BodyBagBluespaceBSOFolded
 - type: entity
   id: BodyBagBluespaceBSO
   parent: [BodyBag, BaseCentcommContraband]
@@ -43,4 +42,3 @@
   components:
   - type: Foldable
     folded: true
-# Nightshade End

@@ -1,4 +1,4 @@
-# Nightshade Start - BSO support package: ClothingBeltExtractionRigBSOFilled, ClothingBeltMilitaryWebbingBSOFilledMed, ClothingBeltChemBagBSOFilled
+# Nightshade Start
 - type: entity
   id: ClothingBeltExtractionRigBSOFilled
   parent: ClothingBeltExtractionRigBSO

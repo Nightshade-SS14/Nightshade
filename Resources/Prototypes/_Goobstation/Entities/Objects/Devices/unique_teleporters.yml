@@ -39,7 +39,7 @@
     markerName: NanorepLocker
     stationOnly: false
 
-# Nightshade Start - BSO locker infrastructure: BlueshieldOfficerLockerTeleporter, UniqueBlueshieldOfficerLockerTeleporter
+# Nightshade Start
 - type: entity
   parent: BaseLockerTeleporter
   id: BlueshieldOfficerLockerTeleporter

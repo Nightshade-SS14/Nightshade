@@ -1,19 +1,15 @@
-# Nightshade Start - BSO BRDI set
+# Nightshade Start
 selectable-set-bso-brdi-name = BRDI R-25
 selectable-set-bso-brdi-description =
     An iconic weapon used by members of the Biesel Republic Foreign Legion.
     Repainted for Blueshield Officers.
-# Nightshade End
 
-# Nightshade Start - BSO Typewriter set
 selectable-set-bso-typewriter-name = Typewriter Submachine Gun
 selectable-set-bso-typewriter-desc =
     A kit containing a perfect replica of the Thompson Submachine Gun,
     chambered in .35, a preloaded drum mag, a stick mag and a drum mag with rubber bullets;
     perfect for the historically minded and wise guys alike.
-# Nightshade End
 
-# Nightshade Start - BSO support locale: selectable-set-bso-extraction-name, selectable-set-bso-extraction-description, selectable-set-bso-medical-name, selectable-set-bso-medical-description, selectable-set-bso-chemical-name, selectable-set-bso-chemical-description
 selectable-set-bso-extraction-name = Extraction kit
 selectable-set-bso-extraction-description =
     A swift extraction guarantees safety, you stand by those words.

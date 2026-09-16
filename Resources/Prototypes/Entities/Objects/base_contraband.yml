@@ -89,7 +89,7 @@
   components:
   - type: Contraband
     allowedDepartments: [ Security ]
-    # Nightshade Start - BSO security contraband compatibility
+    # Nightshade Start
     allowedJobs: [ BlueshieldOfficer ]
     # Nightshade End
 

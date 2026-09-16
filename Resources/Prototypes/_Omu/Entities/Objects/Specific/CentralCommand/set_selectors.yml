@@ -1,4 +1,4 @@
-# Nightshade Start - BSO offensive selector case
+# Nightshade Start
 - type: entity
   id: BlueshieldUndeterminedOffensive
   name:  blueshield offensive sets pack
@@ -17,9 +17,6 @@
     - BSOBlueshieldSet
     - BSOCQCSet
     maxSelectedSets: 1
-# Nightshade End
-
-# Nightshade Start - BSO support package: BlueshieldUndeterminedSupport
 - type: entity
   id: BlueshieldUndeterminedSupport
   name:  blueshield support sets pack

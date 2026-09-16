@@ -1,7 +1,5 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
-# Nightshade Start - Omu Dragon Kung Fu translated to Trauma's entity-effect combo framework
-
 # Omu: Disarm -> Disarm.
 # 50 stamina damage and a strong 2 second movement slowdown.
 - type: combo
@@ -50,8 +48,6 @@
       time: 6
       drop: true
     falseEffects:
-    # Trauma does not expose Omu's one-second stun as a combo effect;
-    # paralysis is the closest local effect and preserves the brief disable.
     - !type:ModifyParalysis
       time: 1
 
@@ -80,5 +76,3 @@
         Blunt: 40
   - !type:ModifyParalysis
     time: 2
-
-# Nightshade End

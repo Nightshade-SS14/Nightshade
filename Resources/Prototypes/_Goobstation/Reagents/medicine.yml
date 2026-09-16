@@ -1256,7 +1256,7 @@
             Poison: 0.5
 # </Viro>
 
-# Nightshade Start - BSO support package: Ebifin, Syriniver, Tehifin
+# Nightshade Start - BSO chem - needs fixing/looking at
 - type: reagent
   id: Ebifin
   name: reagent-name-ebifin

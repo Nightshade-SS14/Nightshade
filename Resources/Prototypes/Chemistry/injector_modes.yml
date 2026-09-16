@@ -147,7 +147,7 @@
   parent: [ BaseAdvancedJetInjectorMode, BaseDynamicMode ]
   id: AdvancedJetInjectorDynamicMode
 
-# Nightshade Start - BSO support package: BaseCombatInjectorMode, CombatInjectorDynamicMode, CombatInjectorInjectMode
+# Nightshade Start
 - type: injectorMode
   abstract: true
   id: BaseCombatInjectorMode

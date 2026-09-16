@@ -253,7 +253,7 @@
   - type: Pda
     id: RadioHostIDCard
 
-# Nightshade Start - BSO final role import: BlueshieldPDA
+# Nightshade Start
 - type: entity
   parent: BaseMedicalPDA
   id: BlueshieldPDA

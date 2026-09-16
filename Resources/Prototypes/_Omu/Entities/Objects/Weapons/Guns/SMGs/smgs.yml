@@ -1,4 +1,3 @@
-# Nightshade Start - BSO Typewriter set
 - type: entity
   name: Typewriter
   parent: [ BaseWeaponSubMachineGun, BaseCentcommContraband ]
@@ -46,4 +45,3 @@
           tags:
             - CartridgePistol
   - type: Appearance
-# Nightshade End

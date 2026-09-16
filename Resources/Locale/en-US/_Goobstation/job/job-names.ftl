@@ -45,6 +45,6 @@ job-name-bs = Blueshield
 JobBlueshieldOfficer = Blueshield Officer
 # Nightshade End
 
-# Nightshade Start - BSO final role locale: job-name-bso
+# Nightshade Start
 job-name-bso = Blueshield Officer
 # Nightshade End

@@ -1,6 +1,5 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
-# Nightshade Start - BSO locker infrastructure: LockerFillBlueshieldOfficerOmu
 - type: entityTable
   id: LockerFillBlueshieldOfficerOmu
   table: !type:AllSelector
@@ -22,4 +21,3 @@
     - id: ParamedHypo
     - id: WeaponDisabler
     - id: RubberStampBlueshieldOfficer
-# Nightshade End

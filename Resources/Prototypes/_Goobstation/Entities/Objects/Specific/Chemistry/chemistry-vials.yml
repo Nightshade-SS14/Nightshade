@@ -110,7 +110,7 @@
   - type: StaticPrice
     price: 65
 
-# Nightshade Start - BSO support package: EbifinlLazideChemistryVial, SyriniverChemistryVial
+# Nightshade Start - BSO chems: EbifinlLazideChemistryVial, SyriniverChemistryVial - needs adding or removing
 - type: entity
   id: EbifinlLazideChemistryVial
   parent: ChemistryEmptyVial

@@ -1,7 +1,6 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # SOP Main Directory
 
-# Nightshade Start - BSO final role import: BlueshieldOfficerSOP, Succession
 - type: guideEntry
   id: BlueshieldOfficerSOP
   name: guide-entry-sop-bso
@@ -13,4 +12,3 @@
   priority: 0
 
 # Emergency SOP Entries
-# Nightshade End

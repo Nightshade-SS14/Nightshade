@@ -248,7 +248,7 @@
   - type: PresetIdCard
     job: Virologist
 
-# Nightshade Start - BSO final role import: BlueshieldIDCard
+# Nightshade Start
 - type: entity
   parent: IDCardStandard
   id: BlueshieldIDCard

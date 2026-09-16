@@ -759,7 +759,7 @@
 - type: Tag
   id: CD
 
-# Nightshade Start - BSO support package: AutoinjectorCartridge, Defibrillator, Injector, MedicalPatch
+# Nightshade Start
 - type: Tag
   id: AutoinjectorCartridge
 - type: Tag

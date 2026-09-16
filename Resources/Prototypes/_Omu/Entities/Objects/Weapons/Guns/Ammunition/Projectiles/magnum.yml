@@ -1,4 +1,3 @@
-# Nightshade Start - BSO Chester set
 - type: entity
   id: BulletMagnumEnsnaring
   name: bullet (.45 magnum ensnaring)
@@ -48,4 +47,3 @@
     damage:
       types:
         Piercing: 18
-# Nightshade End

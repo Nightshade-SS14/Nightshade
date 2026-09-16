@@ -1,4 +1,4 @@
-# Nightshade Start - BSO BRDI set
+# Nightshade Start
 - type: selectableSet
   id: BSOBRDISet # Yes I moved it because it bothered me that it was in some random ass place above
   name: selectable-set-bso-brdi-name
@@ -10,9 +10,6 @@
   - WeaponSubMachineGunBRDIR25BSO
   - MagazineCaselessRifleFMJ
   - MagazineCaselessRifleFMJ
-# Nightshade End
-
-# Nightshade Start - BSO Typewriter set
 - type: selectableSet
   id: BSOTypewriterSet
   name: selectable-set-bso-typewriter-name
@@ -24,9 +21,6 @@
   - WeaponSubMachineGunTypewriter
   - MagazinePistolSubMachineGunDrumRubber
   - MagazinePistolSubMachineGun
-# Nightshade End
-
-# Nightshade Start - BSO support package: BSOExtractionSet, BSOMedicalSet, BSOChemicalSet
 - type: selectableSet
   id: BSOExtractionSet
   name: selectable-set-bso-extraction-name
@@ -55,5 +49,4 @@
   content:
   - ClothingBeltChemBagBSOFilled
 
-# NTR
 # Nightshade End

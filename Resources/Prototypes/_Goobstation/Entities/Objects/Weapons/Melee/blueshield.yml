@@ -59,6 +59,9 @@
     maxCharge: 600
     startingCharge: 600
   - type: UseDelay
+    delays:
+      stunbaton:
+        length: 2.5
   - type: Item
     heldPrefix: off
     size: Normal
@@ -79,7 +82,6 @@
   - type: StaticPrice
     price: 1000
 
-# Nightshade Start - BSO support package: CombatInjector
 - type: entity
   name: combat injector
   parent: [BaseItem, BaseCentcommContraband]
@@ -113,4 +115,3 @@
     animation: WeaponArcThrust
     soundHit:
       path: /Audio/Weapons/bladeslice.ogg
-# Nightshade End

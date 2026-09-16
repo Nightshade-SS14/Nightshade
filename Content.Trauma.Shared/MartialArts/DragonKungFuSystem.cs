@@ -13,12 +13,10 @@ using Robust.Shared.Timing;
 
 namespace Content.Trauma.Shared.MartialArts;
 
-// Nightshade Start - Omu Dragon Kung Fu translated to Trauma's martial-arts framework
+// Nightshade Start - Omu Dragon Kung Fu
 
 /// <summary>
 /// Trauma-native Dragon Kung Fu integration.
-/// Combo execution remains data-driven through Trauma's ComboPrototype and
-/// entity-effect systems; this handles the manual and Dragon Power.
 /// </summary>
 public sealed partial class DragonKungFuSystem : EntitySystem
 {

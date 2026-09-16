@@ -395,7 +395,7 @@
   - type: Clothing
     sprite: _ShitChap/Clothing/OuterClothing/Misc/bishop.rsi
 
-# Nightshade Start - BSO final role import: ClothingBlueshieldArmourVest
+# Nightshade Start
 - type: entity
   parent: [ BaseCentcommContraband, ClothingOuterArmorCaptainCarapace ]
   id: ClothingBlueshieldArmourVest

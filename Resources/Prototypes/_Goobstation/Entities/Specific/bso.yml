@@ -1,4 +1,4 @@
-# Nightshade Start - BSO locker contents
+# Nightshade - BSO locker contents
 - type: entity
   parent: [BaseItem, BaseCentcommContraband]
   id: HandheldCrewMonitorBSO
@@ -24,6 +24,7 @@
   - type: DeviceNetwork
     deviceNetId: Wireless
     receiveFrequencyId: CrewMonitor
+    prefix: device-address-prefix-crew-monitor
   - type: WirelessNetworkConnection
     range: 500
   - type: StationLimitedNetwork
@@ -34,9 +35,7 @@
     - HandheldCrewMonitor
   - type: Speech
     speechSounds: Borg
-# Nightshade End
 
-# Nightshade Start - BSO Dragon Kung Fu manual
 - type: entity
   parent: [BaseItem, BaseCentcommContraband]
   id: BSOManual
@@ -51,10 +50,7 @@
     size: Small
   - type: StaticPrice
     price: 3000
-  # Nightshade Start - Trauma martial-arts knowledge compatibility
   - type: GrantDragonKungFu
-  # Nightshade End
   - type: GuideHelp
     guides:
     - DragonKungFu
-# Nightshade End

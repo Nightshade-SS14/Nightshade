@@ -26,6 +26,6 @@ job-description-command-maid = Clean the bridge, command rooms, and everything e
 job-description-security-clown = Do security's job, but don't forget to do it with your clown spice.
 job-description-party-maker = Throw the biggest party ever at this station!
 
-# Nightshade Start - BSO final role locale: job-description-bso
+# Nightshade Start
 job-description-bso = Act as a bodyguard and advisor for Command and CentCom VIPs.
 # Nightshade End

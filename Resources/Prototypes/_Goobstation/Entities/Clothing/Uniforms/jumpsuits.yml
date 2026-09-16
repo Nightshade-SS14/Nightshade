@@ -266,7 +266,7 @@
   components:
   - type: Unremoveable
 
-# Nightshade Start - BSO final role import: ClothingUniformJumpsuitBlueshieldOfficer
+# Nightshade Start
 - type: entity
   parent: [ClothingUniformBase,  ClothingUniformFoldableBase]
   id: ClothingUniformJumpsuitBlueshieldOfficer

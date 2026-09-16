@@ -1,4 +1,3 @@
-# Nightshade Start - BSO Typewriter set
 - type: entity
   id: BaseBulletRubber
   name: base bullet rubber
@@ -20,4 +19,3 @@
   - type: Tag
     tags:
     - BulletRubber
-# Nightshade End

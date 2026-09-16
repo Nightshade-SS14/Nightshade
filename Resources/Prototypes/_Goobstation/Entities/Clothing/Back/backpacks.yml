@@ -16,7 +16,7 @@
   components:
   - type: Unremoveable
 
-# Nightshade Start - BSO final role import: ClothingBackpackBlueshield
+# Nightshade Start
 - type: entity
   parent: [ClothingBackpack, BaseCentcommContraband]
   id: ClothingBackpackBlueshield
