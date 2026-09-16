@@ -38,3 +38,8 @@
 
 - type: playTimeTracker
   id: JobVirologist
+
+# Nightshade Start
+- type: playTimeTracker
+  id: JobBlueshieldOfficer
+# Nightshade End

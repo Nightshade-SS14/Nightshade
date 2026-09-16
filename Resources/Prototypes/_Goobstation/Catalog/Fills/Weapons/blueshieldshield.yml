@@ -9,3 +9,15 @@
     containers:
       item:
       - BlueshieldMace
+
+# Nightshade Start - BSO shield set
+- type: entity
+  id: BlueShieldShieldFilled
+  parent: BlueShieldShield
+  suffix: Filled, DO NOT MAP
+  components:
+  - type: ContainerFill
+    containers:
+      item:
+      - BlueshieldMace
+# Nightshade End

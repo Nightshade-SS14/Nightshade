@@ -1,0 +1,14 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+# SOP Main Directory
+
+- type: guideEntry
+  id: BlueshieldOfficerSOP
+  name: guide-entry-sop-bso
+  text: "/ServerInfo/_Goobstation/Guidebook/SoP/Jobs/Command/BlueshieldOfficerSOP.xml"
+- type: guideEntry
+  id: Succession
+  name: guide-entry-sop-succession # Is named as "Chain of Command" in game.
+  text: "/ServerInfo/_Goobstation/Guidebook/SoP/StandardProcedures/CommandSuccession.xml"
+  priority: 0
+
+# Emergency SOP Entries

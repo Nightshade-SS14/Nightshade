@@ -1,0 +1,84 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: job
+  id: BlueshieldOfficer
+  name: job-name-bso
+  description: job-description-bso
+  playTimeTracker: JobBlueshieldOfficer
+  requirements:
+    - !type:DepartmentTimeRequirement
+      department: Command
+      time: 25h # 25 hours
+    - !type:DepartmentTimeRequirement
+      department: Medical
+      time: 15h # 15 hours
+    - !type:DepartmentTimeRequirement
+      department: Security
+      time: 25h # 25 hours
+    - !type:AgeRequirement
+      requiredAge: 21
+#    - !type:SpeciesRequirement # Goob - None Felinid
+#      inverted: true
+#      species:
+#      - Felinid #Omu, add back Felinid
+    - !type:OverallPlaytimeRequirement
+      time: 20h #20 hours - Omu Edit
+  guides:
+  - BlueshieldOfficerSOP
+  - Command
+  - Succession
+  goobcoins: 45
+  weight: 20
+  startingGear: BlueshieldOfficerGear
+  icon: "JobIconBlueshield"
+  joinNotifyCrew: true
+  supervisors: job-supervisors-ntr-centcom
+  canBeAntag: false
+  access:
+  - Security
+  - Brig
+  - External
+  - Cryogenics
+  - Maintenance
+  - Engineering
+  - Medical
+  - Research
+  - Command
+  - CentralCommand
+  - BlueshieldOfficer
+  - Service
+  - Hydroponics
+  - Cargo
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplantCentComm, BluespaceLifelineImplant ] # Go big, or go home. # Omu, use CC mindshield
+  - !type:AddComponentSpecial
+    components:
+      - type: CommandStaff
+      - type: Condemned
+        soulOwnedNotDevil: true
+      - type: SurgerySpeedModifier #Omu Change
+        speedModifier: 1.25 #Same as Paramedic and Corpsman
+
+# Nightshade Start
+- type: startingGear
+  id: BlueshieldOfficerGear
+  equipment:
+    eyes: ClothingEyesGlassesBSO
+    #gloves: ClothingHandsGlovesCombat - Goobstation, moved to loadouts
+    #id: BlueshieldPDA - Omu, moved to loadouts
+    ears: ClothingHeadsetAltBlueshield
+    #belt: ClothingBeltMilitaryWebbingFilled - Omu, moved to loadouts
+    pocket1: UniqueBlueshieldOfficerLockerTeleporter
+    jumpsuit: ClothingUniformJumpsuitBlueshieldOfficer
+    outerClothing: ClothingBlueshieldArmourVest
+    gloves: ClothingHandsGlovesCombat
+    shoes: ClothingShoesBootsJack
+    id: BlueshieldPDA
+    back: ClothingBackpackBlueshield
+  storage:
+    back:
+    - Flash
+    - ClothingBSOMaskGasSwat
+    - CombatKnife
+# Nightshade End

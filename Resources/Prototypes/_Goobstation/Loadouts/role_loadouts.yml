@@ -136,3 +136,12 @@
   - VirologyEnvirosuit
   - VirologyEnvirogloves
   - ExclusiveItems
+
+# Nightshade Start
+- type: roleLoadout
+  id: JobBlueshieldOfficer
+  groups:
+  - Trinkets
+  - GroupSpeciesBreathTool
+  - SurvivalSecurity
+# Nightshade End

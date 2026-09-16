@@ -6,3 +6,7 @@
 
 id-card-access-level-ntr = Nanotrasen Representative
 id-card-access-level-robotics = Robotics
+
+# Nightshade Start
+id-card-access-level-bso = Blueshield Officer
+# Nightshade End

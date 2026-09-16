@@ -212,3 +212,46 @@ selectable-set-research-director-modsuit-desc =
     A modular hardsuit armored perfectly to turn you into a research tank,
     not even the most dangerous of experiments will harm you in this,
     and the worst of assistants will think twice before breaking in sci.
+
+# Nightshade Start - BSO light hardsuit
+selectable-set-blueshield-hardsuit-light-name = blueshield hardsuit
+selectable-set-blueshield-hardsuit-light-description =
+    An armoured hardsuit, allowing for more speed at the cost of protection.
+# Nightshade End
+
+# Nightshade Start - BSO Praetorian modsuit
+selectable-set-blueshield-modsuit-name = blueshield modsuit
+selectable-set-blueshield-modsuit-description =
+    A custom modular hardsuit, allowing for more customisation, at the cost of requiring power.
+# Nightshade End
+
+# Nightshade Start - BSO revolver set
+selectable-set-blueshield-revolver-name = revolver set
+selectable-set-blueshield-revolver-description =
+    Running out of ammo is the worst thing that could happen in a firefight.
+    Includes: The EG-4 energy revolver, capable of firing bolts using
+    recharging speedloaders, both lethal and not, and a shoulder holster.
+# Nightshade End
+
+# Nightshade Start - BSO shield set
+selectable-set-blueshield-shield-name = blueshield set
+selectable-set-blueshield-shield-description =
+    The iconic namesake of these soldiers.
+    Includes: The greatshield, and the DT-4 Atrocity customized stun baton.
+# Nightshade End
+
+# Nightshade Start - BSO Chester set
+selectable-set-blueshield-chester-name = chester set
+selectable-set-blueshield-chester-description =
+    Ready to go hunting?
+    Includes: .45 lever-action rifle, the Chester. Spare ammo,
+    Alternate ammo, Spare magazines.
+# Nightshade End
+
+# Nightshade Start - BSO Dragon Kung Fu selector locale
+selectable-set-blueshield-dragon-name = kung fu manual set
+selectable-set-blueshield-dragon-description =
+    Sometimes you need to get your hands dirty.
+    Includes: A book capable of teaching the user
+    advanced kung fu martial art.
+# Nightshade End

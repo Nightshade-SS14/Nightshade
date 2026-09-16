@@ -8,3 +8,14 @@
   - type: ConditionalSpawner
     prototypes:
     - UniqueMarkerNanorepLocker
+
+# Nightshade Start
+- type: entity
+  id: UniqueLockerBlueshieldOfficerFilled
+  suffix: MAP THIS, Unique, Filled
+  parent: LockerBlueshieldOfficerFilled
+  components:
+  - type: ConditionalSpawner
+    prototypes:
+    - UniqueMarkerBlueshieldLocker
+# Nightshade End

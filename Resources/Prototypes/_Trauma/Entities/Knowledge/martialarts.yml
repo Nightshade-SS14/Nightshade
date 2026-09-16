@@ -249,3 +249,21 @@
     - ArmstrongFireball
     - ArmstrongHorseStance
     - ArmstrongHeadbutt
+
+# Nightshade Start - Trauma-native Dragon Kung Fu knowledge
+- type: entity
+  parent: BaseMartialArtsKnowledge
+  id: MartialArtKungFuDragon
+  name: Dragon Kung Fu
+  description: A Shaolin martial art focused on defense, control, and powerful counterattacks.
+  components:
+  - type: Sprite
+    sprite: _Goobstation/Objects/Misc/martial_arts.rsi
+    state: dragon
+  - type: CanPerformCombo
+    roundstartCombos:
+    - DragonClaw
+    - DragonTail
+    - DragonStrike
+  - type: DragonKungFuKnowledge
+# Nightshade End

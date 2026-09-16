@@ -109,3 +109,34 @@
       Silver: 12
   - type: StaticPrice
     price: 65
+
+# Nightshade Start - BSO chems: EbifinlLazideChemistryVial, SyriniverChemistryVial - needs adding or removing
+- type: entity
+  id: EbifinlLazideChemistryVial
+  parent: ChemistryEmptyVial
+  suffix: ebifin
+  components:
+  - type: Label
+    currentLabel: reagent-name-ebifin
+  - type: SolutionContainerManager
+    solutions:
+      beaker:
+        maxVol: 30
+        reagents:
+          - ReagentId: Ebifin
+            Quantity: 30
+- type: entity
+  id: SyriniverChemistryVial
+  parent: ChemistryEmptyVial
+  suffix: syriniver
+  components:
+  - type: Label
+    currentLabel: reagent-name-syriniver
+  - type: SolutionContainerManager
+    solutions:
+      beaker:
+        maxVol: 30
+        reagents:
+          - ReagentId: Syriniver
+            Quantity: 30
+# Nightshade End

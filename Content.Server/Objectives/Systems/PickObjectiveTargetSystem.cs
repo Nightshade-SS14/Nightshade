@@ -1,3 +1,6 @@
+// Nightshade Start - BSO target objective immunity
+using Content.Server._DV.Objectives.Components;
+// Nightshade End
 using Content.Server.Objectives.Components;
 using Content.Shared.Mind;
 using Content.Shared.Objectives.Components;
@@ -51,6 +54,22 @@ public sealed partial class PickObjectiveTargetSystem : EntitySystem
             return;
         }
 
+        // Nightshade Start - BSO target objective immunity
+        if (HasComp<TargetObjectiveImmuneComponent>(targetComp.Target.Value))
+        {
+            args.Cancelled = true;
+            return;
+        }
+
+        if (!TryComp<MindComponent>(targetComp.Target.Value, out var targetMind) ||
+            targetMind.OwnedEntity == null ||
+            HasComp<TargetObjectiveImmuneComponent>(targetMind.OwnedEntity.Value))
+        {
+            args.Cancelled = true;
+            return;
+        }
+        // Nightshade End
+
         _target.SetTarget(ent.Owner, targetComp.Target.Value);
     }
 
@@ -68,7 +87,15 @@ public sealed partial class PickObjectiveTargetSystem : EntitySystem
             return;
 
         // couldn't find a target :(
-        if (_mind.PickFromPool(ent.Comp.Pool, args.MindId, ent.Comp.Conditions) is not {} picked)
+        // Nightshade Start - BSO target objective immunity
+        if (_mind.PickFromPoolFiltered(
+                ent.Comp.Pool,
+                mind => !HasComp<TargetObjectiveImmuneComponent>(mind.Owner) &&
+                        mind.Comp.OwnedEntity is { } entity &&
+                        !HasComp<TargetObjectiveImmuneComponent>(entity),
+                args.MindId,
+                ent.Comp.Conditions) is not {} picked)
+        // Nightshade End
         {
             args.Cancelled = true;
             return;

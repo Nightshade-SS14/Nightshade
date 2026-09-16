@@ -26,6 +26,9 @@
   description: department-CentralCommand-description
   color: "#0c344d"
   roles:
+  # Nightshade Start
+  - BlueshieldOfficer
+  # Nightshade End
   - CentralCommandOfficial
   - CBURN
   - ERTLeader
@@ -44,6 +47,9 @@
   description: department-Command-description
   color: "#334E6D"
   roles:
+  # Nightshade Start
+  - BlueshieldOfficer
+  # Nightshade End
   - Captain
   - ChiefEngineer
   - ChiefMedicalOfficer

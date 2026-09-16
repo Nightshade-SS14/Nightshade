@@ -265,3 +265,16 @@
   suffix: Unremoveable
   components:
   - type: Unremoveable
+
+# Nightshade Start
+- type: entity
+  parent: [ClothingUniformBase,  ClothingUniformFoldableBase]
+  id: ClothingUniformJumpsuitBlueshieldOfficer
+  name: blueshield officer jumpsuit
+  description: A short-sleeved grey and blue jumpsuit, made out of a sturdy material. Blueshield standard issue.
+  components:
+  - type: Sprite
+    sprite: _Goobstation/Clothing/Uniforms/Jumpsuit/Centcom/blueshield_officer.rsi
+  - type: Clothing
+    sprite: _Goobstation/Clothing/Uniforms/Jumpsuit/Centcom/blueshield_officer.rsi
+# Nightshade End

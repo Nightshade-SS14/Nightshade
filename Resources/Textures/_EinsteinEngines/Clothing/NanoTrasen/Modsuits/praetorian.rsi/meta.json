@@ -1,7 +1,7 @@
 {
   "version": 1,
   "license": "CC-BY-SA-3.0",
-  "copyright": "Taken from TG Station's Files",
+  "copyright": "Taken from TG Station's Files - Resomi edit outersuit by Marty",
   "size": {
     "x": 32,
     "y": 32
@@ -128,6 +128,74 @@
     {
       "name": "equipped-FEET-vox",
       "directions": 4
-    }
+    },
+      {
+          "name": "equipped-BACKPACK-resomi",
+          "directions": 4
+      },
+      {
+          "name": "equipped-BACKPACK-sealed-resomi",
+          "directions": 4
+      },
+      {
+          "name": "equipped-FEET-reptilian",
+          "directions": 4
+      },
+      {
+          "name": "equipped-FEET-sealed-reptilian",
+          "directions": 4
+      },
+      {
+          "name": "equipped-HAND-sealed-unshaded-vox",
+          "directions": 4
+      },
+      {
+          "name": "equipped-HEAD-reptilian",
+          "directions": 4
+      },
+      {
+          "name": "equipped-HEAD-resomi",
+          "directions": 4
+      },
+      {
+          "name": "equipped-HEAD-sealed-reptilian",
+          "directions": 4
+      },
+      {
+          "name": "equipped-HEAD-sealed-resomi",
+          "directions": 4
+      },
+      {
+          "name": "equipped-HEAD-sealed-unshaded-reptilian",
+          "directions": 4
+      },
+      {
+          "name": "equipped-HEAD-sealed-unshaded-vulpkanin",
+          "directions": 4
+      },
+      {
+          "name": "equipped-HEAD-sealed-vulpkanin",
+          "directions": 4
+      },
+      {
+          "name": "equipped-HEAD-vulpkanin",
+          "directions": 4
+      },
+      {
+          "name": "equipped-OUTERCLOTHING-reptilian",
+          "directions": 4
+      },
+      {
+          "name": "equipped-OUTERCLOTHING-resomi",
+          "directions": 4
+      },
+      {
+          "name": "equipped-OUTERCLOTHING-sealed-reptilian",
+          "directions": 4
+      },
+      {
+          "name": "equipped-OUTERCLOTHING-sealed-resomi",
+          "directions": 4
+      }
   ]
 }

@@ -309,3 +309,88 @@
     state: control
   content:
   - ClothingModsuitResearchDirectorPowerCell
+
+# Nightshade Start - BSO light hardsuit
+- type: selectableSet
+  id: BSOHardsuitLightSet
+  name: selectable-set-blueshield-hardsuit-light-name
+  description: selectable-set-blueshield-hardsuit-light-description
+  sprite:
+    sprite: _Goobstation/Clothing/OuterClothing/Hardsuits/bsolight.rsi
+    state: icon
+  content:
+    - ClothingOuterHardsuitBlueshieldLight
+# Nightshade End
+
+# Nightshade Start - BSO Praetorian modsuit selector
+- type: selectableSet
+  id: BSOModsuitSet
+  name: selectable-set-blueshield-modsuit-name
+  description: selectable-set-blueshield-modsuit-description
+  sprite:
+    sprite: _EinsteinEngines/Clothing/NanoTrasen/Modsuits/praetorian.rsi
+    state: control
+  content:
+    - ClothingModsuitPraetorian
+
+# ERT
+# Nightshade End
+
+# Nightshade Start - BSO revolver set
+- type: selectableSet
+  id: BSORevolverSet
+  name: selectable-set-blueshield-revolver-name
+  description: selectable-set-blueshield-revolver-description
+  sprite:
+    sprite: _Goobstation/Objects/Weapons/Guns/Battery/erevolver.rsi
+    state: icon
+  content:
+    - ClothingBeltHolsterFilledBlueshield # Pistol, 1+2 lethal speedloaders and 1 disabler speedloader
+# Nightshade End
+
+# Nightshade Start - BSO shield set
+- type: selectableSet
+  id: BSOBlueshieldSet
+  name: selectable-set-blueshield-shield-name
+  description: selectable-set-blueshield-shield-description
+  sprite:
+    sprite: _Goobstation/Objects/Shields/blueshieldshield.rsi
+    state: icon-on
+  content:
+    - BlueShieldShieldFilled
+# Nightshade End
+
+# Nightshade Start - BSO Chester set
+- type: selectableSet
+  id: BSOChesterSet
+  name: selectable-set-blueshield-chester-name
+  description: selectable-set-blueshield-chester-description
+  sprite:
+    sprite: _Omu/Objects/Weapons/Guns/Lever/chester.rsi # Omu, replace the chester in this with the old one.
+    state: base
+  content:
+  # Guaranteed items
+  #- WeaponLeverChester
+  #- MagazineShotgunLeverRifleEmpty
+  #- MagazineShotgunLeverRifleEmpty
+  #- MagazineBoxShotgunHighCaliberEMP
+  #- MagazineBoxShotgunHighCaliberEnsnaring
+  # Omu start
+  - WeaponLeverChesterRifle
+  - BlueshieldAmmunitionBoxFilled
+  # Omu end
+#  tables:
+#  - ChesterRandomAmmoTable
+# Nightshade End
+
+# Nightshade Start - BSO CQC selectable set
+- type: selectableSet
+  id: BSOCQCSet
+  name: selectable-set-blueshield-dragon-name
+  description: selectable-set-blueshield-dragon-description
+  sprite:
+    sprite: _Goobstation/Objects/Misc/martial_arts.rsi
+    state: dragon
+  content:
+    - BSOManual
+# Nightshade End

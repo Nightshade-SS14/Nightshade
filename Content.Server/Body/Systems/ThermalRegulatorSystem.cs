@@ -46,6 +46,9 @@ public sealed partial class ThermalRegulatorSystem : EntitySystem
         }
     }
 
+    /// <summary>
+    /// Processes thermal regulation for a mob
+    /// </summary>
     private void ProcessThermalRegulation(Entity<ThermalRegulatorComponent, TemperatureComponent?> ent)
     {
         if (!Resolve(ent, ref ent.Comp2, logMissing: false))

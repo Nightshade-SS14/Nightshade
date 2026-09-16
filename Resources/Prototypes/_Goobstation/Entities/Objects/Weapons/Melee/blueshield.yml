@@ -59,6 +59,9 @@
     maxCharge: 600
     startingCharge: 600
   - type: UseDelay
+    delays:
+      stunbaton:
+        length: 2.5
   - type: Item
     heldPrefix: off
     size: Normal
@@ -78,3 +81,37 @@
           False: {state: icon-off}
   - type: StaticPrice
     price: 1000
+
+- type: entity
+  name: combat injector
+  parent: [BaseItem, BaseCentcommContraband]
+  id: CombatInjector
+  description: Injects stored chemicals on hit, has a low capacity due to its sturdy design.
+  components:
+  - type: Sprite
+    sprite: _Goobstation/Objects/Weapons/Melee/blueshield_knife.rsi
+    state: icon
+  - type: Item
+    size: Small
+  - type: SolutionContainerManager
+    solutions:
+      injector:
+        maxVol: 5
+  - type: Injector
+    activeModeProtoId: CombatInjectorDynamicMode # SyringeDrawMode #Goob start
+    allowedModes:
+    - CombatInjectorDynamicMode # SyringeDrawMode
+    - CombatInjectorInjectMode # SyringeInjectMode #Goob end
+  - type: MeleeChemicalInjector
+    transferAmount: 5
+    solution: injector
+    pierceArmor: true
+  - type: MeleeWeapon
+    angle: 0
+    wideAnimationRotation: -135
+    damage:
+      types:
+        Piercing: 1
+    animation: WeaponArcThrust
+    soundHit:
+      path: /Audio/Weapons/bladeslice.ogg

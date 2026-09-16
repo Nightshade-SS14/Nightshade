@@ -432,6 +432,9 @@ public abstract partial class SharedSuitSensorSystem : EntitySystem
                 }
 
                 status.Coordinates = GetNetCoordinates(coordinates);
+                // Nightshade Start
+                status.IsCommandTracker = sensor.CommandTracker;
+                // Nightshade End
                 break;
         }
 

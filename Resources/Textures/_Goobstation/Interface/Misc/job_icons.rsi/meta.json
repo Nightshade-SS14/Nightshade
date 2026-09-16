@@ -47,6 +47,9 @@
     },
     {
         "name": "radiohost"
-    }
+    },
+      {
+        "name": "blueshield"
+      }
     ]
 }

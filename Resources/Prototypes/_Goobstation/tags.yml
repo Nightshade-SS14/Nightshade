@@ -492,7 +492,7 @@
   id: SnapPop
 
 - type: Tag
-  id: Softsuit # Used for Yowies outerslot whitelist
+  id: Softsuit
 
 - type: Tag
   id: SolarAssemblyFlatpack # stupid upstream thing used it in a construction graph
@@ -758,3 +758,14 @@
 
 - type: Tag
   id: CD
+
+# Nightshade Start
+- type: Tag
+  id: AutoinjectorCartridge
+- type: Tag
+  id: Defibrillator
+- type: Tag
+  id: Injector
+- type: Tag
+  id: MedicalPatch
+# Nightshade End

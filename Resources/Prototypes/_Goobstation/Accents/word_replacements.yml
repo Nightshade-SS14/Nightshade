@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 # Accents that work off of word replacements.
-- type: accent #(Goobstation) New Yowie Accent, to whoever ends up reading this, remember to spell each word exactly
+- type: accent
   id: bogan
   wordReplacements:
     accent-bogan-words-1: accent-bogan-words-replace-1

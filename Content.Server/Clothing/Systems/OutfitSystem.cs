@@ -78,23 +78,23 @@ public sealed partial class OutfitSystem : EntitySystem
                 onEquipped?.Invoke(target, equipmentEntity);
 
                 // Goobstation - Start
-                if (startingGear.Storage.Count <= 0
-                    || slot.SlotFlags != SlotFlags.BACK
-                    || !TryComp<StorageComponent>(equipmentEntity, out var storage))
-                    continue;
+                //if (startingGear.Storage.Count <= 0
+                //    || slot.SlotFlags != SlotFlags.BACK
+                //    || !TryComp<StorageComponent>(equipmentEntity, out var storage))
+                //    continue;
 
-                foreach (var (_, entProtos) in startingGear.Storage)
-                {
-                    if (entProtos.Count == 0)
-                        continue;
+                //foreach (var (_, entProtos) in startingGear.Storage)
+                //{
+                //    if (entProtos.Count == 0)
+                //        continue;
 
-                    foreach (var entProto in entProtos)
-                    {
-                        var spawnedEntity = Spawn(entProto, Transform(target).Coordinates);
-                        _storage.Insert(equipmentEntity, spawnedEntity, out _, storageComp: storage, playSound: false);
-                    }
+                //    foreach (var entProto in entProtos)
+                //    {
+                //        var spawnedEntity = Spawn(entProto, Transform(target).Coordinates);
+                //        _storage.Insert(equipmentEntity, spawnedEntity, out _, storageComp: storage, playSound: false);
+                //    }
 
-                }
+                //}
                 // Goobstation - End
             }
         }

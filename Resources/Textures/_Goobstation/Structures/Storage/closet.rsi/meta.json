@@ -36,6 +36,15 @@
     },
 	{
       "name": "locked"
-    }
+    },
+      {
+          "name": "bso"
+      },
+      {
+          "name": "bso_open"
+      },
+      {
+          "name": "bso_door"
+      }
   ]
 }

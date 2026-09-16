@@ -39,3 +39,12 @@ JobRoboticist = Roboticist
 JobRadioHost = Radio Host
 JobSecurityClown = Security Clown
 JobVirologist = Virologist
+
+# Nightshade Start
+job-name-bs = Blueshield
+JobBlueshieldOfficer = Blueshield Officer
+# Nightshade End
+
+# Nightshade Start
+job-name-bso = Blueshield Officer
+# Nightshade End

@@ -1,0 +1,78 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+# Omu: Disarm -> Disarm.
+# 50 stamina damage and a strong 2 second movement slowdown.
+- type: combo
+  id: DragonClaw
+  attacks:
+  - Disarm
+  - Disarm
+  userEffects:
+  - !type:PlaySoundEffect
+    sound: /Audio/Weapons/genhit3.ogg
+  opponentEffects:
+  - !type:TakeStaminaDamage
+    amount: 50
+  - !type:ModifyStatusEffect
+    effectProto: DragonClawSlowdownStatusEffect
+    type: Update
+    time: 2
+
+# Omu: Disarm -> Grab -> Harm.
+# Standing targets take 15 blunt + 30 stamina and are knocked down for 6s.
+# Already-downed targets instead receive a short 1s incapacitation.
+- type: combo
+  id: DragonTail
+  attacks:
+  - Disarm
+  - Grab
+  - Harm
+  userEffects:
+  - !type:PlaySoundEffect
+    sound: /Audio/Weapons/genhit2.ogg
+  opponentEffects:
+  - !type:StopPull
+  - !type:IfElse
+    condition: !type:StandingCondition
+    trueEffects:
+    - !type:HealthChange
+      useTargeting: false
+      ignoreResistances: false
+      damage:
+        flags: MartialArtCombo
+        types:
+          Blunt: 15
+    - !type:TakeStaminaDamage
+      amount: 30
+    - !type:ModifyKnockdown
+      time: 6
+      drop: true
+    falseEffects:
+    - !type:ModifyParalysis
+      time: 1
+
+# Omu: Disarm -> Harm -> Harm.
+# Only works against a downed target, deals 40 blunt and paralyzes for 2s.
+- type: combo
+  id: DragonStrike
+  attacks:
+  - Disarm
+  - Harm
+  - Harm
+  conditions:
+  - !type:StandingCondition
+    inverted: true
+    failMessage: martial-arts-fail-target-standing
+  userEffects:
+  - !type:PlaySoundEffect
+    sound: /Audio/Weapons/genhit1.ogg
+  opponentEffects:
+  - !type:HealthChange
+    useTargeting: false
+    ignoreResistances: false
+    damage:
+      flags: MartialArtCombo
+      types:
+        Blunt: 40
+  - !type:ModifyParalysis
+    time: 2

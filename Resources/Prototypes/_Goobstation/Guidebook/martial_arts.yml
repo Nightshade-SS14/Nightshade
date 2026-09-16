@@ -11,9 +11,11 @@
   - CorporateJudo
   - Capoeira
   - Ninjutsu
+  # Nightshade Start - Dragon Kung Fu guide
+  - DragonKungFu
+  # Nightshade End
   - HellRip
   - ArmstrongKarate
-
 - type: guideEntry
   id: CQC
   name: guide-entry-cqc
@@ -53,3 +55,10 @@
   id: ArmstrongKarate
   name: guide-entry-armstrong-karate
   text: "/ServerInfo/_Trauma/Guidebook/MartialArts/ArmstrongKarate.xml"
+
+# Nightshade Start - Dragon Kung Fu guide entry
+- type: guideEntry
+  id: DragonKungFu
+  name: guide-entry-dragon-kung-fu
+  text: "/ServerInfo/_Goobstation/Guidebook/MartialArts/DragonKungFu.xml"
+# Nightshade End
