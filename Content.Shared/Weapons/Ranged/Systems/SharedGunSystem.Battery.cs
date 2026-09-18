@@ -87,9 +87,9 @@ public abstract partial class SharedGunSystem
                 args.Ammo.Add(GetShootable(ent, args.Coordinates));
             }
         }
-        // Nightshade Start
-        TakeCharge(ent, ent.Comp.FireCost * args.FireCostMultiplier, (int) shots);
-        // Nightshade End
+        // </Trauma>
+
+        TakeCharge(ent, ent.Comp.FireCost * args.FireCostMultiplier * shots); // Trauma - use FireCostMultiplier
     }
 
     private void OnBatteryAmmoCount(Entity<BatteryAmmoProviderComponent> ent, ref GetAmmoCountEvent args)
