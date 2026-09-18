@@ -35,9 +35,9 @@
   conserveEnergy: false
   reactants:
     Flour:
-      amount: 45
+      amount: 15 #Nightshade made it 15
     Water:
-      amount: 15
+      amount: 5 #Nightshade made it 5
   effects:
     - !type:SpawnEntity
       entity: FoodDough

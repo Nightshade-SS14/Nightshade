@@ -562,7 +562,7 @@
     maxGrowth: 2
   # </Trauma>
   - type: GhostRole
-    prob: 0 # Trauma
+    prob: 1 # Nightshade made it 1
     makeSentient: true
     allowSpeech: true
     allowMovement: true
