@@ -53,3 +53,17 @@
   id: FloorTileDesertAstroSand
   name: stack-desert-astro-sand-floor
   spawn: FloorTileItemDesertAstroSand
+
+# <Nightshade - moon sand>
+- type: stack
+  parent: BaseTileStack
+  id: FloorTileAsteroidMoonSand
+  name: stack-asteroid-moon-sand-floor
+  spawn: FloorTileItemAsteroidMoonSand
+
+# <Nightshade - blue grass>
+- type: stack
+  parent: BaseTileStack
+  id: FloorTileGrassBlue
+  name: stack-blue-grass-floor
+  spawn: FloorTileGrassBlue
