@@ -1769,6 +1769,47 @@
   - type: Stack
     stackType: FloorTileDesertAstroSand
 
+# <Nightshade - moon sand>
+- type: entity
+  id: FloorTileItemAsteroidMoonSand
+  parent: BaseFloorTileAstro
+  name: asteroid moon sand
+  description: Fake sand. Luckily, it's not as coarse as the real thing.
+  components:
+  - type: Sprite
+    state: astro-asteroid
+  - type: Item
+    heldPrefix: asteroid
+  - type: FloorTile
+    outputs:
+    - Plating
+    - FloorAsteroidMoonSand
+  - type: Stack
+    stackType: FloorTileAsteroidMoonSand
+# </Nightshade>
+
+# <Nightshade - blue grass>
+- type: entity
+  name: blue grass tile
+  parent: FloorTileItemBase
+  id: FloorTileItemGrassBlue
+  components:
+  - type: Sprite
+    sprite: _Nightshade/Objects/Tiles/tile.rsi
+    state: grassblue
+  - type: Item
+    sprite: _Nightshade/Objects/Tiles/tile.rsi
+    heldPrefix: grassblue
+  - type: FloorTile
+    outputs:
+      - Plating
+      - FloorGrassBlue
+  - type: Stack
+    stackType: FloorTileGrassBlue
+# </Nightshade>
+
+
+
 - type: entity
   name: large wood floor
   parent: FloorTileItemBase
@@ -1792,7 +1833,7 @@
 
 - type: entity
   name: white marble tile
-  description: A chiseled, polished square of the finest Space Marble. Best not to lose it.
+  description: Chiseled, polished squares of the finest Space Marble. Best not to lose it. # NS
   parent: FloorTileItemBase
   id: FloorTileItemWhiteMarble
   components:
@@ -1806,6 +1847,42 @@
       - FloorWhiteMarble
   - type: Stack
     stackType: FloorTileWhiteMarble
+
+# <Nightshade> Mono marble
+- type: entity
+  name: white marble mono tile
+  description: A chiseled, polished square of the finest Space Marble. Best not to lose it.
+  parent: FloorTileItemWhiteMarble
+  id: FloorTileItemWhiteMarbleMono
+  components:
+  - type: Sprite
+    state: white-marble
+  - type: Item
+    heldPrefix: white-marble
+  - type: FloorTile
+    outputs:
+      - Plating
+      - FloorWhiteMarbleMono
+  - type: Stack
+    stackType: FloorTileWhiteMarbleMono
+
+- type: entity
+  name: dark marble mono tile
+  description: A chiseled, polished square of the finest Space Marble. Best not to lose it.
+  parent: FloorTileItemWhiteMarble
+  id: FloorTileItemDarkMarbleMono
+  components:
+  - type: Sprite
+    state: dark-marble
+  - type: Item
+    heldPrefix: dark-marble
+  - type: FloorTile
+    outputs:
+      - Plating
+      - FloorDarkMarbleMono
+  - type: Stack
+    stackType: FloorTileDarkMarbleMono
+# </Nightshade>
 
 - type: entity
   name: dark marble tile

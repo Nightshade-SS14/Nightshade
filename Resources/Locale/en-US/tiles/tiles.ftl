@@ -170,6 +170,10 @@ tiles-astro-ice = astro-ice
 tiles-astro-snow = astro-snow
 tiles-astro-asteroid-sand = asteroid astro-sand
 tiles-astro-asteroid-sand-borderless = borderless asteroid astro-sand
+# <Nightshade> don't use the same name for unvariantized options
+tiles-asteroid-sand-unvariantized = unvariantized astro-sand
+tiles-asteroid-sand-borderless-unvariantized = borderless unvariantized astro-sand
+# </Nightshade>
 tiles-desert-astro-sand = desert astro-sand
 tiles-wood-large = large wood
 tiles-xeno-floor = xeno floor
@@ -182,3 +186,11 @@ tiles-white-marble = white marble tile
 tiles-dark-marble = dark marble tile
 tiles-plasma-marble = plasmarble tile
 tiles-uranium-marble = uranium marble tile
+
+# NS - Marble mono tiles
+tiles-white-marble-mono = white marble mono tile
+tiles-dark-marble-mono = dark marble mono tile
+# NS - Moon sand
+tiles-asteroid-moonsand = moon astro-sand
+# NS - Blue grass
+tiles-blue-grass-floor = blue grass floor

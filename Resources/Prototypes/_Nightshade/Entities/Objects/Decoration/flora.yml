@@ -1,0 +1,63 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+
+# Blue tree
+
+- type: entity
+  parent: BaseTree
+  id: FloraBlueTree
+  name: blue tree
+  components:
+  - type: Sprite
+    sprite: _Nightshade/Objects/Decoration/Flora/flora_treesblue.rsi
+    layers:
+    - state: bluetree01
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        bluetree01: ""
+        bluetree02: ""
+
+
+# Vines
+
+- type: entity
+  id: WallVines
+  parent: BaseStructure
+  name: wall vines
+  description: This excessive plant growth seems anomalous.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Anchorable
+  - type: Sprite
+    noRot: true
+    sprite: /Textures/_Nightshade/Objects/Decoration/Flora/flora_wallvines.rsi
+    drawdepth: WallMountedItems
+    layers:
+    - state: vine01
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        vine01: ""
+        vine02: ""
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0
+  - type: Damageable
+    damageModifierSet: Metallic # check this
+  - type: Injurable
+    damageContainer: StructuralInorganic # check this
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 50
+        behaviors:
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]

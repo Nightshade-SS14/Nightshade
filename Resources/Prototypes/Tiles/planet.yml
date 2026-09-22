@@ -12,7 +12,7 @@
   id: FloorPlanetDirt
   parent: BaseFloorPlanet
   name: tiles-dirt-planet-floor
-# <Nightshade> respritening
+# <Nightshade>
   sprite: /Textures/Tiles/Planet/Dirt/dirt.png
   variants: 5
   placementVariants:
@@ -39,13 +39,37 @@
   parent: BaseFloorPlanet
   name: tiles-desert-floor
   sprite: /Textures/Tiles/Planet/Desert/desert.png
-  variants: 6
+# <Nightshade>
+  variants: 5
+  edgeSpritePriority: 2
+  edgeSprites:
+    SouthEast: /Textures/Tiles/Planet/Desert/single_edge_SE.png
+    NorthEast: /Textures/Tiles/Planet/Desert/single_edge_NE.png
+    NorthWest: /Textures/Tiles/Planet/Desert/single_edge_NW.png
+    SouthWest: /Textures/Tiles/Planet/Desert/single_edge_SW.png
+    South: /Textures/Tiles/Planet/Desert/double_edge_S.png
+    East: /Textures/Tiles/Planet/Desert/double_edge_E.png
+    North: /Textures/Tiles/Planet/Desert/double_edge_N.png
+    West: /Textures/Tiles/Planet/Desert/double_edge_W.png
+# </Nightshade>
 
 - type: tile
   id: FloorLowDesert
   name: tiles-low-desert-floor
-  sprite: /Textures/Tiles/Planet/Desert/low_desert.png
-  variants: 6
+# <Nightshade>
+  sprite: /Textures/Tiles/Planet/Desert/DesertLow/low_desert.png
+  variants: 5
+  edgeSpritePriority: 2
+  edgeSprites:
+    SouthEast: /Textures/Tiles/Planet/Desert/DesertLow/single_edge_SE.png
+    NorthEast: /Textures/Tiles/Planet/Desert/DesertLow/single_edge_NE.png
+    NorthWest: /Textures/Tiles/Planet/Desert/DesertLow/single_edge_NW.png
+    SouthWest: /Textures/Tiles/Planet/Desert/DesertLow/single_edge_SW.png
+    South: /Textures/Tiles/Planet/Desert/DesertLow/double_edge_S.png
+    East: /Textures/Tiles/Planet/Desert/DesertLow/double_edge_E.png
+    North: /Textures/Tiles/Planet/Desert/DesertLow/double_edge_N.png
+    West: /Textures/Tiles/Planet/Desert/DesertLow/double_edge_W.png
+# </Nightshade>
 
 # Grass
 - type: tile
@@ -53,7 +77,7 @@
   parent: BaseFloorPlanet
   name: tiles-grass-planet-floor
   sprite: /Textures/Tiles/Planet/Grass/grass.png
-# <Nightshade> respritening
+# <Nightshade>
   variants: 6
   edgeSpritePriority: 5
   edgeSprites:
@@ -83,7 +107,7 @@
   parent: BaseFloorPlanet
   name: tiles-snow
   sprite: /Textures/Tiles/Planet/Snow/snow.png
-# <Nightshade> respritening
+# <Nightshade>
   variants: 6
   edgeSpritePriority: 8
   edgeSprites:
@@ -103,7 +127,7 @@
 - type: tile
   id: FloorIce
   name: tiles-ice
-# <Nightshade> respritening
+# <Nightshade>
   sprite: /Textures/Tiles/Planet/Ice/ice.png
   variants: 4
 # </Nightshade>
