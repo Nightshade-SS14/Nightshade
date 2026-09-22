@@ -21,18 +21,8 @@ jobs:
       with:
         submodules: 'recursive'
 
-    - name: Get Engine Tag
-      run: |
-        cd RobustToolbox
-
-        if [ "$(git rev-parse --is-shallow-repository)" = "true" ]; then
-          git fetch --unshallow --tags
-        else
-          git fetch --tags
-        fi
-
-        ENGINE_TAG=$(git describe --tags --abbrev=0)
-        echo "Engine tag: $ENGINE_TAG"
+    - name: Show Engine Version
+      run: git -C RobustToolbox rev-parse HEAD
 
     - name: Install dependencies
       run: dotnet restore
