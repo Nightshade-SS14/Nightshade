@@ -21,8 +21,15 @@ jobs:
       with:
         submodules: 'recursive'
 
-    - name: Show Engine Version
-      run: git -C RobustToolbox rev-parse HEAD
+    - name: Prepare Engine Version
+      run: |
+        if [ "$(git -C RobustToolbox rev-parse --is-shallow-repository)" = "true" ]; then
+          git -C RobustToolbox fetch --unshallow --tags --quiet
+        else
+          git -C RobustToolbox fetch --tags --quiet
+        fi
+
+        git -C RobustToolbox describe --tags --abbrev=0
 
     - name: Install dependencies
       run: dotnet restore
