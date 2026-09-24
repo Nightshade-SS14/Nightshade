@@ -110,33 +110,43 @@
   - type: StaticPrice
     price: 65
 
-# Nightshade Start - BSO chems: EbifinlLazideChemistryVial, SyriniverChemistryVial - needs adding or removing
+# Nightshade Start - BSO chem vials: Artiplates (bleed), Oxandrolone (burn), PentenicAcid (poison)
 - type: entity
-  id: EbifinlLazideChemistryVial
+  id: ArtiplatesChemistryVial
   parent: ChemistryEmptyVial
-  suffix: ebifin
+  suffix: artiplates
   components:
   - type: Label
-    currentLabel: reagent-name-ebifin
-  - type: SolutionContainerManager
-    solutions:
-      beaker:
-        maxVol: 30
-        reagents:
-          - ReagentId: Ebifin
-            Quantity: 30
+    localizedLabel: reagent-name-artiplates
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Artiplates
+        Quantity: 30
+
 - type: entity
-  id: SyriniverChemistryVial
+  id: OxandroloneChemistryVial
   parent: ChemistryEmptyVial
-  suffix: syriniver
+  suffix: oxandrolone
   components:
   - type: Label
-    currentLabel: reagent-name-syriniver
-  - type: SolutionContainerManager
-    solutions:
-      beaker:
-        maxVol: 30
-        reagents:
-          - ReagentId: Syriniver
-            Quantity: 30
+    localizedLabel: reagent-name-oxandrolone
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Oxandrolone
+        Quantity: 30
+
+- type: entity
+  id: PentenicAcidChemistryVial
+  parent: ChemistryEmptyVial
+  suffix: pentenic acid
+  components:
+  - type: Label
+    localizedLabel: reagent-name-pentenic-acid
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: PentenicAcid
+        Quantity: 30
 # Nightshade End
