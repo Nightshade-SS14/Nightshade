@@ -31,9 +31,9 @@
       amount: 1
     - id: ProcenylLazideChemistryVial
       amount: 1
-    - id: EbifinlLazideChemistryVial
+    - id: OxandroloneChemistryVial # NS - to replace omu's ebifin vial, treats burn
       amount: 1
-    - id: SyriniverChemistryVial
+    - id: PentenicAcidChemistryVial # NS - to replace omu's syriniver vial, treats poison
       amount: 1
     - id: TirimolChemistryVial
       amount: 1
