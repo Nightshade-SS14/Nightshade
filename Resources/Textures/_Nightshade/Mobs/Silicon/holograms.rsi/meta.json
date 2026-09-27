@@ -1,0 +1,46 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "ophiuchiko (GitHub)",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+	    {
+	        "name": "ai_bee"
+	    },
+	    {
+	        "name": "ai_dragon"
+	    },
+        {
+	        "name": "ai_moth"
+	    },
+        {
+            "name": "ai_mouse",
+            "delays": [
+                [
+                    0.3,
+                    2.3,
+                    0.3,
+                    2.3
+                ]
+            ]
+        },
+        {
+	        "name": "ai_robot"
+	    },
+        {
+	        "name": "ai_spectre"
+	    },
+        {
+	        "name": "ai_spider"
+	    },
+	    {
+	        "name": "ai_watcher"
+	    },
+	    {
+	        "name": "ai_weird"
+	    }
+    ]
+}

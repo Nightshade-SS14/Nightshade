@@ -45,6 +45,16 @@
   - StationAiHologramFace
   - StationAiHologramCat
   - StationAiHologramDog
+# Nightshade
+  - StationAiHologramMouse
+  - StationAiHologramBee
+  - StationAiHologramMoth
+  - StationAiHologramRobot
+  - StationAiHologramDragon
+  - StationAiHologramSpectre
+  - StationAiHologramSpider
+  - StationAiHologramWatcher
+  - StationAiHologramWeird
 
 # Iconography
 - type: stationAiCustomization

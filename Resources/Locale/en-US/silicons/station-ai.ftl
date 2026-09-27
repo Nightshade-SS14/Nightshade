@@ -65,3 +65,13 @@ station-ai-hologram-face = Disembodied head
 # Goob, consistentcy, form -> appearance
 station-ai-hologram-cat = Cat appearance
 station-ai-hologram-dog = Corgi appearance
+# Nightshade
+station-ai-hologram-moth = Moth appearance
+station-ai-hologram-mouse = Mouse appearance
+station-ai-hologram-robot = Robotic appearance
+station-ai-hologram-spectre = Ghostly appearance
+station-ai-hologram-spider = Spider appearance
+station-ai-hologram-watcher = Watcher appearance
+station-ai-hologram-weird = Glitched appearance
+station-ai-hologram-bee = Bee appearance
+station-ai-hologram-dragon = Dragon appearance
