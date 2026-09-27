@@ -1,0 +1,91 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+# Heisenbee AI hologram
+- type: stationAiCustomization
+  id: StationAiHologramBee
+  name: station-ai-hologram-bee
+  previewKey: Hologram
+  layerData:
+    Hologram:
+      sprite: _Nightshade/Mobs/Silicon/holograms.rsi
+      state: ai_bee
+
+# Dragon AI hologram
+- type: stationAiCustomization
+  id: StationAiHologramDragon
+  name: station-ai-hologram-dragon
+  previewKey: Hologram
+  layerData:
+    Hologram:
+      sprite: _Nightshade/Mobs/Silicon/holograms.rsi
+      state: ai_dragon
+
+# Moth AI hologram
+- type: stationAiCustomization
+  id: StationAiHologramMoth
+  name: station-ai-hologram-moth
+  previewKey: Hologram
+  layerData:
+    Hologram:
+      sprite: _Nightshade/Mobs/Silicon/holograms.rsi
+      state: ai_moth
+
+# Mouse AI hologram
+- type: stationAiCustomization
+  id: StationAiHologramMouse
+  name: station-ai-hologram-mouse
+  previewKey: Hologram
+  layerData:
+    Hologram:
+      sprite: _Nightshade/Mobs/Silicon/holograms.rsi
+      state: ai_mouse
+
+# Robot AI hologram
+- type: stationAiCustomization
+  id: StationAiHologramRobot
+  name: station-ai-hologram-robot
+  previewKey: Hologram
+  layerData:
+    Hologram:
+      sprite: _Nightshade/Mobs/Silicon/holograms.rsi
+      state: ai_robot
+
+# Spectre AI hologram
+- type: stationAiCustomization
+  id: StationAiHologramSpectre
+  name: station-ai-hologram-spectre
+  previewKey: Hologram
+  layerData:
+    Hologram:
+      sprite: _Nightshade/Mobs/Silicon/holograms.rsi
+      state: ai_spectre
+
+# Spider AI hologram
+- type: stationAiCustomization
+  id: StationAiHologramSpider
+  name: station-ai-hologram-spider
+  previewKey: Hologram
+  layerData:
+    Hologram:
+      sprite: _Nightshade/Mobs/Silicon/holograms.rsi
+      state: ai_spider
+
+# Glitched AI hologram
+- type: stationAiCustomization
+  id: StationAiHologramWeird
+  name: station-ai-hologram-weird
+  previewKey: Hologram
+  layerData:
+    Hologram:
+      sprite: _Nightshade/Mobs/Silicon/holograms.rsi
+      state: ai_weird
+
+# Watcher eye AI hologram
+- type: stationAiCustomization
+  id: StationAiHologramWatcher
+  name: station-ai-hologram-watcher
+  previewKey: Hologram
+  layerData:
+    Hologram:
+      sprite: _Nightshade/Mobs/Silicon/holograms.rsi
+      state: ai_watcher
