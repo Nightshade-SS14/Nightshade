@@ -354,15 +354,15 @@
     treatments:
       # <Trauma>
       SoftCrit:
-        reagent: Inaprovaline
-        quantity: 15
+        reagent: Nanozaline # Nightshade - was Inaprovaline
+        quantity: 5 # NS - was 15 for inap
       # </Trauma>
       Alive:
         reagent: Tricordrazine
         quantity: 10 # Trauma - Was 30
       Critical:
-        reagent: Inaprovaline
-        quantity: 15
+        reagent: Nanozaline # Nightshade - was Inaprovaline
+        quantity: 5 # NS - was 15 for inap
   - type: EmaggableMedibot
     replacements:
       # <Trauma>

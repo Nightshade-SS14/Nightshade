@@ -1,0 +1,32 @@
+
+# A chemical meant for medibots to stabilize crit patients & actually slowly recover them.
+# No more inap-bots turning dylo into tric and keeping people forever critical.
+# Cant be produced & won't OD.
+- type: reagent
+  id: Nanozaline
+  name: reagent-name-nanozaline
+  group: Medicine
+  desc: reagent-desc-nanozaline
+  physicalDesc: reagent-physical-desc-opaque
+  flavor: medicine
+  color: "#8f8fa4"
+  metabolisms:
+    Bloodstream:
+      metabolismRate: 0.1
+      effects:
+      - !type:EvenHealthChange
+        conditions:
+        - !type:NestedCondition
+          proto: MobCritical
+        damage:
+          Airloss: -1.5
+          Toxin: -0.2
+          Brute: -0.2
+          Burn: -0.2
+      - !type:ModifyBleed
+        amount: -0.2
+      - !type:ModifyBloodLevel
+        amount: 10
+      - !type:Satiate
+        satiationType: Thirst # similarly to saline
+        factor: 6
