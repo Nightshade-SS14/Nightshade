@@ -1,0 +1,43 @@
+{
+	"version": 1,
+	"license": "CC-BY-SA-3.0",
+    "copyright": "Paradise Station",
+	"size": {
+		"x": 32,
+		"y": 32
+	},
+	"states": [
+		{
+			"name": "mender",
+			"copyright": "Paradise Station",
+			"license": "CC-BY-SA-3.0"
+		},
+		{
+			"name": "mender1",
+			"copyright": "Paradise Station",
+			"license": "CC-BY-SA-3.0"
+		},
+		{
+			"name": "mender2",
+			"copyright": "Paradise Station",
+			"license": "CC-BY-SA-3.0"
+		},
+		{
+			"name": "mender3",
+			"copyright": "Paradise Station",
+			"license": "CC-BY-SA-3.0"
+		},
+		{
+			"name": "mender-inhand-left",
+            "directions": 4,
+			"copyright": "Paradise Station",
+			"license": "CC-BY-SA-3.0"
+		},
+		{
+			"name": "mender-inhand-right",
+            "directions": 4,
+			"copyright": "Paradise Station",
+			"license": "CC-BY-SA-3.0"
+		}
+    ]
+}
