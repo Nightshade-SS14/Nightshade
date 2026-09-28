@@ -39,6 +39,9 @@
 - type: vendingMachineInventory
   id: NanoMedPlusInventory
   startingInventory:
+    # Nightshade - Automenders
+    AutoMenderBruteFilled: 2
+    AutoMenderBurnFilled: 2
     # Medical Essential Gear
     ClothingBeltMedicalFilled: 2
     # Shared Essential

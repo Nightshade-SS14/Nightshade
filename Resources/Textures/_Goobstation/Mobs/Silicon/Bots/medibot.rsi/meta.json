@@ -1,5 +1,5 @@
 {
-   "copyright" : "Taken from https://github.com/tgstation/tgstation, modified by marvelousjoker",
+   "copyright" : "Taken from https://github.com/tgstation/tgstation, modified by marvelousjoker, modified by ophiuchiko",
    "license" : "CC-BY-SA-3.0",
    "size" : {
       "x" : 32,
@@ -12,7 +12,15 @@
       },
       {
          "directions" : 1,
-         "name" : "powered"
+         "name" : "powered",
+         "delays": [
+                [
+                    5,
+                    4.2,
+                    5,
+                    3.5
+                ]
+            		]
       }
    ],
    "version" : 1

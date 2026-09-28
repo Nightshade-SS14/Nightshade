@@ -41,6 +41,8 @@ public sealed partial class SolutionTransferSystem : EntitySystem
         SubscribeLocalEvent<SolutionTransferComponent, AfterInteractEvent>(OnAfterInteract);
         SubscribeLocalEvent<SolutionTransferComponent, SolutionDrainTransferDoAfterEvent>(OnSolutionDrainTransferDoAfter);
         SubscribeLocalEvent<SolutionTransferComponent, SolutionRefillTransferDoAfterEvent>(OnSolutionFillTransferDoAfter);
+
+        SubscribeLocalEvent<RefillableSolutionComponent, SolutionTransferAttemptEvent>(OnRefillTransferAttempt); // Starlight
     }
 
     private void AddSetTransferVerbs(Entity<SolutionTransferComponent> ent, ref GetVerbsEvent<AlternativeVerb> args)
@@ -332,7 +334,7 @@ public sealed partial class SolutionTransferSystem : EntitySystem
     /// </summary>
     private bool CanTransfer(SolutionTransferData data)
     {
-        var transferAttempt = new SolutionTransferAttemptEvent(data.SourceEntity, data.TargetEntity);
+        var transferAttempt = new SolutionTransferAttemptEvent(data.SourceEntity, data.TargetEntity, data.Source); // Starlight - add Source parameter
 
         // Check if the source is cancelling the transfer
         RaiseLocalEvent(data.SourceEntity, ref transferAttempt);
@@ -394,7 +396,8 @@ public struct SolutionTransferData(EntityUid user, EntityUid sourceEntity, Entit
 /// To not mispredict this should always be cancelled in shared code and not server or client.
 /// </summary>
 [ByRefEvent]
-public record struct SolutionTransferAttemptEvent(EntityUid From, EntityUid To, string? CancelReason = null)
+public record struct SolutionTransferAttemptEvent(EntityUid From, EntityUid To, Entity<SolutionComponent> SolutionEntity, string? CancelReason = null)
+// Nightshade - added "Entity<SolutionComponent> SolutionEntity" since it appears needed for automenders to work.
 {
     /// <summary>
     /// Cancels the transfer.
