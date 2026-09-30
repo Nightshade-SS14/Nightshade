@@ -164,6 +164,12 @@ TaskJug: Jug
 
 # 2026-08-24
 LightReplacerEmpty: LightReplacer
+
+# 2026-09-16
+SpawnMobPlantbot: null
+
+# 2026-09-19
+PoweredFloorLight: null
 # </Trauma>
 
 # Goobstation - Submarine from DeltaV
@@ -1270,3 +1276,7 @@ DrinkWaterJug: JugWater
 
 #2026-09-05
 AsimovCircuitBoard: CrewsimovCircuitBoard
+
+# 2026-09-24
+ClothingShoesTourist: ClothingShoesSandalsBlack
+ClothingShoesWizard: ClothingShoesSandalsBrown
