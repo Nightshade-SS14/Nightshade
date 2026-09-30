@@ -74,11 +74,11 @@
       - Biological
       - Hybrid
     damage:
-      Brute: 0.66
-#      types:
-#        Blunt: 0.66
-#        Piercing: 0.66
-#        Slash: 0.66
+      types:
+        Blunt: -0.66
+        Piercing: -0.66
+        Slash: -0.66
+        Ballistic: -0.66
     healingBeginSound:
       path: "/Audio/_Starlight/Items/Medical/mender.ogg"
     healingEndSound:
@@ -102,7 +102,7 @@
 - type: entity
   id: AutoMenderBurn
   name: burn automender
-  description: A device used to heal patients brute, burn or both damage types. Uses dermalin to work.
+  description: A device used to heal patients brute, burn or both damage types. Uses dermaline to work.
   parent: BaseAutoMender
   components:
   - type: Sprite

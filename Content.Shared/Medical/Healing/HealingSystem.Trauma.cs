@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
+using Content.Shared.Chemistry.Reagent;
 using Content.Medical.Common.Body;
 using Content.Medical.Common.Healing;
 using Content.Medical.Common.Targeting;
@@ -152,6 +153,24 @@ public sealed partial class HealingSystem
         if (!TryComp<DamageableComponent>(targetedWoundable, out var damageableComp))
             return;
 
+        // Nightshade - automenders and other non-bleed healing items
+        // should not attempt treatment while the patient is actively bleeding.
+        if (healing.BloodlossModifier == 0 &&
+            healing.ModifyBloodLevel >= 0 &&
+            TryComp<BloodstreamComponent>(ent, out var activeBleeding) &&
+            activeBleeding.BleedAmountFromWounds > 0)
+        {
+            _popupSystem.PopupClient(
+                Loc.GetString("medical-item-cant-use-rebell", ("target", ent)),
+                ent,
+                args.User,
+                PopupType.MediumCaution);
+
+            args.Repeat = false;
+            args.Handled = true;
+            return;
+        }
+
         var healedBleed = false;
         //var canHeal = true; // Shitmed - not used
         var healedTotal = new DamageSpecifier(); // Goobstation
@@ -204,16 +223,18 @@ public sealed partial class HealingSystem
                 targetedWoundable = woundablesQueue.Dequeue();
                 var ev = new PartHealAttemptEvent();
                 RaiseLocalEvent(targetedWoundable, ref ev);
-                if (ev.Cancelled)
+                if (healing.BloodlossModifier == 0 &&
+                    healing.ModifyBloodLevel >= 0 &&
+                    ev.Bleeding)
                 {
-                    // if it wasn't healed then a trauma blocked it? goida
-                    leftoverHealAndTrauma |= !healedBleedLevel;
+                    leftoverHealAndBleed = true;
                     continue;
                 }
 
-                if (healing.BloodlossModifier == 0 && healing.ModifyBloodLevel >= 0 && ev.Bleeding)  // If the healing item has no bleeding heals, and its bleeding, we raise the alert. Goobstation edit
+                if (ev.Cancelled)
                 {
-                    leftoverHealAndBleed = true;
+                    // Healing was blocked by trauma.
+                    leftoverHealAndTrauma |= !healedBleedLevel;
                     continue;
                 }
 
@@ -232,10 +253,11 @@ public sealed partial class HealingSystem
 
         if (!healedBleed && !isAnyTypeFullyConsumed && (leftoverHealAndTrauma || leftoverHealAndBleed))
         {
-            if (leftoverHealAndTrauma)
+            if (leftoverHealAndBleed)
+                _popupSystem.PopupClient(Loc.GetString("medical-item-cant-use-rebell", ("target", ent)), ent, args.User, PopupType.MediumCaution);
+            else if (leftoverHealAndTrauma)
                 _popupSystem.PopupClient(Loc.GetString("medical-item-requires-surgery-rebell", ("target", ent)), ent, args.User, PopupType.MediumCaution);
-            else if (leftoverHealAndBleed) // the else is because would like to not pop both the popups at once, priority goes to the trauma popup
-                _popupSystem.PopupClient(Loc.GetString("medical-item-cant-use-rebell", ("target", ent)), ent, args.User);
+
             return;
         }
         // Goobstation end
@@ -247,6 +269,43 @@ public sealed partial class HealingSystem
 
             if (_stacks.GetCount((args.Used.Value, stackComp)) <= 0)
                 dontRepeat = true;
+        }
+        
+        // Starlight - solution-backed healing items such as automenders
+        else if (healing.SolutionDrain &&
+                 _solutionContainerSystem.TryGetSolution(
+                     args.Used.Value,
+                     "injector",
+                     out var solutionEntity,
+                     out var solution))
+        {
+            var reagentsToRemove =
+                new List<(ReagentQuantity Reagent, FixedPoint2 Amount)>();
+
+            foreach (var reagent in solution.Contents)
+            {
+                var drainReagent = healing.ReagentsToDrain.FirstOrDefault(drain =>
+                    drain.Reagent == reagent.Reagent &&
+                    reagent.Quantity >= drain.Quantity);
+
+                reagentsToRemove.Add((reagent, drainReagent.Quantity));
+            }
+
+            foreach (var (reagent, amount) in reagentsToRemove)
+            {
+                _solutionContainerSystem.RemoveReagent(
+                    solutionEntity.Value,
+                    reagent.Reagent,
+                    amount);
+            }
+
+            if (!solution.Contents.Any(sol =>
+                    healing.ReagentsToDrain.Any(req =>
+                        req.Reagent == sol.Reagent &&
+                        sol.Quantity >= req.Quantity)))
+            {
+                dontRepeat = true;
+            }
         }
         else
         {
