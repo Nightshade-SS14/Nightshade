@@ -1,3 +1,4 @@
+using Content.Shared.Chemistry.Reagent;
 // <Trauma>
 using Content.Medical.Common.Healing;
 using Content.Shared.Body;
@@ -20,6 +21,7 @@ using Content.Shared.Mobs.Systems;
 using Content.Shared.Popups;
 using Content.Shared.Stacks;
 using Robust.Shared.Audio.Systems;
+using System.Linq;
 
 namespace Content.Shared.Medical.Healing;
 
@@ -100,6 +102,42 @@ public sealed partial class HealingSystem : EntitySystem
 
             if (_stacks.GetCount((args.Used.Value, stackComp)) <= 0)
                 dontRepeat = true;
+        }
+        // Starlight - solution-backed healing items such as automenders
+        else if (healing.SolutionDrain &&
+                 _solutionContainerSystem.TryGetSolution(
+                     args.Used.Value,
+                     "injector",
+                     out var solutionEntity,
+                     out var solution))
+        {
+            var reagentsToRemove =
+                new List<(ReagentQuantity Reagent, FixedPoint2 Amount)>();
+
+            foreach (var reagent in solution.Contents)
+            {
+                var drainReagent = healing.ReagentsToDrain.FirstOrDefault(drain =>
+                    drain.Reagent == reagent.Reagent &&
+                    reagent.Quantity >= drain.Quantity);
+
+                reagentsToRemove.Add((reagent, drainReagent.Quantity));
+            }
+
+            foreach (var (reagent, amount) in reagentsToRemove)
+            {
+                _solutionContainerSystem.RemoveReagent(
+                    solutionEntity.Value,
+                    reagent.Reagent,
+                    amount);
+            }
+
+            if (!solution.Contents.Any(sol =>
+                    healing.ReagentsToDrain.Any(req =>
+                        req.Reagent == sol.Reagent &&
+                        sol.Quantity >= req.Quantity)))
+            {
+                dontRepeat = true;
+            }
         }
         else
         {
@@ -207,6 +245,30 @@ public sealed partial class HealingSystem : EntitySystem
 
         if (TryComp<StackComponent>(healing, out var stack) && stack.Count < 1)
             return false;
+
+        // Starlight - solution-backed healing items such as automenders
+        if (healing.Comp.SolutionDrain)
+        {
+            if (_solutionContainerSystem.TryGetSolution(healing.Owner, "injector", out _, out var solution))
+            {
+                if (!solution.Contents.Any(sol =>
+                        healing.Comp.ReagentsToDrain.Any(req =>
+                            req.Reagent == sol.Reagent &&
+                            sol.Quantity >= req.Quantity)))
+                {
+                    _popupSystem.PopupClient(
+                        Loc.GetString("medical-item-solution-missing", ("item", healing.Owner)),
+                        healing.Owner,
+                        user);
+
+                    return false;
+                }
+            }
+            else
+            {
+                return false;
+            }
+        }
 
         // Shitmed Change Start
         var anythingToDo =
