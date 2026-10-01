@@ -6,12 +6,12 @@
   id: BaseRanchingEgg
   name: fertilized egg
   components:
-  - type: Perishable
-    rotAfter: 99999999 # For my birthday wish I wish to remove rotting
-    molsPerSecondPerUnitMass: 0
-  - type: RotInto
-    entity: Eggshells
-    stage: 1
+#  - type: Perishable
+#    rotAfter: 99999999 # Nightshade disabled food rot
+#    molsPerSecondPerUnitMass: 0
+#  - type: RotInto
+#    entity: Eggshells
+#    stage: 1
   - type: Sprite
     sprite: _Trauma/Objects/Misc/eggs.rsi
     state: egg-white

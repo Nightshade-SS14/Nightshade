@@ -6,8 +6,8 @@
   parent: [SolutionNormal, FoodInjectableBase]
   id: FoodPizzaBase
   components:
-  - type: Perishable # Trauma - Brings whole pizza rot time in-line with pizza slices
-    rotAfter: 900
+#  - type: Perishable # Trauma - Brings whole pizza rot time in-line with pizza slices
+#    rotAfter: 900  # Nightshade stopped it rotting
   - type: FlavorProfile
     flavors:
       - oily
@@ -38,10 +38,10 @@
   abstract: true
   components:
   # <Trauma>
-  - type: Perishable
-    rotAfter: 600
-  - type: RotInto # pizza rots into moldy pizza
-    entity: FoodPizzaMoldySlice
+#  - type: Perishable
+#    rotAfter: 600            # Nightshade stopped it rotting
+#  - type: RotInto # pizza rots into moldy pizza
+#    entity: FoodPizzaMoldySlice
   # </Trauma>
   - type: FlavorProfile
     flavors:
@@ -532,10 +532,10 @@
   description: Once a perfectly good slice of pizza pie, but now it lies here, rancid and bursting with spores.
   components:
   # <Trauma>
-  - type: Perishable # pizza shouldn't take 20 minutes to turn into rot
-    rotAfter: 300
-  - type: RotInto # make sure moldy pizza doesn't rot into moldy pizza :godo:
-    entity: FoodRot
+#  - type: Perishable # pizza shouldn't take 20 minutes to turn into rot
+#    rotAfter: 300                                                                  # Nightshade stopped it rotting
+#  - type: RotInto # make sure moldy pizza doesn't rot into moldy pizza :godo:
+#    entity: FoodRot
   # </Trauma>
   - type: FlavorProfile
     flavors:

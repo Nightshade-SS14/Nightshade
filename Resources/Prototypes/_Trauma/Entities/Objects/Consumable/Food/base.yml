@@ -5,12 +5,12 @@
   parent: FoodBase
   id: BasePerishableFood
   components:
-  - type: Perishable
-    rotAfter: 1200
-    molsPerSecondPerUnitMass: 0
-  - type: RotInto
-    entity: FoodRot
-    stage: 1
+#  - type: Perishable
+#    rotAfter: 1200
+#    molsPerSecondPerUnitMass: 0  # Nightshade disabled food rot
+#  - type: RotInto
+#    entity: FoodRot
+#    stage: 1
   - type: AtmosExposed
   - type: Temperature
     temperature: 290
