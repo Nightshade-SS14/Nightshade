@@ -7,7 +7,7 @@
   id: FoodBreadBase
   components:
   - type: Perishable # Trauma - Bread loaf should take as long to rot as slices do
-    rotAfter: 900
+    rotAfter: 1200 # Changed from 900 - Nightshade
   - type: Item
     size: Normal
   - type: FlavorProfile
@@ -31,7 +31,7 @@
   components:
   # <Trauma>
   - type: Perishable
-    rotAfter: 600
+    rotAfter: 1200 # Changed from 600 - Nightshade
   - type: RotInto # rots into moldy bread
     entity: FoodBreadMoldySlice
   # </Trauma>
@@ -877,10 +877,10 @@
   description: Entire stations have been ripped apart over arguing whether this is still good to eat.
   components:
   # <Trauma>
-  - type: Perishable # shouldnt take 20 mins to rot
-    rotAfter: 300
-  - type: RotInto # mold should not rot into more mold
-    entity: FoodRot
+#  - type: Perishable # shouldnt take 20 mins to rot
+#    rotAfter: 300                                          # Nightshade stopped it rotting
+#  - type: RotInto # mold should not rot into more mold
+#    entity: FoodRot
   # </Trauma>
   - type: Sprite
     layers:
