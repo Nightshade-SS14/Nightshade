@@ -14,6 +14,10 @@
     - state: soul_stone_glow
       map: [ "enum.SoulShardVisualState.Glow" ]
       visible: false
+  - type: CollectiveMind
+    defaultChannel: BloodCult
+    channels:
+    - BloodCult
   - type: LanguageSpeaker
     speaks:
     - Eldritch
@@ -21,6 +25,8 @@
     - Eldritch
     - TauCetiBasic
   - type: MindContainer
+  - type: NameIdentifier
+    group: AdjectivePrefix # TODO: make cult related dataset
   - type: Examiner
     skipChecks: true
   - type: PointLight
@@ -43,8 +49,12 @@
   - type: IsDeadIC
   - type: SoulShard
   - type: GhostRole
-    allowMovement: true
     name: ghost-role-information-soul-shard-name
     description: ghost-role-information-soul-shard-description
     rules: ghost-role-information-soul-shard-rules
+    mindRoles: [] # handled by the shard system
   - type: GhostTakeoverAvailable
+  - type: AlwaysTakeHoly
+  - type: Damageable
+  - type: Injurable
+    damageContainer: InorganicMetaphysical
