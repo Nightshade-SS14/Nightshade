@@ -1,15 +1,14 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
-using System.Diagnostics.CodeAnalysis;
-using System.Linq;
+using Content.Shared.Hands.EntitySystems;
 using Content.Shared.Mind;
-using Content.Shared.PDA;
 using Content.Shared.Objectives.Components;
 using Content.Shared.Objectives.Systems;
-using Content.Shared.Hands.EntitySystems;
+using Content.Shared.PDA;
 using Content.Trauma.Common.JobListings;
-using Robust.Shared.Timing;
 using Robust.Shared.Containers;
+using Robust.Shared.Player;
+using Robust.Shared.Timing;
 
 namespace Content.Trauma.Shared.JobListings;
 
@@ -18,31 +17,39 @@ namespace Content.Trauma.Shared.JobListings;
 /// </summary>
 public abstract partial class JobListingsSystem : EntitySystem
 {
-    [Dependency] protected SharedObjectivesSystem Objectives = default!;
     [Dependency] protected IGameTiming Timing = default!;
-    [Dependency] protected SharedUserInterfaceSystem Ui = default!;
     [Dependency] protected SharedContainerSystem Container = default!;
-    [Dependency] private INetManager _net = default!;
-    [Dependency] protected SharedMindSystem Mind = default!;
     [Dependency] protected SharedHandsSystem Hands = default!;
+    [Dependency] protected SharedMindSystem Mind = default!;
+    [Dependency] protected SharedObjectivesSystem Objectives = default!;
+    [Dependency] private SharedPdaSystem _pda = default!;
+    [Dependency] private SharedPvsOverrideSystem _pvsOverride = default!;
+    [Dependency] protected SharedUserInterfaceSystem Ui = default!;
+    [Dependency] private INetManager _net = default!;
+    [Dependency] private EntityQuery<ActorComponent> _actorQuery = default!;
     [Dependency] protected EntityQuery<JobListingsComponent> JobListingsQuery = default!;
     [Dependency] protected EntityQuery<SideJobComponent> SideJobQuery = default!;
     [Dependency] protected EntityQuery<MindComponent> MindQuery = default!;
     [Dependency] protected EntityQuery<ObjectiveComponent> ObjectiveQuery = default!;
-    [Dependency] private EntityQuery<JobListingsOwnerComponent> _jobListingsOwnerQuery = default!;
-    [Dependency] private EntityQuery<RemoteJobListingsComponent> _remoteJobListingsQuery = default!;
+    [Dependency] protected EntityQuery<RemoteJobListingsComponent> RemoteQuery = default!;
+    [Dependency] protected EntityQuery<UplinkOwnerComponent> UplinkQuery = default!;
+    [Dependency] protected EntityQuery<JobListingsOwnerComponent> OwnerQuery = default!;
 
     /// <summary>
     /// Accept an already assigned job.
     /// </summary>
     public bool AcceptSideJob(Entity<JobListingsComponent> jobBoard, EntityUid actor, EntityUid sideJob)
     {
-        if (jobBoard.Comp.AcceptedSideJobs.Count >= jobBoard.Comp.MaximumAcceptedSideJobs)
+        if (jobBoard.Comp.AcceptedSideJobs.Count >= jobBoard.Comp.MaximumAcceptedSideJobs ||
+            !jobBoard.Comp.AvailableSideJobs.Contains(sideJob) ||
+            !SideJobQuery.TryComp(sideJob, out var sideJobComp))
             return false;
-        if (!jobBoard.Comp.AvailableSideJobs.Contains(sideJob))
+
+        if (jobBoard.Comp.Mind is not { } mind)
+        {
+            Log.Error($"Job board {ToPrettyString(jobBoard)} had no mind, can't accept job {ToPrettyString(sideJob)}!");
             return false;
-        if (!SideJobQuery.TryComp(sideJob, out var sideJobComp))
-            return false;
+        }
 
         Container.Insert(sideJob, jobBoard.Comp.AcceptedSideJobs);
 
@@ -50,7 +57,7 @@ public abstract partial class JobListingsSystem : EntitySystem
         {
             var tool = PredictedSpawnAtPosition(toolProto, Transform(actor).Coordinates);
             Hands.PickupOrDrop(actor, tool);
-            var ev = new SideJobToolSpawned(sideJob);
+            var ev = new SideJobToolSpawnedEvent(sideJob, mind);
             RaiseLocalEvent(tool, ref ev);
         }
 
@@ -70,9 +77,7 @@ public abstract partial class JobListingsSystem : EntitySystem
     /// </summary>
     public void ClaimSideJob(Entity<JobListingsComponent> jobBoard, EntityUid actor, EntityUid sideJob)
     {
-        if (jobBoard.Comp.Mind is not { } mind)
-            return;
-        if (!MindQuery.TryComp(mind, out var mindComp))
+        if (jobBoard.Comp.Mind is not { } mind || !MindQuery.TryComp(mind, out var mindComp))
             return;
         var progress = Objectives.GetProgress(sideJob, (mind, mindComp));
         if (progress < 0.999f)
@@ -171,8 +176,11 @@ public abstract partial class JobListingsSystem : EntitySystem
     /// </summary>
     public void OpenUi(EntityUid owner, EntityUid actor)
     {
+        if (!RemoteQuery.HasComp(owner))
+            return;
+
         UpdateUi(owner, actor);
-        Ui.TryOpenUi(owner, JobListingsUiKey.Key, actor);
+        Ui.TryToggleUi(owner, JobListingsUiKey.Key, actor);
     }
 
     /// <summary>
@@ -213,7 +221,7 @@ public abstract partial class JobListingsSystem : EntitySystem
     {
         if (mind.Comp.OwnedEntity is null)
             return;
-        if (!_jobListingsOwnerQuery.TryComp(mind.Owner, out var jobListingsOwnerComp))
+        if (!OwnerQuery.TryComp(mind.Owner, out var jobListingsOwnerComp))
             return;
         var jobBoard = jobListingsOwnerComp.JobListings;
         if (!JobListingsQuery.TryComp(jobBoard, out var jobBoardComp))
@@ -227,13 +235,13 @@ public abstract partial class JobListingsSystem : EntitySystem
     /// </summary>
     public Entity<JobListingsComponent>? GetJobBoard(EntityUid owner)
     {
-        if (!_remoteJobListingsQuery.TryComp(owner, out var remoteComp))
-            return null;
-        var jobListings = remoteComp.JobListings;
-        if (!JobListingsQuery.TryComp(jobListings, out var jobListingsComp))
+        if (RemoteQuery.TryComp(owner, out var remote))
+            owner = remote.JobListings;
+
+        if (!JobListingsQuery.TryComp(owner, out var comp))
             return null;
 
-        return (jobListings, jobListingsComp);
+        return (owner, comp);
     }
 
     /// <summary>
@@ -253,7 +261,7 @@ public abstract partial class JobListingsSystem : EntitySystem
     /// <summary>
     /// Setup the Ui key for the job board Ui.
     /// </summary>
-    public void InitUi(Entity<JobListingsComponent> jobBoard, EntityUid host)
+    public void InitUi(EntityUid host)
     {
         Ui.SetUi(host, JobListingsUiKey.Key, new InterfaceData("JobListingsBUI"));
     }
@@ -261,12 +269,27 @@ public abstract partial class JobListingsSystem : EntitySystem
     /// <summary>
     /// Link an entity with a ui (like a pda) to a job board.
     /// </summary>
-    public void Link(Entity<JobListingsComponent> jobBoard, EntityUid remote)
+    public void LinkRemote(Entity<JobListingsComponent> jobBoard, EntityUid remote)
     {
         AddComp(remote, new RemoteJobListingsComponent { JobListings = jobBoard.Owner });
-        InitUi(jobBoard, remote);
+        InitUi(remote);
         jobBoard.Comp.Remotes.Add(remote);
         DirtyField(jobBoard.AsNullable(), nameof(JobListingsComponent.Remotes));
+        _pda.UpdatePdaUi(remote);
+    }
+
+    /// <summary>
+    /// Helper method to add a PVS override for the job board.
+    /// The job board / uplink store is a nullspace entity which would not normally be replicated.
+    /// It is supposed to be shared between uplinks and persist if any of them are destroyed so it can't be put in an uplink's container.
+    /// </summary>
+    protected void PVSOverrideEntity(Entity<MindComponent> mind, EntityUid entity)
+    {
+        if (mind.Comp.OwnedEntity is not { } mob)
+            return;
+        if (!_actorQuery.TryComp(mob, out var actor))
+            return;
+        _pvsOverride.AddSessionOverride(entity, actor.PlayerSession);
     }
 
     /// <summary>
@@ -343,41 +366,51 @@ public abstract partial class JobListingsSystem : EntitySystem
     }
 
     [SubscribeLocalEvent]
-    private void OnMessage(Entity<RemoteJobListingsComponent> owner, ref JobListingsAcceptJobMessage msg)
+    private void OnRemoteShutdown(Entity<RemoteJobListingsComponent> ent, ref ComponentShutdown args)
     {
-        if (GetJobBoard(owner.Owner) is not { } jobBoard)
+        if (GetJobBoard(ent.Owner) is not { } jobBoard)
+            return;
+
+        jobBoard.Comp.Remotes.Remove(ent.Owner);
+        DirtyField(jobBoard.AsNullable(), nameof(JobListingsComponent.Remotes));
+    }
+
+    [SubscribeLocalEvent]
+    private void OnMessage(Entity<RemoteJobListingsComponent> ent, ref JobListingsAcceptJobMessage msg)
+    {
+        if (GetJobBoard(ent.Owner) is not { } jobBoard)
             return;
         AcceptSideJob(jobBoard, msg.Actor, GetEntity(msg.Job));
-        UpdateUi(owner.Owner, msg.Actor);
+        UpdateUi(ent.Owner, msg.Actor);
     }
 
     [SubscribeLocalEvent]
-    private void OnMessage(Entity<RemoteJobListingsComponent> owner, ref JobListingsClaimJobMessage msg)
+    private void OnMessage(Entity<RemoteJobListingsComponent> ent, ref JobListingsClaimJobMessage msg)
     {
-        if (GetJobBoard(owner.Owner) is not { } jobBoard)
+        if (GetJobBoard(ent.Owner) is not { } jobBoard)
             return;
         ClaimSideJob(jobBoard, msg.Actor, GetEntity(msg.Job));
-        UpdateUi(owner.Owner, msg.Actor);
+        UpdateUi(ent.Owner, msg.Actor);
     }
 
     [SubscribeLocalEvent]
-    private void OnMessage(Entity<RemoteJobListingsComponent> owner, ref JobListingsCancelJobMessage msg)
+    private void OnMessage(Entity<RemoteJobListingsComponent> ent, ref JobListingsCancelJobMessage msg)
     {
-        if (GetJobBoard(owner.Owner) is not { } jobBoard)
+        if (GetJobBoard(ent.Owner) is not { } jobBoard)
             return;
         CancelSideJob(jobBoard, GetEntity(msg.Job));
-        UpdateUi(owner.Owner, msg.Actor);
+        UpdateUi(ent.Owner, msg.Actor);
     }
 
     [SubscribeLocalEvent]
-    private void OnMessage(Entity<RemoteJobListingsComponent> owner, ref JobListingsRefreshMessage msg)
+    private void OnMessage(Entity<RemoteJobListingsComponent> ent, ref JobListingsRefreshMessage msg)
     {
-        if (GetJobBoard(owner.Owner) is not { } jobBoard)
+        if (GetJobBoard(ent.Owner) is not { } jobBoard)
             return;
         if (!CanRefresh(jobBoard))
             return;
         Refresh(jobBoard);
-        UpdateUi(owner.Owner, msg.Actor);
+        UpdateUi(ent.Owner, msg.Actor);
     }
 }
 
@@ -397,10 +430,32 @@ public record struct SideJobCreatedEvent(int EffectiveLevel, bool Cancelled = fa
 /// Raised on a side job's tool when it is spawned.
 /// </summary>
 [ByRefEvent]
-public record struct SideJobToolSpawned(EntityUid Objective);
+public record struct SideJobToolSpawnedEvent(EntityUid Objective, EntityUid Mind);
 
 /// <summary>
 /// Raised on the job board when a non-repeatable side job is completed and its reward claimed, so the same job is not generated again.
 /// </summary>
 [ByRefEvent]
 public record struct SideJobClaimedEvent(EntityUid SideJob);
+
+/// <summary>
+/// Raised on an uplink's pre-established remote when a job board is created.
+/// For example, if you injected an uplink implant then the uplink implant becomes a pre-existing remote of your uplink and is associated with your mind.
+/// If you then buy the Job Runner Kit and create a job board this event is raised on the implant so it knows to make the Open Job Board action.
+/// If you injected the implant after already creating the job board then it would add the implant itself on implantation.
+/// </summary>
+[ByRefEvent]
+public record struct JobBoardCreatedEvent;
+
+/// <summary>
+/// Event raised by a store on a person's mind to create a job board for them.
+/// </summary>
+[DataDefinition]
+public sealed partial class CreateJobBoardEvent : EntityEventArgs
+{
+    /// <summary>
+    /// The prototype for the job board to create.
+    /// </summary>
+    [DataField(required: true)]
+    public EntProtoId<JobListingsComponent> JobBoardProto;
+}

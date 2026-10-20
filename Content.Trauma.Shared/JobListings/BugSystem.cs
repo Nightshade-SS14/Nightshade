@@ -6,7 +6,6 @@ using Content.Shared.Mind;
 using Content.Shared.Objectives.Components;
 using Content.Shared.Objectives.Systems;
 using Content.Trauma.Shared.Areas;
-using System.Diagnostics.CodeAnalysis;
 
 namespace Content.Trauma.Shared.JobListings;
 
@@ -21,13 +20,17 @@ public sealed partial class BugSystem : EntitySystem
     [Dependency] private JobListingsSystem _jobs = default!;
     [Dependency] private MetaDataSystem _metaData = default!;
     [Dependency] private SharedObjectivesSystem _objectives = default!;
+    [Dependency] private EntityQuery<MindComponent> _mindQuery = default!;
 
     /// <summmary>
     /// Works out if the bug is in the correct area.
     /// </summary>
     public bool IsInCorrectArea(Entity<BugComponent> ent)
     {
-        return _area.GetAreaPrototype(ent.Owner) == ent.Comp.TargetArea;
+        if (_area.GetArea(ent) is not { } area)
+            return false;
+
+        return Prototype(area)?.ID == ent.Comp.TargetArea;
     }
 
     /// <summary>
@@ -55,16 +58,17 @@ public sealed partial class BugSystem : EntitySystem
     {
         if (ent.Comp.TargetArea is not { } area)
         {
-            Log.Error($"Bug {ent.Owner}'s TargetArea is not set.");
+            Log.Error($"Bug {ToPrettyString(ent)}'s TargetArea is not set.");
             return;
         }
 
         var name = ProtoMan.Index(area).Name;
         args.PushMarkup(Loc.GetString("bug-examine-target-area", ("target-area", name)));
 
-        if (Transform(ent.Owner).Anchored)
+        if (Transform(ent).Anchored)
         {
-            args.PushMarkup(Loc.GetString($"bug-examine-{(IsInCorrectArea(ent) ? "correct" : "incorrect")}-area"));
+            var prefix = IsInCorrectArea(ent) ? "" : "in";
+            args.PushMarkup(Loc.GetString($"bug-examine-{prefix}correct-area"));
         }
     }
 
@@ -73,7 +77,7 @@ public sealed partial class BugSystem : EntitySystem
     {
         if (ent.Comp.TargetArea is not { } area)
         {
-            Log.Error($"BugObjective {ent.Owner}'s TargetArea is not set.");
+            Log.Error($"Bug {ToPrettyString(ent)}'s TargetArea is not set.");
             return;
         }
 
@@ -88,7 +92,7 @@ public sealed partial class BugSystem : EntitySystem
     {
         if (ent.Comp.TargetArea is not { } area)
         {
-            Log.Error($"BugObjective {ent.Owner}'s TargetArea is not set.");
+            Log.Error($"BugObjective {ToPrettyString(ent)}'s TargetArea is not set.");
             return;
         }
 
@@ -100,28 +104,29 @@ public sealed partial class BugSystem : EntitySystem
     [SubscribeLocalEvent]
     private void OnWrench(Entity<BugComponent> ent, ref UserAnchoredEvent args)
     {
-        if (!Transform(ent.Owner).Anchored || !IsInCorrectArea(ent))
-            return;
-        if (!_mind.TryGetMind(args.User, out var mind, out var mindComp))
+        if (!Transform(ent.Owner).Anchored || !IsInCorrectArea(ent) ||
+            !_mindQuery.TryComp(ent.Comp.Mind, out var mindComp))
             return;
 
         if (ent.Comp.TargetArea is not { } area)
         {
-            Log.Error($"Bug {ent.Owner}'s TargetArea is not set.");
+            Log.Error($"Bug {ToPrettyString(ent)}'s TargetArea is not set.");
             return;
         }
 
-        RegisterBuggedArea((mind, mindComp), area);
-        _jobs.UpdateUi((mind, mindComp));
+        var mind = (ent.Comp.Mind.Value, mindComp);
+        RegisterBuggedArea(mind, area);
+        _jobs.UpdateUi(mind);
     }
 
     [SubscribeLocalEvent]
-    private void OnToolSpawned(Entity<BugComponent> ent, ref SideJobToolSpawned args)
+    private void OnToolSpawned(Entity<BugComponent> ent, ref SideJobToolSpawnedEvent args)
     {
         if (!TryComp<BugAreaConditionComponent>(args.Objective, out var objComp))
             return;
 
         ent.Comp.TargetArea ??= objComp.TargetArea;
+        ent.Comp.Mind ??= args.Mind;
         Dirty(ent);
     }
 }
